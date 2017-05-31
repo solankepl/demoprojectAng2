@@ -10,14 +10,24 @@ import { FooterBottomComponent } from './footer-bottom/footer-bottom.component';
 import { AboutComponent } from './about/about.component';
 import { FormComponent } from './form/form.component';
 import { HomeComponent } from './home/home.component';
+import { Subtab1Component } from './home/subtab/subtab1/subtab1.component';
+import { Subtab2Component } from './home/subtab/subtab2/subtab2.component';
+
 import {LocationStrategy, HashLocationStrategy} from '@angular/common';
 import { PageNotFoundComponentComponent } from './page-not-found-component/page-not-found-component.component';
 
 
 
+
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
-  { path: 'home', component: HomeComponent },
+  { path: 'home', component: HomeComponent,
+    children: [
+      { path: '', redirectTo: 'subtab1', pathMatch: 'full' },
+      { path: 'subtab1', component: Subtab1Component},
+      { path: 'subtab2', component: Subtab2Component }
+    ]     
+   },
   { path: 'about', component: AboutComponent },
   { path: 'form', component: FormComponent },
   { path: '**', component: PageNotFoundComponentComponent }    
@@ -33,7 +43,9 @@ const routes: Routes = [
     AboutComponent,
     FormComponent,
     HomeComponent,
-    PageNotFoundComponentComponent
+    PageNotFoundComponentComponent,
+    Subtab1Component,
+    Subtab2Component
   ],
   imports: [
     BrowserModule,
