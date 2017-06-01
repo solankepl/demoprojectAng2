@@ -16,6 +16,9 @@ import { Subtab2Component } from './home/subtab/subtab2/subtab2.component';
 import {LocationStrategy, HashLocationStrategy} from '@angular/common';
 import { PageNotFoundComponentComponent } from './page-not-found-component/page-not-found-component.component';
 
+import { StudentdataService } from './services/studentdata.service';
+import { StudentlistComponent } from './commancomponent/studentlist/studentlist.component';
+//import { SortinglistPipe } from './pipe/sortinglist.pipe';
 
 
 
@@ -45,7 +48,8 @@ const routes: Routes = [
     HomeComponent,
     PageNotFoundComponentComponent,
     Subtab1Component,
-    Subtab2Component
+    Subtab2Component,
+    StudentlistComponent
   ],
   imports: [
     BrowserModule,
@@ -53,7 +57,7 @@ const routes: Routes = [
     HttpModule,
     RouterModule.forRoot(routes) // <-- installs Router routes, components and services-->
   ],
-  providers: [],
+  providers: [StudentdataService], 
   bootstrap: [AppComponent]
 })
 export class AppModule { }

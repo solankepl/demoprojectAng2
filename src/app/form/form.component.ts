@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import {User} from 'app/form/User';
+import {Student} from '../services/Student';
+import { StudentdataService } from '../services/studentdata.service';
 @Component({
   selector: 'app-form',
   templateUrl: './form.component.html',
@@ -7,20 +8,26 @@ import {User} from 'app/form/User';
 })
 export class FormComponent implements OnInit {
 
-  constructor() { }
+  student:Student = {
+            name : 'James',             
+            height:'1234',
+            weight:'55'
+    }    
+    
+    
+  constructor(private studentdataService:StudentdataService) { }
 
   ngOnInit() {
+          
+    //console.log(this.studentdataService);
+    
   }
-  
-   user:User = {
-            name : 'James',             
-            phone:"1234",
-            address:'India'
-        
-    }
+    
+   
 
-    postForm(userform:User){
-           alert("ssss"+ userform.name);
+    postForm(studentform:Student){        
+        this.studentdataService.addStudentData(this.student);
+        //alert("ssss"+ studentform.name);
     }
  
 

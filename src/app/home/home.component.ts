@@ -11,7 +11,7 @@ export class HomeComponent implements OnInit, OnDestroy  {
     private sub: any;
     id: number;
     
-    constructor(private route: ActivatedRoute) { }
+    constructor(private router: Router, private route: ActivatedRoute) { }
     ngOnInit() {
        this.sub = this.route.params.subscribe(params => {
        this.id = +params['id']; // (+) converts string 'id' to a number
@@ -19,11 +19,11 @@ export class HomeComponent implements OnInit, OnDestroy  {
     }
 
     navigateFormPage = function () {
-        this.route.navigateByUrl('/form');
+        this.router.navigateByUrl('/form');
     };    
 
     ngOnDestroy() {
-        //this.sub.unsubscribe();
+        this.sub.unsubscribe();
     }
 
 }

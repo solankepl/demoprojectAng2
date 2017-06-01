@@ -4,10 +4,4 @@
     .sidebar {
         position: static !important;
     }
-    body {
-        background: #0022f0 !important;
-    }
-    .bg-faded {
-        background-color: #ff00ff;
-    }
 }

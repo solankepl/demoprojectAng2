@@ -1,0 +1,27 @@
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th class="pointer" (click)="sort('name')">
+                Name
+                <i class="fa" [ngClass]="{'fa-sort': column != 'name', 
+                        'fa-sort-asc': (column == 'name' && !isDesc), 
+                        'fa-sort-desc': (column == 'name' && isDesc) }" aria-hidden="true"> </i>
+
+            </th>
+            <th>Height</th>
+            <th>Weight</th>
+            <th></th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let student of students">
+            <!-- | sortinglist: {property: column, direction: direction} -->
+            <th scope="row ">{{student.name}}</th>
+            <td>{{student.height}}</td>
+            <td>{{student.weight}}</td>
+            <td class="block "><i class="fa fa-pencil fa-lg "></i> </td>
+            <td class="block "><i class="fa fa-trash fa-lg "></i> </td>
+        </tr>
+    </tbody>
+</table>
