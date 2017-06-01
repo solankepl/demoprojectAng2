@@ -20,10 +20,10 @@ export class StudentlistComponent implements OnInit {
         this.students = this.studentdataService.getStudents();       
     }
     
-    /*sort(property){
+    sort(property){
         this.isDesc = !this.isDesc;   
         this.column = property;
         this.direction = this.isDesc ? 1 : -1;
-    };*/
+    };
 
 }
