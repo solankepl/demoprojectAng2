@@ -9,7 +9,51 @@ ng g service [name]
 
 
 
-
 ng build --env=prod
 
 remove path indext.html baseUrl ="/";
+
+
+Github basic command 
+http://gitref.org/basic/
+
+git init
+
+git status -s
+
+git diff --cached
+
+git stash //locally save
+
+git stash list
+
+git stash apply
+
+git stash drop stash@{1}
+
+git stash clear
+
+git add "filename"
+
+git commit -am 'changes to hello file'
+
+git reset --soft HEAD~
+
+git branch "branch_name"
+
+git branch
+
+git branch checkout "baranche-name"
+
+$ git push origin --delete "baranche-name"
+
+$ git branch -d "baranche-name"
+
+git merge "branch_name"
+
+git push origin "branch_name"
+
+git remote add origin https://github.com/VijayNew/NewExample.git
+
+git remote -v
+
