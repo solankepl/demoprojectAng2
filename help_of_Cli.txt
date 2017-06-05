@@ -1,0 +1,15 @@
+https://github.com/angular/angular-cli
+https://app.netlify.com/start/repos/solankepl/htmldrive-examples
+
+ng new projectFolder
+
+ng g component [name] generates a component
+
+ng g service [name]
+
+
+
+
+ng build --env=prod
+
+remove path indext.html baseUrl ="/";
