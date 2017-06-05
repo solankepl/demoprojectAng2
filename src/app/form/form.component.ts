@@ -8,23 +8,19 @@ import { StudentdataService } from '../services/studentdata.service';
 })
 export class FormComponent implements OnInit {
 
-  student:Student = {
-            name : 'James',             
-            height:'1234',
+    student:Student = {
+            name : 'kishor solanke',             
+            height:'126',
             weight:'55'
     }    
-    
-    
-  constructor(private studentdataService:StudentdataService) { }
 
-  ngOnInit() {
-          
-    //console.log(this.studentdataService);
-    
-  }
-    
-   
 
+    constructor(private studentdataService:StudentdataService) { }
+
+    ngOnInit() {          
+    //console.log(this.studentdataService);    
+    }
+    
     postForm(studentform:Student){        
         this.studentdataService.addStudentData(this.student);
         //alert("ssss"+ studentform.name);
