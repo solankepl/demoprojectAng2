@@ -4,6 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { RouterModule, Routes} from '@angular/router';
 
+
 import { AppComponent } from './app.component';
 import { HeadertopComponent } from './headertop/headertop.component';
 import { FooterBottomComponent } from './footer-bottom/footer-bottom.component';
@@ -59,7 +60,7 @@ const routes: Routes = [
     HttpModule,
     RouterModule.forRoot(routes) // <-- installs Router routes, components and services-->
   ],
-  providers: [StudentdataService], 
+  providers: [{ provide: LocationStrategy, useClass: HashLocationStrategy }, StudentdataService], 
   bootstrap: [AppComponent],
     
 })

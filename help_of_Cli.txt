@@ -14,6 +14,13 @@ ng build --env=prod
 remove path indext.html baseUrl ="/";
 
 
+Refresh issue ang 2 app
+Change base url from index.html file "./index.html" 
+import file  "import {LocationStrategy, HashLocationStrategy} from '@angular/common';" in app.module ts file
+and add  providers: [{ provide: LocationStrategy, useClass: HashLocationStrategy }] this ocde in app.module ts file.
+
+
+
 Github basic command 
 http://gitref.org/basic/
 
