@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { RouterModule, Routes} from '@angular/router';
-
+import {BootsrapeModule} from 'bootstrap';
 
 import { AppComponent } from './app.component';
 import { HeadertopComponent } from './headertop/headertop.component';
@@ -21,6 +21,7 @@ import { PageNotFoundComponentComponent } from './page-not-found-component/page-
 import { StudentdataService } from './services/studentdata.service';
 import { StudentlistComponent } from './commancomponent/studentlist/studentlist.component';
 import { SortinglistPipe } from './pipe/sortinglist.pipe';
+import { DragComponent } from './drag/drag.component';
 
 
 
@@ -36,6 +37,7 @@ const routes: Routes = [
    },
   { path: 'about', component: AboutComponent },
   { path: 'form', component: FormComponent },
+  { path: 'jqueryui', component: DragComponent },    
   { path: '**', component: PageNotFoundComponentComponent }    
 ];
 
@@ -51,8 +53,9 @@ const routes: Routes = [
     PageNotFoundComponentComponent,
     Subtab1Component,
     Subtab2Component,
-      Subtab3Component,
-    StudentlistComponent
+    Subtab3Component,
+    StudentlistComponent,
+    DragComponent
   ],
   imports: [
     BrowserModule,

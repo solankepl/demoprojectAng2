@@ -17,6 +17,20 @@
             <h1>Welcome to my angular two demo project</h1>
             <p>This is an example to show the potential of an offcanvas layout pattern in Bootstrap. Try some responsive-range viewport sizes to see it in action.</p>
             <button type="button" class="btn btn-primary" (click)="navigateFormPage();"><i class="fa fa-plus"></i> Navigate to Form Page</button>
+
+
+            <div class="btn-group">
+                <button type="button" class="btn btn-danger ropdown-toggle dropdown-toggle-split" data-toggle="dropdown">{{selectListVal}}</button>
+                <button type="button" class="btn btn-danger dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-expanded="false">
+                    <span class="sr-only">Toggle Dropdown</span>
+                </button>
+                <div class="dropdown-menu">
+                    <a *ngFor="let list of dropeDownList" class="dropdown-item" href="#" (click)="selectListVal = list.val">{{list.val}}</a>
+                    <!--<div class="dropdown-divider"></div>-->
+
+                </div>
+            </div>
+
         </div>
 
 

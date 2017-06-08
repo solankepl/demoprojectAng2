@@ -8,6 +8,7 @@ ng g component [name] generates a component
 ng g service [name]
 
 
+ng serve
 
 ng build --env=prod
 
@@ -18,6 +19,20 @@ Refresh issue ang 2 app
 Change base url from index.html file "./index.html" 
 import file  "import {LocationStrategy, HashLocationStrategy} from '@angular/common';" in app.module ts file
 and add  providers: [{ provide: LocationStrategy, useClass: HashLocationStrategy }] this ocde in app.module ts file.
+
+
+install jquery ui and external laibrary
+npm install --save "pakage name"
+
+npm install --save jquery-ui (pakage.json will be updated)
+
+Open the angular-cli.json file 
+add path in script option   "scripts": [
+      ".././node_modules/jquery/dist/jquery.min.js",
+      ".././node_modules/jquery/dist/jquery.min.js"      
+      ],
+
+sytemjs.config.js add maping
 
 
 
