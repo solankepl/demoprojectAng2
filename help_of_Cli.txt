@@ -11,6 +11,7 @@ npm install --save-dev @angular/cli@latest
 npm install
 ng update
 
+newuser1234
 
 ng new ng-cli-test --style scss (sass project ganrated)
 
@@ -62,15 +63,6 @@ add path in script option   "scripts": [
       ],
 
 sytemjs.config.js add maping
-
-//++++++++++++++++++ adding jquery plugin ------//
-Open the angular-cli.json file 
-add path in script option   
-"scripts": ["../node_modules/jquery/dist/jquery.min.js",  "assets/jslib/myPlugin.js"],
-
-add below code in component file
-declare var $:any;
-
 
 
 

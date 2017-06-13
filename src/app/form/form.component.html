@@ -6,13 +6,19 @@
     </div>
 
     <div class="form-group">
-        <label for="formGroupExampleInput2">Enter Height</label>
-        <input type="text" class="form-control" name="height" minlength="2" maxlength="3" #height="ngModel" [(ngModel)]="student.height" required>
+        <label for="formGroupExampleInput2">Enter Mark of Englsih</label>
+        <input type="text" class="form-control" name="English" minlength="2" maxlength="3" #english="ngModel" [(ngModel)]="student.english" required>
 
     </div>
     <div class="form-group">
-        <label for="formGroupExampleInput3">Enter Weight</label>
-        <input type="text" class="form-control" name="Weight" #weight="ngModel" [(ngModel)]="student.weight">
+        <label for="formGroupExampleInput3">Enter Mark of Math</label>
+        <input type="text" class="form-control" name="Math" #math="ngModel" [(ngModel)]="student.math">
     </div>
+
+    <div class="form-group">
+        <label for="formGroupExampleInput3">Enter Mark of Hindi</label>
+        <input type="text" class="form-control" name="Hindi" #hindi="ngModel" [(ngModel)]="student.hindi">
+    </div>
+
     <button type="submit" class="btn btn-primary">Submit</button>
 </form>

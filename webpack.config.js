@@ -92,6 +92,8 @@ module.exports = {
       "script-loader!./node_modules\\tether\\dist\\js\\tether.js",
       "script-loader!./node_modules\\bootstrap\\dist\\js\\bootstrap.js",
       "script-loader!./src\\assets\\jslib\\myPlugin.js",
+      "script-loader!./src\\assets\\jslib\\material-charts.js",
+      "script-loader!./src\\assets\\jslib\\canvasjs.min.js"
     ],
         "styles": [
       "./node_modules\\bootstrap\\dist\\css\\bootstrap.css",

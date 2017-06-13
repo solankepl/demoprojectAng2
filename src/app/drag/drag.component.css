@@ -1,11 +1,4 @@
-.carousel {
-    display: block;
-    width: 200px;
-    overflow: hidden;
-}
-
-.slide {
-    height: 200px;
-    width: 200px;
-    border: 1px solid blue;
+ul,
+li {
+    list-style: none;
 }

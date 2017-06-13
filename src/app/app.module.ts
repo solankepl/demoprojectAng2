@@ -22,7 +22,7 @@ import { StudentdataService } from './services/studentdata.service';
 import { StudentlistComponent } from './commancomponent/studentlist/studentlist.component';
 import { SortinglistPipe } from './pipe/sortinglist.pipe';
 import { DragComponent } from './drag/drag.component';
-import { MypluginDirective } from './myplugin.directive';
+//import { MypluginDirective } from './myplugin.directive';
 
 import {SlickCarouselComponent, SlickCarouselItem} from './drag/slick-carousel.component'
 
@@ -44,7 +44,7 @@ const routes: Routes = [
   { path: 'jqueryui', component: DragComponent },    
   { path: '**', component: PageNotFoundComponentComponent }    
 ];
-
+//MypluginDirective,
 @NgModule({
   declarations: [
     AppComponent,
@@ -60,7 +60,6 @@ const routes: Routes = [
     Subtab3Component,
     StudentlistComponent,
     DragComponent,
-    MypluginDirective,
     SlickCarouselComponent, 
     SlickCarouselItem,
       DatePicker,

@@ -5,8 +5,8 @@ import {Student} from './Student';
 export class StudentdataService {
     studentList:Student[] = new Array<Student>();   
     constructor() {
-        let p1 = new Student("Pavan Solanke","177","70");
-        let p2 = new Student("ram kolhe","512","100");        
+        let p1 = new Student("Pavan Solanke","77","70","50");
+        let p2 = new Student("Ram Kolhe","51","90","45");        
         this.studentList.push(p1);
         this.studentList.push(p2);    
     }

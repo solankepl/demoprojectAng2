@@ -9,17 +9,25 @@
                         'fa-sort-desc': (column == 'name' && isDesc) }" aria-hidden="true"> </i>
 
             </th>
-            <th class="pointer" (click)="sort('height')">Height
-                <i class="fa" [ngClass]="{'fa-sort': column != 'height', 
-                        'fa-sort-asc': (column == 'height' && !isDesc), 
-                        'fa-sort-desc': (column == 'height' && isDesc) }" aria-hidden="true"> </i>
+            <th class="pointer" (click)="sort('english')">ENGLISH
+                <i class="fa" [ngClass]="{'fa-sort': column != 'english', 
+                        'fa-sort-asc': (column == 'english' && !isDesc), 
+                        'fa-sort-desc': (column == 'english' && isDesc) }" aria-hidden="true"> </i>
             </th>
-            <th class="pointer" (click)="sort('weight')">
-                Weight
-                <i class="fa" [ngClass]="{'fa-sort': column != 'weight', 
-                        'fa-sort-asc': (column == 'weight' && !isDesc), 
-                        'fa-sort-desc': (column == 'weight' && isDesc) }" aria-hidden="true"> </i>
+            <th class="pointer" (click)="sort('math')">
+                Math
+                <i class="fa" [ngClass]="{'fa-sort': column != 'math', 
+                        'fa-sort-asc': (column == 'math' && !isDesc), 
+                        'fa-sort-desc': (column == 'math' && isDesc) }" aria-hidden="true"> </i>
             </th>
+
+            <th class="pointer" (click)="sort('hindi')">
+                HINDI
+                <i class="fa" [ngClass]="{'fa-sort': column != 'hindi', 
+                        'fa-sort-asc': (column == 'hindi' && !isDesc), 
+                        'fa-sort-desc': (column == 'hindi' && isDesc) }" aria-hidden="true"> </i>
+            </th>
+
             <th></th>
             <th></th>
         </tr>
@@ -29,8 +37,9 @@
             <!-- | sortinglist: {property: column, direction: direction} -->
             <td>{{i}}</td>
             <th scope="row ">{{student.name}}</th>
-            <td>{{student.height}}</td>
-            <td>{{student.weight}}</td>
+            <td>{{student.english}}</td>
+            <td>{{student.math}}</td>
+            <td>{{student.hindi}}</td>
             <td class="block "><i class="fa fa-pencil fa-lg "></i> </td>
             <td class="block" (click)="deleteReord(i)"><i class="fa fa-trash fa-lg "></i> </td>
         </tr>

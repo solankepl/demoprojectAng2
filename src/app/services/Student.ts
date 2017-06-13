@@ -1,11 +1,13 @@
 export class Student {
      name:string;
-     height:string;
-     weight:string;
+     english:string;
+     math:string;
+     hindi:string;
     
-    constructor(name:string,height:string,weight:string){      
+constructor(name:string,english:string,math:string,hindi:string){      
         this.name = name;
-        this.height = height;
-        this.weight = weight;       
+        this.english = english;
+        this.math = math; 
+        this.hindi = hindi; 
     }
 }

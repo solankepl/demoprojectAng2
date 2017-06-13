@@ -9,9 +9,10 @@ import { StudentdataService } from '../services/studentdata.service';
 export class FormComponent implements OnInit {
 
     student:Student = {
-            name : 'kishor solanke',             
-            height:'126',
-            weight:'55'
+            name : '',             
+            english:'',
+            math:'',
+            hindi:''
     }    
 
 
