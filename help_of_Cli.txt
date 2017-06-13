@@ -1,6 +1,20 @@
 https://github.com/angular/angular-cli
 https://app.netlify.com/start/repos/solankepl/htmldrive-examples
 
+///update ng-cli in latest in our project 
+npm uninstall -g angular-cli
+npm cache clean
+npm install -g @angular/cli@latest
+rm -rf node_modules dist
+npm uninstall --save-dev angular-cli
+npm install --save-dev @angular/cli@latest
+npm install
+ng update
+
+
+ng new ng-cli-test --style scss (sass project ganrated)
+
+
 ng new projectFolder
 
 ng g component [name] generates a component
@@ -8,7 +22,22 @@ ng g component [name] generates a component
 ng g service [name]
 
 
+Scaffold	Usage
+Component	ng g component my-new-component
+Directive	ng g directive my-new-directive
+Pipe		ng g pipe my-new-pipe
+Service		ng g service my-new-service
+Class		ng g class my-new-class
+Guard		ng g guard my-new-guard
+Interface	ng g interface my-new-interface
+Enum		ng g enum my-new-enum
+Module		ng g module my-module
+
+
+
 ng serve
+
+
 
 ng build --env=prod
 
@@ -33,6 +62,15 @@ add path in script option   "scripts": [
       ],
 
 sytemjs.config.js add maping
+
+//++++++++++++++++++ adding jquery plugin ------//
+Open the angular-cli.json file 
+add path in script option   
+"scripts": ["../node_modules/jquery/dist/jquery.min.js",  "assets/jslib/myPlugin.js"],
+
+add below code in component file
+declare var $:any;
+
 
 
 
@@ -78,4 +116,14 @@ git push origin "branch_name"
 git remote add origin https://github.com/VijayNew/NewExample.git
 
 git remote -v
+
+git clean -fd //clean local changes
+
+git reset --hard  //revert local changes delete changed file
+
+git reset --hard e3f1e37
+
+git push --force origin master //revert back chnage versiton
+
+git diff master..origin/master
 

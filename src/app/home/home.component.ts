@@ -1,10 +1,13 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { ActivatedRoute, Router} from '@angular/router';
+declare var $: any;
+
+import { DatePicker } from '../commancomponent/datepicker/date-picker.component';
 
 
 @Component({
     selector: 'app-home',
-    templateUrl: './home.component.html',
+    templateUrl: './home.component.html',    
     styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit, OnDestroy  {

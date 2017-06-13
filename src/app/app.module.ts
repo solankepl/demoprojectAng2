@@ -22,8 +22,12 @@ import { StudentdataService } from './services/studentdata.service';
 import { StudentlistComponent } from './commancomponent/studentlist/studentlist.component';
 import { SortinglistPipe } from './pipe/sortinglist.pipe';
 import { DragComponent } from './drag/drag.component';
+import { MypluginDirective } from './myplugin.directive';
 
+import {SlickCarouselComponent, SlickCarouselItem} from './drag/slick-carousel.component'
 
+import { DatePicker } from './commancomponent/datepicker/date-picker.component';
+import { BarchartComponent } from './commancomponent/barchart/barchart.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
@@ -55,7 +59,12 @@ const routes: Routes = [
     Subtab2Component,
     Subtab3Component,
     StudentlistComponent,
-    DragComponent
+    DragComponent,
+    MypluginDirective,
+    SlickCarouselComponent, 
+    SlickCarouselItem,
+      DatePicker,
+      BarchartComponent
   ],
   imports: [
     BrowserModule,
