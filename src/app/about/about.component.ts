@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { BarchartComponent } from '../commancomponent/barchart/barchart.component';
 //import "../../assets/jslib/material-charts.js";
 
@@ -11,9 +11,20 @@ declare var $:any;
 })
 
 export class AboutComponent implements OnInit {
-  constructor() { }    
+  
+    private currentIndex:string;    
+    constructor() {
+        this.currentIndex = "0";
+    }    
+
+    ngOnInit() {
+        
+    }
     
-  ngOnInit() {
-  }
+    onNotifyClicked(message:string):void {
+        this.currentIndex = message;
+    }
+
+    
 
 }

@@ -1,5 +1,8 @@
 https://github.com/angular/angular-cli
-https://app.netlify.com/start/repos/solankepl/htmldrive-examples
+
+
+//angular 2 app demo url
+https://exporter-edward-62476.netlify.com/index.html#/home/subtab1
 
 ///update ng-cli in latest in our project 
 npm uninstall -g angular-cli
@@ -11,7 +14,6 @@ npm install --save-dev @angular/cli@latest
 npm install
 ng update
 
-newuser1234
 
 ng new ng-cli-test --style scss (sass project ganrated)
 
@@ -63,6 +65,62 @@ add path in script option   "scripts": [
       ],
 
 sytemjs.config.js add maping
+
+//++++++++++++++++++ adding jquery plugin ------//
+Open the angular-cli.json file 
+add path in script option   
+"scripts": ["../node_modules/jquery/dist/jquery.min.js",  "assets/jslib/myPlugin.js"],
+
+add below code in component file
+declare var $:any;
+
+
+
+
+//=============================== @input and @output method two communicate between two component ========================
+
+@input : pass the value into the parent component to child component
+in child template pass varible using below code
+<child [passVar]="value"> </child>
+
+in child.component Import the input calss from anular class
+Then add colde @Input() passVar:string;
+
+and we use the varible  {{passVar}} in child component
+=========================================
+@Output(EventMitter): pass the value into the child component to parent parent Componet
+add bellow code in to the chiled component
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+
+@Output()notify:EventEmitter<string> = new EventEmitter<string>(); 
+
+in function call below method to set value of varible
+this.notify.emit(obj); obje pass massge value
+
+open the parent componet html code and add the below code
+<child list (notify)="onNotifyClicked($event)"></<child > 
+
+opent parent componet.ts file and add below code
+
+ onNotifyClicked(message:string):void {
+    this.currentIndex = message;
+ }
+
+ngOnChanges(changes) {} method call when the input value is changed 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

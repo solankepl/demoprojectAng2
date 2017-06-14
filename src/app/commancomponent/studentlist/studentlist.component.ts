@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { Router } from '@angular/router';
 import { StudentdataService } from '../../services/studentdata.service';
 import {Student} from '../../services/Student';
 
@@ -12,8 +13,9 @@ export class StudentlistComponent implements OnInit {
     isDesc: boolean = false;
     column: string = 'name';
     direction: number;
-    
-    constructor(private studentdataService:StudentdataService) { }
+    @Output()notify:EventEmitter<string> = new EventEmitter<string>(); 
+   
+    constructor(private studentdataService:StudentdataService, private router: Router) { }
     
     ngOnInit() {
         this.students = this.studentdataService.getStudents();       
@@ -30,5 +32,18 @@ export class StudentlistComponent implements OnInit {
         this.column = property;
         this.direction = this.isDesc ? 1 : -1;
     };
+    
+    createChart(evt, obj):void{
+        console.log( obj); 
+        this.notify.emit(obj);
+         var target = evt.target;
+          if (target.checked) {
+            //doSelected(target);    
+          } else {
+            //doUnSelected(this._prevSelected)
+          }
+    }
+    
+  
 
 }

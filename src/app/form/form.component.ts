@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router} from '@angular/router';
 import {Student} from '../services/Student';
 import { StudentdataService } from '../services/studentdata.service';
 @Component({
@@ -14,9 +15,8 @@ export class FormComponent implements OnInit {
             math:'',
             hindi:''
     }    
-
-
-    constructor(private studentdataService:StudentdataService) { }
+    
+    constructor(private studentdataService:StudentdataService, private router: Router) { }
 
     ngOnInit() {          
     //console.log(this.studentdataService);    
@@ -24,7 +24,7 @@ export class FormComponent implements OnInit {
     
     postForm(studentform:Student){        
         this.studentdataService.addStudentData(this.student);
-        //alert("ssss"+ studentform.name);
+         this.router.navigateByUrl('/about');
     }
  
 

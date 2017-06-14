@@ -1,7 +1,6 @@
-<p>
-    about works!
-</p>
+<div class="col-md-12">
+    <p> </p>
+    <app-studentlist (notify)="onNotifyClicked($event)"></app-studentlist>
 
-<app-studentlist></app-studentlist>
-
-<app-barchart></app-barchart>
+    <app-barchart [currentIndex]="currentIndex"></app-barchart>
+</div>

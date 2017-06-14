@@ -1,47 +1,70 @@
-<table class="table table-striped">
-    <thead>
-        <tr>
-            <th>ID</th>
-            <th class="pointer" (click)="sort('name')">
-                Name
-                <i class="fa" [ngClass]="{'fa-sort': column != 'name', 
+<div class="panel panel-default panel-table">
+    <div class="panel-heading">
+        <div class="row">
+            <div class="col col-xs-6">
+                <h3 class="panel-title">Total Student List {{students.length}}</h3>
+            </div>
+            <div class="col col-xs-6 text-right">
+                <button type="button" class="btn btn-sm btn-primary btn-create" (click)="router.navigateByUrl('/form');">Create New</button>
+            </div>
+        </div>
+    </div>
+
+    <table class="table  table-sm  table-bordered table-hover">
+        <thead class="thead-inverse">
+            <tr>
+                <th class="text-center">ID</th>
+                <th class="pointer" (click)="sort('name')">
+                    Name
+                    <i class="fa" [ngClass]="{'fa-sort': column != 'name', 
                         'fa-sort-asc': (column == 'name' && !isDesc), 
                         'fa-sort-desc': (column == 'name' && isDesc) }" aria-hidden="true"> </i>
 
-            </th>
-            <th class="pointer" (click)="sort('english')">ENGLISH
-                <i class="fa" [ngClass]="{'fa-sort': column != 'english', 
+                </th>
+                <th class="pointer" (click)="sort('english')">ENGLISH
+                    <i class="fa" [ngClass]="{'fa-sort': column != 'english', 
                         'fa-sort-asc': (column == 'english' && !isDesc), 
                         'fa-sort-desc': (column == 'english' && isDesc) }" aria-hidden="true"> </i>
-            </th>
-            <th class="pointer" (click)="sort('math')">
-                Math
-                <i class="fa" [ngClass]="{'fa-sort': column != 'math', 
+                </th>
+                <th class="pointer" (click)="sort('math')">
+                    Math
+                    <i class="fa" [ngClass]="{'fa-sort': column != 'math', 
                         'fa-sort-asc': (column == 'math' && !isDesc), 
                         'fa-sort-desc': (column == 'math' && isDesc) }" aria-hidden="true"> </i>
-            </th>
+                </th>
 
-            <th class="pointer" (click)="sort('hindi')">
-                HINDI
-                <i class="fa" [ngClass]="{'fa-sort': column != 'hindi', 
+                <th class="pointer" (click)="sort('hindi')">
+                    HINDI
+                    <i class="fa" [ngClass]="{'fa-sort': column != 'hindi', 
                         'fa-sort-asc': (column == 'hindi' && !isDesc), 
                         'fa-sort-desc': (column == 'hindi' && isDesc) }" aria-hidden="true"> </i>
-            </th>
+                </th>
 
-            <th></th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr *ngFor="let student of students | sortinglist: {property: column, direction: direction}; let i = index">
-            <!-- | sortinglist: {property: column, direction: direction} -->
-            <td>{{i}}</td>
-            <th scope="row ">{{student.name}}</th>
-            <td>{{student.english}}</td>
-            <td>{{student.math}}</td>
-            <td>{{student.hindi}}</td>
-            <td class="block "><i class="fa fa-pencil fa-lg "></i> </td>
-            <td class="block" (click)="deleteReord(i)"><i class="fa fa-trash fa-lg "></i> </td>
-        </tr>
-    </tbody>
-</table>
+                <th></th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let student of students | sortinglist: {property: column, direction: direction}; let i = index;">
+                <!-- | sortinglist: {property: column, direction: direction} -->
+                <td class="text-center">{{i}}</td>
+                <th>{{student.name}}</th>
+                <td>{{student.english}}</td>
+                <td>{{student.math}}</td>
+                <td>{{student.hindi}}</td>
+                <td class="text-center">
+
+                    <label class="custom-control custom-radio">
+                        <input name="optionsRadios" type="radio" class="custom-control-input" value="i" (change)="createChart($event, i)" [checked]=" i ===0">
+                        <span class="custom-control-indicator"></span>
+                        <span class="custom-control-description"></span>
+                    </label>
+
+
+
+                </td>
+                <td class="text-center" (click)="deleteReord(i)"><i class="fa fa-trash fa-lg "></i> </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

@@ -1,5 +1,5 @@
 <form novalidate #studentform="ngForm" (ngSubmit)="postForm(studentform.value)">
-    <div class="form-group">
+    <div class="form-group" [ngClass]="{'has-error':!student.name.valid}">
         <label for="formGroupExampleInput">Enter Name</label>
         <input type="text" class="form-control" name="name" #name="ngModel" [(ngModel)]="student.name" required>
         <p *ngIf="name.invalid && name.dirty"> user name is manidatory</p>
@@ -7,18 +7,18 @@
 
     <div class="form-group">
         <label for="formGroupExampleInput2">Enter Mark of Englsih</label>
-        <input type="text" class="form-control" name="English" minlength="2" maxlength="3" #english="ngModel" [(ngModel)]="student.english" required>
+        <input type="number" class="form-control" name="English" minlength="2" maxlength="3" #english="ngModel" [(ngModel)]="student.english" required>
 
     </div>
     <div class="form-group">
         <label for="formGroupExampleInput3">Enter Mark of Math</label>
-        <input type="text" class="form-control" name="Math" #math="ngModel" [(ngModel)]="student.math">
+        <input type="number" class="form-control" name="Math" #math="ngModel" [(ngModel)]="student.math" required>
     </div>
 
     <div class="form-group">
         <label for="formGroupExampleInput3">Enter Mark of Hindi</label>
-        <input type="text" class="form-control" name="Hindi" #hindi="ngModel" [(ngModel)]="student.hindi">
+        <input type="number" class="form-control" name="Hindi" #hindi="ngModel" [(ngModel)]="student.hindi" required>
     </div>
 
-    <button type="submit" class="btn btn-primary">Submit</button>
+    <button type="submit" [disabled]='!studentform.valid' class="btn btn-primary">Submit</button>
 </form>
