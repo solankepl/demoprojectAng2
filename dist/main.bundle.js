@@ -34,7 +34,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/about/about.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<p>\r\n    about works!\r\n</p>\r\n\r\n<app-studentlist></app-studentlist>\r\n\r\n<app-barchart></app-barchart>"
+module.exports = "<div class=\"col-md-12\">\r\n    <p> </p>\r\n    <app-studentlist (notify)=\"onNotifyClicked($event)\"></app-studentlist>\r\n\r\n    <app-barchart [currentIndex]=\"currentIndex\"></app-barchart>\r\n</div>"
 
 /***/ }),
 
@@ -56,8 +56,12 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 var AboutComponent = (function () {
     function AboutComponent() {
+        this.currentIndex = "0";
     }
     AboutComponent.prototype.ngOnInit = function () {
+    };
+    AboutComponent.prototype.onNotifyClicked = function (message) {
+        this.currentIndex = message;
     };
     return AboutComponent;
 }());
@@ -274,6 +278,7 @@ module.exports = "<div id=\"student\"></div>"
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_studentdata_service__ = __webpack_require__("../../../../../src/app/services/studentdata.service.ts");
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return BarchartComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -285,42 +290,90 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 
+
 var BarchartComponent = (function () {
-    function BarchartComponent() {
-    }
-    BarchartComponent.prototype.ngOnInit = function () {
-    };
-    BarchartComponent.prototype.ngAfterViewInit = function () {
-        //console.log(materialCharts);
-        var chart = new CanvasJS.Chart("student", {
+    function BarchartComponent(studentdataService) {
+        this.studentdataService = studentdataService;
+        this.students = new Array();
+        this.chartConfig = {
             title: {
                 text: "Chart With Mark"
             },
             axisY: {
-                maximum: 100,
+                maximum: 100
             },
-            data: [{
+            data: [
+                {
                     type: "column",
                     dataPoints: [
-                        { y: 77, label: "ENGLISH" },
-                        { y: 70, label: "MATH" },
-                        { y: 50, label: "HINDI" },
+                        {
+                            y: 77,
+                            label: "ENGLISH"
+                        },
+                        {
+                            y: 70,
+                            label: "MATH"
+                        },
+                        {
+                            y: 50,
+                            label: "HINDI"
+                        },
                     ]
-                }]
+                }
+            ]
+        };
+    }
+    BarchartComponent.prototype.ngOnInit = function () {
+        this.students = this.studentdataService.getStudents();
+    };
+    BarchartComponent.prototype.ngAfterViewInit = function () {
+        this.currentIndex = "0";
+        this.drwaBarchart();
+    };
+    BarchartComponent.prototype.ngOnChanges = function (changes) {
+        this.drwaBarchart();
+    };
+    BarchartComponent.prototype.drwaBarchart = function () {
+        var currentData = this.students[this.currentIndex];
+        var title = 'Chart Of "';
+        //console.log(currentData);
+        var convertedData = new Array();
+        var i = 0;
+        $.each(currentData, function (key, value) {
+            var temp = {
+                y: Number(value),
+                label: key.toUpperCase()
+            };
+            if (i > 0) {
+                convertedData.push(temp);
+            }
+            else {
+                title = title + value + '" Mark';
+            }
+            i++;
         });
+        this.chartConfig.title.text = title;
+        this.chartConfig.data[0].dataPoints = convertedData;
+        // this.drwaBarchart(this.chartConfig);      
+        var chart = new CanvasJS.Chart("student", this.chartConfig);
         chart.render();
     };
     return BarchartComponent;
 }());
+__decorate([
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["p" /* Input */])(),
+    __metadata("design:type", String)
+], BarchartComponent.prototype, "currentIndex", void 0);
 BarchartComponent = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_14" /* Component */])({
         selector: 'app-barchart',
         template: __webpack_require__("../../../../../src/app/commancomponent/barchart/barchart.component.html"),
         styles: [__webpack_require__("../../../../../src/app/commancomponent/barchart/barchart.component.css")]
     }),
-    __metadata("design:paramtypes", [])
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__services_studentdata_service__["a" /* StudentdataService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__services_studentdata_service__["a" /* StudentdataService */]) === "function" && _a || Object])
 ], BarchartComponent);
 
+var _a;
 //# sourceMappingURL=barchart.component.js.map
 
 /***/ }),
@@ -386,7 +439,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/commancomponent/studentlist/studentlist.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<table class=\"table table-striped\">\n    <thead>\n        <tr>\n            <th>ID</th>\n            <th class=\"pointer\" (click)=\"sort('name')\">\n                Name\n                <i class=\"fa\" [ngClass]=\"{'fa-sort': column != 'name', \n                        'fa-sort-asc': (column == 'name' && !isDesc), \n                        'fa-sort-desc': (column == 'name' && isDesc) }\" aria-hidden=\"true\"> </i>\n\n            </th>\n            <th class=\"pointer\" (click)=\"sort('english')\">ENGLISH\n                <i class=\"fa\" [ngClass]=\"{'fa-sort': column != 'english', \n                        'fa-sort-asc': (column == 'english' && !isDesc), \n                        'fa-sort-desc': (column == 'english' && isDesc) }\" aria-hidden=\"true\"> </i>\n            </th>\n            <th class=\"pointer\" (click)=\"sort('math')\">\n                Math\n                <i class=\"fa\" [ngClass]=\"{'fa-sort': column != 'math', \n                        'fa-sort-asc': (column == 'math' && !isDesc), \n                        'fa-sort-desc': (column == 'math' && isDesc) }\" aria-hidden=\"true\"> </i>\n            </th>\n\n            <th class=\"pointer\" (click)=\"sort('hindi')\">\n                HINDI\n                <i class=\"fa\" [ngClass]=\"{'fa-sort': column != 'hindi', \n                        'fa-sort-asc': (column == 'hindi' && !isDesc), \n                        'fa-sort-desc': (column == 'hindi' && isDesc) }\" aria-hidden=\"true\"> </i>\n            </th>\n\n            <th></th>\n            <th></th>\n        </tr>\n    </thead>\n    <tbody>\n        <tr *ngFor=\"let student of students | sortinglist: {property: column, direction: direction}; let i = index\">\n            <!-- | sortinglist: {property: column, direction: direction} -->\n            <td>{{i}}</td>\n            <th scope=\"row \">{{student.name}}</th>\n            <td>{{student.english}}</td>\n            <td>{{student.math}}</td>\n            <td>{{student.hindi}}</td>\n            <td class=\"block \"><i class=\"fa fa-pencil fa-lg \"></i> </td>\n            <td class=\"block\" (click)=\"deleteReord(i)\"><i class=\"fa fa-trash fa-lg \"></i> </td>\n        </tr>\n    </tbody>\n</table>"
+module.exports = "<div class=\"panel panel-default panel-table\">\n    <div class=\"panel-heading\">\n        <div class=\"row\">\n            <div class=\"col col-xs-6\">\n                <h3 class=\"panel-title\">Total Student List {{students.length}}</h3>\n            </div>\n            <div class=\"col col-xs-6 text-right\">\n                <button type=\"button\" class=\"btn btn-sm btn-primary btn-create\" (click)=\"router.navigateByUrl('/form');\">Create New</button>\n            </div>\n        </div>\n    </div>\n\n    <table class=\"table  table-sm  table-bordered table-hover\">\n        <thead class=\"thead-inverse\">\n            <tr>\n                <th class=\"text-center\">ID</th>\n                <th class=\"pointer\" (click)=\"sort('name')\">\n                    Name\n                    <i class=\"fa\" [ngClass]=\"{'fa-sort': column != 'name', \n                        'fa-sort-asc': (column == 'name' && !isDesc), \n                        'fa-sort-desc': (column == 'name' && isDesc) }\" aria-hidden=\"true\"> </i>\n\n                </th>\n                <th class=\"pointer\" (click)=\"sort('english')\">ENGLISH\n                    <i class=\"fa\" [ngClass]=\"{'fa-sort': column != 'english', \n                        'fa-sort-asc': (column == 'english' && !isDesc), \n                        'fa-sort-desc': (column == 'english' && isDesc) }\" aria-hidden=\"true\"> </i>\n                </th>\n                <th class=\"pointer\" (click)=\"sort('math')\">\n                    Math\n                    <i class=\"fa\" [ngClass]=\"{'fa-sort': column != 'math', \n                        'fa-sort-asc': (column == 'math' && !isDesc), \n                        'fa-sort-desc': (column == 'math' && isDesc) }\" aria-hidden=\"true\"> </i>\n                </th>\n\n                <th class=\"pointer\" (click)=\"sort('hindi')\">\n                    HINDI\n                    <i class=\"fa\" [ngClass]=\"{'fa-sort': column != 'hindi', \n                        'fa-sort-asc': (column == 'hindi' && !isDesc), \n                        'fa-sort-desc': (column == 'hindi' && isDesc) }\" aria-hidden=\"true\"> </i>\n                </th>\n\n                <th></th>\n                <th></th>\n            </tr>\n        </thead>\n        <tbody>\n            <tr *ngFor=\"let student of students | sortinglist: {property: column, direction: direction}; let i = index;\">\n                <!-- | sortinglist: {property: column, direction: direction} -->\n                <td class=\"text-center\">{{i}}</td>\n                <th>{{student.name}}</th>\n                <td>{{student.english}}</td>\n                <td>{{student.math}}</td>\n                <td>{{student.hindi}}</td>\n                <td class=\"text-center\">\n\n                    <label class=\"custom-control custom-radio\">\n                        <input name=\"optionsRadios\" type=\"radio\" class=\"custom-control-input\" value=\"i\" (change)=\"createChart($event, i)\" [checked]=\" i ===0\">\n                        <span class=\"custom-control-indicator\"></span>\n                        <span class=\"custom-control-description\"></span>\n                    </label>\n\n\n\n                </td>\n                <td class=\"text-center\" (click)=\"deleteReord(i)\"><i class=\"fa fa-trash fa-lg \"></i> </td>\n            </tr>\n        </tbody>\n    </table>\n</div>"
 
 /***/ }),
 
@@ -395,7 +448,8 @@ module.exports = "<table class=\"table table-striped\">\n    <thead>\n        <t
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_studentdata_service__ = __webpack_require__("../../../../../src/app/services/studentdata.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_router__ = __webpack_require__("../../../router/@angular/router.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__services_studentdata_service__ = __webpack_require__("../../../../../src/app/services/studentdata.service.ts");
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return StudentlistComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -408,12 +462,15 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 
 
+
 var StudentlistComponent = (function () {
-    function StudentlistComponent(studentdataService) {
+    function StudentlistComponent(studentdataService, router) {
         this.studentdataService = studentdataService;
+        this.router = router;
         this.students = new Array();
         this.isDesc = false;
         this.column = 'name';
+        this.notify = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["e" /* EventEmitter */]();
     }
     StudentlistComponent.prototype.ngOnInit = function () {
         this.students = this.studentdataService.getStudents();
@@ -428,18 +485,33 @@ var StudentlistComponent = (function () {
         this.direction = this.isDesc ? 1 : -1;
     };
     ;
+    StudentlistComponent.prototype.createChart = function (evt, obj) {
+        console.log(obj);
+        this.notify.emit(obj);
+        var target = evt.target;
+        if (target.checked) {
+            //doSelected(target);    
+        }
+        else {
+            //doUnSelected(this._prevSelected)
+        }
+    };
     return StudentlistComponent;
 }());
+__decorate([
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["I" /* Output */])(),
+    __metadata("design:type", typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["e" /* EventEmitter */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["e" /* EventEmitter */]) === "function" && _a || Object)
+], StudentlistComponent.prototype, "notify", void 0);
 StudentlistComponent = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_14" /* Component */])({
         selector: 'app-studentlist',
         template: __webpack_require__("../../../../../src/app/commancomponent/studentlist/studentlist.component.html"),
         styles: [__webpack_require__("../../../../../src/app/commancomponent/studentlist/studentlist.component.css")]
     }),
-    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__services_studentdata_service__["a" /* StudentdataService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__services_studentdata_service__["a" /* StudentdataService */]) === "function" && _a || Object])
+    __metadata("design:paramtypes", [typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__services_studentdata_service__["a" /* StudentdataService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__services_studentdata_service__["a" /* StudentdataService */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* Router */]) === "function" && _c || Object])
 ], StudentlistComponent);
 
-var _a;
+var _a, _b, _c;
 //# sourceMappingURL=studentlist.component.js.map
 
 /***/ }),
@@ -691,7 +763,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/form/form.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<form novalidate #studentform=\"ngForm\" (ngSubmit)=\"postForm(studentform.value)\">\r\n    <div class=\"form-group\">\r\n        <label for=\"formGroupExampleInput\">Enter Name</label>\r\n        <input type=\"text\" class=\"form-control\" name=\"name\" #name=\"ngModel\" [(ngModel)]=\"student.name\" required>\r\n        <p *ngIf=\"name.invalid && name.dirty\"> user name is manidatory</p>\r\n    </div>\r\n\r\n    <div class=\"form-group\">\r\n        <label for=\"formGroupExampleInput2\">Enter Mark of Englsih</label>\r\n        <input type=\"text\" class=\"form-control\" name=\"English\" minlength=\"2\" maxlength=\"3\" #english=\"ngModel\" [(ngModel)]=\"student.english\" required>\r\n\r\n    </div>\r\n    <div class=\"form-group\">\r\n        <label for=\"formGroupExampleInput3\">Enter Mark of Math</label>\r\n        <input type=\"text\" class=\"form-control\" name=\"Math\" #math=\"ngModel\" [(ngModel)]=\"student.math\">\r\n    </div>\r\n\r\n    <div class=\"form-group\">\r\n        <label for=\"formGroupExampleInput3\">Enter Mark of Hindi</label>\r\n        <input type=\"text\" class=\"form-control\" name=\"Hindi\" #hindi=\"ngModel\" [(ngModel)]=\"student.hindi\">\r\n    </div>\r\n\r\n    <button type=\"submit\" class=\"btn btn-primary\">Submit</button>\r\n</form>"
+module.exports = "<form novalidate #studentform=\"ngForm\" (ngSubmit)=\"postForm(studentform.value)\">\r\n    <div class=\"form-group\" [ngClass]=\"{'has-error':!student.name.valid}\">\r\n        <label for=\"formGroupExampleInput\">Enter Name</label>\r\n        <input type=\"text\" class=\"form-control\" name=\"name\" #name=\"ngModel\" [(ngModel)]=\"student.name\" required>\r\n        <p *ngIf=\"name.invalid && name.dirty\"> user name is manidatory</p>\r\n    </div>\r\n\r\n    <div class=\"form-group\">\r\n        <label for=\"formGroupExampleInput2\">Enter Mark of Englsih</label>\r\n        <input type=\"number\" class=\"form-control\" name=\"English\" minlength=\"2\" maxlength=\"3\" #english=\"ngModel\" [(ngModel)]=\"student.english\" required>\r\n\r\n    </div>\r\n    <div class=\"form-group\">\r\n        <label for=\"formGroupExampleInput3\">Enter Mark of Math</label>\r\n        <input type=\"number\" class=\"form-control\" name=\"Math\" #math=\"ngModel\" [(ngModel)]=\"student.math\" required>\r\n    </div>\r\n\r\n    <div class=\"form-group\">\r\n        <label for=\"formGroupExampleInput3\">Enter Mark of Hindi</label>\r\n        <input type=\"number\" class=\"form-control\" name=\"Hindi\" #hindi=\"ngModel\" [(ngModel)]=\"student.hindi\" required>\r\n    </div>\r\n\r\n    <button type=\"submit\" [disabled]='!studentform.valid' class=\"btn btn-primary\">Submit</button>\r\n</form>"
 
 /***/ }),
 
@@ -700,7 +772,8 @@ module.exports = "<form novalidate #studentform=\"ngForm\" (ngSubmit)=\"postForm
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_studentdata_service__ = __webpack_require__("../../../../../src/app/services/studentdata.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_router__ = __webpack_require__("../../../router/@angular/router.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__services_studentdata_service__ = __webpack_require__("../../../../../src/app/services/studentdata.service.ts");
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return FormComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -713,9 +786,11 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 
 
+
 var FormComponent = (function () {
-    function FormComponent(studentdataService) {
+    function FormComponent(studentdataService, router) {
         this.studentdataService = studentdataService;
+        this.router = router;
         this.student = {
             name: '',
             english: '',
@@ -728,7 +803,7 @@ var FormComponent = (function () {
     };
     FormComponent.prototype.postForm = function (studentform) {
         this.studentdataService.addStudentData(this.student);
-        //alert("ssss"+ studentform.name);
+        this.router.navigateByUrl('/about');
     };
     return FormComponent;
 }());
@@ -738,10 +813,10 @@ FormComponent = __decorate([
         template: __webpack_require__("../../../../../src/app/form/form.component.html"),
         styles: [__webpack_require__("../../../../../src/app/form/form.component.css")]
     }),
-    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__services_studentdata_service__["a" /* StudentdataService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__services_studentdata_service__["a" /* StudentdataService */]) === "function" && _a || Object])
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_2__services_studentdata_service__["a" /* StudentdataService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__services_studentdata_service__["a" /* StudentdataService */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* Router */]) === "function" && _b || Object])
 ], FormComponent);
 
-var _a;
+var _a, _b;
 //# sourceMappingURL=form.component.js.map
 
 /***/ }),
