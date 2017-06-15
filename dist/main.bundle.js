@@ -66,7 +66,7 @@ var AboutComponent = (function () {
     return AboutComponent;
 }());
 AboutComponent = __decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_14" /* Component */])({
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_3" /* Component */])({
         selector: 'app-about',
         template: __webpack_require__("../../../../../src/app/about/about.component.html"),
         styles: [__webpack_require__("../../../../../src/app/about/about.component.css")]
@@ -86,7 +86,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, ".pt-3 {\r\n    padding-top: 1rem!important;\r\n}\r\n\r\n", ""]);
+exports.push([module.i, ".pt-3 {\r\n    padding-top: 1rem!important;\r\n}\r\n\r\nmain {\r\n    margin-bottom: 65px\r\n}", ""]);
 
 // exports
 
@@ -99,7 +99,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/app.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<app-headertop></app-headertop>\r\n\r\n<div class=\"container-fluid\">\r\n    <main>\r\n\r\n        <router-outlet></router-outlet>\r\n\r\n        <!--<app-form></app-form> -->\r\n    </main>\r\n</div>\r\n\r\n<app-footer-bottom></app-footer-bottom>"
+module.exports = "<app-headertop></app-headertop>\r\n\r\n<div class=\"container-fluid\">\r\n    <main>\r\n        <router-outlet></router-outlet>\r\n    </main>\r\n</div>\r\n\r\n<app-footer-bottom></app-footer-bottom>"
 
 /***/ }),
 
@@ -122,7 +122,7 @@ var AppComponent = (function () {
     return AppComponent;
 }());
 AppComponent = __decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_14" /* Component */])({
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_3" /* Component */])({
         selector: 'app-root',
         template: __webpack_require__("../../../../../src/app/app.component.html"),
         styles: [__webpack_require__("../../../../../src/app/app.component.css")]
@@ -154,12 +154,14 @@ AppComponent = __decorate([
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__angular_common__ = __webpack_require__("../../../common/@angular/common.es5.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__page_not_found_component_page_not_found_component_component__ = __webpack_require__("../../../../../src/app/page-not-found-component/page-not-found-component.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__services_studentdata_service__ = __webpack_require__("../../../../../src/app/services/studentdata.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__commancomponent_studentlist_studentlist_component__ = __webpack_require__("../../../../../src/app/commancomponent/studentlist/studentlist.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__pipe_sortinglist_pipe__ = __webpack_require__("../../../../../src/app/pipe/sortinglist.pipe.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__drag_drag_component__ = __webpack_require__("../../../../../src/app/drag/drag.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__drag_slick_carousel_component__ = __webpack_require__("../../../../../src/app/drag/slick-carousel.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_21__commancomponent_datepicker_date_picker_component__ = __webpack_require__("../../../../../src/app/commancomponent/datepicker/date-picker.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_22__commancomponent_barchart_barchart_component__ = __webpack_require__("../../../../../src/app/commancomponent/barchart/barchart.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__services_mapdata_service__ = __webpack_require__("../../../../../src/app/services/mapdata.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__commancomponent_studentlist_studentlist_component__ = __webpack_require__("../../../../../src/app/commancomponent/studentlist/studentlist.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__pipe_sortinglist_pipe__ = __webpack_require__("../../../../../src/app/pipe/sortinglist.pipe.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__drag_drag_component__ = __webpack_require__("../../../../../src/app/drag/drag.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_21__drag_slick_carousel_component__ = __webpack_require__("../../../../../src/app/drag/slick-carousel.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_22__commancomponent_datepicker_date_picker_component__ = __webpack_require__("../../../../../src/app/commancomponent/datepicker/date-picker.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_23__commancomponent_barchart_barchart_component__ = __webpack_require__("../../../../../src/app/commancomponent/barchart/barchart.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_24__agm_core__ = __webpack_require__("../../../../@agm/core/index.js");
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppModule; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -187,7 +189,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
+
 //import { MypluginDirective } from './myplugin.directive';
+
 
 
 
@@ -203,7 +207,7 @@ var routes = [
     },
     { path: 'about', component: __WEBPACK_IMPORTED_MODULE_8__about_about_component__["a" /* AboutComponent */] },
     { path: 'form', component: __WEBPACK_IMPORTED_MODULE_9__form_form_component__["a" /* FormComponent */] },
-    { path: 'jqueryui', component: __WEBPACK_IMPORTED_MODULE_19__drag_drag_component__["a" /* DragComponent */] },
+    { path: 'jqueryui', component: __WEBPACK_IMPORTED_MODULE_20__drag_drag_component__["a" /* DragComponent */] },
     { path: '**', component: __WEBPACK_IMPORTED_MODULE_15__page_not_found_component_page_not_found_component_component__["a" /* PageNotFoundComponentComponent */] }
 ];
 //MypluginDirective,
@@ -216,7 +220,7 @@ AppModule = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__angular_core__["b" /* NgModule */])({
         declarations: [
             __WEBPACK_IMPORTED_MODULE_5__app_component__["a" /* AppComponent */],
-            __WEBPACK_IMPORTED_MODULE_18__pipe_sortinglist_pipe__["a" /* SortinglistPipe */],
+            __WEBPACK_IMPORTED_MODULE_19__pipe_sortinglist_pipe__["a" /* SortinglistPipe */],
             __WEBPACK_IMPORTED_MODULE_6__headertop_headertop_component__["a" /* HeadertopComponent */],
             __WEBPACK_IMPORTED_MODULE_7__footer_bottom_footer_bottom_component__["a" /* FooterBottomComponent */],
             __WEBPACK_IMPORTED_MODULE_8__about_about_component__["a" /* AboutComponent */],
@@ -226,20 +230,23 @@ AppModule = __decorate([
             __WEBPACK_IMPORTED_MODULE_11__home_subtab_subtab1_subtab1_component__["a" /* Subtab1Component */],
             __WEBPACK_IMPORTED_MODULE_12__home_subtab_subtab2_subtab2_component__["a" /* Subtab2Component */],
             __WEBPACK_IMPORTED_MODULE_13__home_subtab_subtab3_subtab3_component__["a" /* Subtab3Component */],
-            __WEBPACK_IMPORTED_MODULE_17__commancomponent_studentlist_studentlist_component__["a" /* StudentlistComponent */],
-            __WEBPACK_IMPORTED_MODULE_19__drag_drag_component__["a" /* DragComponent */],
-            __WEBPACK_IMPORTED_MODULE_20__drag_slick_carousel_component__["a" /* SlickCarouselComponent */],
-            __WEBPACK_IMPORTED_MODULE_20__drag_slick_carousel_component__["b" /* SlickCarouselItem */],
-            __WEBPACK_IMPORTED_MODULE_21__commancomponent_datepicker_date_picker_component__["a" /* DatePicker */],
-            __WEBPACK_IMPORTED_MODULE_22__commancomponent_barchart_barchart_component__["a" /* BarchartComponent */]
+            __WEBPACK_IMPORTED_MODULE_18__commancomponent_studentlist_studentlist_component__["a" /* StudentlistComponent */],
+            __WEBPACK_IMPORTED_MODULE_20__drag_drag_component__["a" /* DragComponent */],
+            __WEBPACK_IMPORTED_MODULE_21__drag_slick_carousel_component__["a" /* SlickCarouselComponent */],
+            __WEBPACK_IMPORTED_MODULE_21__drag_slick_carousel_component__["b" /* SlickCarouselItem */],
+            __WEBPACK_IMPORTED_MODULE_22__commancomponent_datepicker_date_picker_component__["a" /* DatePicker */],
+            __WEBPACK_IMPORTED_MODULE_23__commancomponent_barchart_barchart_component__["a" /* BarchartComponent */]
         ],
         imports: [
             __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__["a" /* BrowserModule */],
             __WEBPACK_IMPORTED_MODULE_2__angular_forms__["a" /* FormsModule */],
             __WEBPACK_IMPORTED_MODULE_3__angular_http__["a" /* HttpModule */],
-            __WEBPACK_IMPORTED_MODULE_4__angular_router__["a" /* RouterModule */].forRoot(routes) // <-- installs Router routes, components and services-->
+            __WEBPACK_IMPORTED_MODULE_4__angular_router__["a" /* RouterModule */].forRoot(routes),
+            __WEBPACK_IMPORTED_MODULE_24__agm_core__["a" /* AgmCoreModule */].forRoot({
+                apiKey: 'AIzaSyCE8lSGYLtw4qX2wrUazXhmxc907Jd8vFc'
+            })
         ],
-        providers: [{ provide: __WEBPACK_IMPORTED_MODULE_14__angular_common__["a" /* LocationStrategy */], useClass: __WEBPACK_IMPORTED_MODULE_14__angular_common__["b" /* HashLocationStrategy */] }, __WEBPACK_IMPORTED_MODULE_16__services_studentdata_service__["a" /* StudentdataService */]],
+        providers: [{ provide: __WEBPACK_IMPORTED_MODULE_14__angular_common__["a" /* LocationStrategy */], useClass: __WEBPACK_IMPORTED_MODULE_14__angular_common__["b" /* HashLocationStrategy */] }, __WEBPACK_IMPORTED_MODULE_16__services_studentdata_service__["a" /* StudentdataService */], __WEBPACK_IMPORTED_MODULE_17__services_mapdata_service__["a" /* MapdataService */]],
         bootstrap: [__WEBPACK_IMPORTED_MODULE_5__app_component__["a" /* AppComponent */]],
     })
 ], AppModule);
@@ -361,11 +368,11 @@ var BarchartComponent = (function () {
     return BarchartComponent;
 }());
 __decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["p" /* Input */])(),
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["O" /* Input */])(),
     __metadata("design:type", String)
 ], BarchartComponent.prototype, "currentIndex", void 0);
 BarchartComponent = __decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_14" /* Component */])({
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_3" /* Component */])({
         selector: 'app-barchart',
         template: __webpack_require__("../../../../../src/app/commancomponent/barchart/barchart.component.html"),
         styles: [__webpack_require__("../../../../../src/app/commancomponent/barchart/barchart.component.css")]
@@ -403,11 +410,11 @@ var DatePicker = (function () {
     return DatePicker;
 }());
 __decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_15" /* ViewChild */])('input'),
-    __metadata("design:type", typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* ElementRef */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* ElementRef */]) === "function" && _a || Object)
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_17" /* ViewChild */])('input'),
+    __metadata("design:type", typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["M" /* ElementRef */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["M" /* ElementRef */]) === "function" && _a || Object)
 ], DatePicker.prototype, "input", void 0);
 DatePicker = __decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_14" /* Component */])({
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_3" /* Component */])({
         selector: 'my-datepicker',
         template: "<input #input type=\"text\">"
     })
@@ -470,7 +477,7 @@ var StudentlistComponent = (function () {
         this.students = new Array();
         this.isDesc = false;
         this.column = 'name';
-        this.notify = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["e" /* EventEmitter */]();
+        this.notify = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["F" /* EventEmitter */]();
     }
     StudentlistComponent.prototype.ngOnInit = function () {
         this.students = this.studentdataService.getStudents();
@@ -499,11 +506,11 @@ var StudentlistComponent = (function () {
     return StudentlistComponent;
 }());
 __decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["I" /* Output */])(),
-    __metadata("design:type", typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["e" /* EventEmitter */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["e" /* EventEmitter */]) === "function" && _a || Object)
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_1" /* Output */])(),
+    __metadata("design:type", typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["F" /* EventEmitter */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["F" /* EventEmitter */]) === "function" && _a || Object)
 ], StudentlistComponent.prototype, "notify", void 0);
 StudentlistComponent = __decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_14" /* Component */])({
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_3" /* Component */])({
         selector: 'app-studentlist',
         template: __webpack_require__("../../../../../src/app/commancomponent/studentlist/studentlist.component.html"),
         styles: [__webpack_require__("../../../../../src/app/commancomponent/studentlist/studentlist.component.css")]
@@ -586,7 +593,7 @@ var DragComponent = (function () {
     return DragComponent;
 }());
 DragComponent = __decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_14" /* Component */])({
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_3" /* Component */])({
         selector: 'app-drag',
         template: __webpack_require__("../../../../../src/app/drag/drag.component.html"),
         styles: [__webpack_require__("../../../../../src/app/drag/drag.component.css")],
@@ -648,11 +655,11 @@ var SlickCarouselComponent = (function () {
     return SlickCarouselComponent;
 }());
 SlickCarouselComponent = __decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_14" /* Component */])({
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_3" /* Component */])({
         selector: 'slick-carousel',
         template: "<ng-content></ng-content>"
     }),
-    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* ElementRef */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* ElementRef */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["W" /* NgZone */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["W" /* NgZone */]) === "function" && _b || Object])
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["M" /* ElementRef */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["M" /* ElementRef */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* NgZone */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* NgZone */]) === "function" && _b || Object])
 ], SlickCarouselComponent);
 
 var SlickCarouselItem = (function () {
@@ -669,11 +676,11 @@ var SlickCarouselItem = (function () {
     return SlickCarouselItem;
 }());
 SlickCarouselItem = __decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["k" /* Directive */])({
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["J" /* Directive */])({
         selector: '[slick-carousel-item]',
     }),
-    __param(1, __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["v" /* Host */])()),
-    __metadata("design:paramtypes", [typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* ElementRef */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* ElementRef */]) === "function" && _c || Object, SlickCarouselComponent])
+    __param(1, __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["T" /* Host */])()),
+    __metadata("design:paramtypes", [typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["M" /* ElementRef */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["M" /* ElementRef */]) === "function" && _c || Object, SlickCarouselComponent])
 ], SlickCarouselItem);
 
 var _a, _b, _c;
@@ -730,7 +737,7 @@ var FooterBottomComponent = (function () {
     return FooterBottomComponent;
 }());
 FooterBottomComponent = __decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_14" /* Component */])({
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_3" /* Component */])({
         selector: 'app-footer-bottom',
         template: __webpack_require__("../../../../../src/app/footer-bottom/footer-bottom.component.html"),
         styles: [__webpack_require__("../../../../../src/app/footer-bottom/footer-bottom.component.css")]
@@ -808,7 +815,7 @@ var FormComponent = (function () {
     return FormComponent;
 }());
 FormComponent = __decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_14" /* Component */])({
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_3" /* Component */])({
         selector: 'app-form',
         template: __webpack_require__("../../../../../src/app/form/form.component.html"),
         styles: [__webpack_require__("../../../../../src/app/form/form.component.css")]
@@ -877,7 +884,7 @@ var HeadertopComponent = (function () {
     return HeadertopComponent;
 }());
 HeadertopComponent = __decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_14" /* Component */])({
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_3" /* Component */])({
         selector: 'app-headertop',
         template: __webpack_require__("../../../../../src/app/headertop/headertop.component.html"),
         styles: [__webpack_require__("../../../../../src/app/headertop/headertop.component.css")]
@@ -898,7 +905,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, ".sidebar {\r\n    position: fixed;\r\n    top: 51px;\r\n    bottom: 0;\r\n    left: 0;\r\n    z-index: 0;\r\n    padding: 20px;\r\n    overflow-x: hidden;\r\n    overflow-y: auto;\r\n    border-right: 1px solid #eee;\r\n}\r\n\r\n.bg-faded {\r\n    background-color: #f7f7f7;\r\n}", ""]);
+exports.push([module.i, ".sidebar {\r\n    position: fixed;\r\n    top: 51px;\r\n    bottom: 0;\r\n    left: 0;\r\n    z-index: 0;\r\n    padding: 20px;\r\n    overflow-x: hidden;\r\n    overflow-y: auto;\r\n    border-right: 1px solid #eee;\r\n}\r\n\r\n.bg-faded {\r\n    background-color: #f7f7f7;\r\n}\r\n\r\nagm-map {\r\n    height: 300px;\r\n}", ""]);
 
 // exports
 
@@ -911,7 +918,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/home/home.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"row\">\n\n    <nav class=\"col-sm-3 col-md-2 bg-faded sidebar\">\n        <ul class=\"nav nav-pills flex-column\">\n            <li class=\"nav-item\"><a class=\"nav-link\" [routerLink]=\"['subtab1']\" routerLinkActive=\"active\">Tab 1</a></li>\n            <li class=\"nav-item\"><a class=\"nav-link\" [routerLink]=\"['subtab2']\" routerLinkActive=\"active\">Tab 2</a></li>\n            <li class=\"nav-item\"><a class=\"nav-link\" [routerLink]=\"['subtab3']\" routerLinkActive=\"active\">Tab 3</a></li>\n\n        </ul>\n    </nav>\n\n    <div class=\"col-sm-9 offset-sm-3 col-md-10 offset-md-2 pt-3\">\n\n\n\n        <div class=\"jumbotron\">\n            <h1>Welcome to my angular two demo project</h1>\n            <p>This is an example to show the potential of an offcanvas layout pattern in Bootstrap. Try some responsive-range viewport sizes to see it in action.</p>\n            <button type=\"button\" class=\"btn btn-primary\" (click)=\"navigateFormPage();\"><i class=\"fa fa-plus\"></i> Navigate to Form Page</button>\n\n\n            <div class=\"btn-group\">\n                <button type=\"button\" class=\"btn btn-danger ropdown-toggle dropdown-toggle-split\" data-toggle=\"dropdown\">{{selectListVal}}</button>\n                <button type=\"button\" class=\"btn btn-danger dropdown-toggle dropdown-toggle-split\" data-toggle=\"dropdown\" aria-expanded=\"false\">\n                    <span class=\"sr-only\">Toggle Dropdown</span>\n                </button>\n                <div class=\"dropdown-menu\">\n                    <a *ngFor=\"let list of dropeDownList\" class=\"dropdown-item\" href=\"#\" (click)=\"selectListVal = list.val\">{{list.val}}</a>\n                    <!--<div class=\"dropdown-divider\"></div>-->\n\n                </div>\n            </div>\n\n            <my-datepicker></my-datepicker>\n\n        </div>\n\n\n\n        <!-- sub tab containt loading div --->\n\n        <div class=\"tab-content\">\n            <div class=\"tab-pane active\">\n                <router-outlet></router-outlet>\n            </div>\n        </div>\n        <!-- --->\n\n    </div>\n\n</div>"
+module.exports = "<div class=\"row\">\n\n    <nav class=\"col-sm-3 col-md-2 bg-faded sidebar\">\n        <ul class=\"nav nav-pills flex-column\">\n            <li class=\"nav-item\"><a class=\"nav-link\" [routerLink]=\"['subtab1']\" routerLinkActive=\"active\">Tab 1</a></li>\n            <li class=\"nav-item\"><a class=\"nav-link\" [routerLink]=\"['subtab2']\" routerLinkActive=\"active\">Tab 2</a></li>\n            <li class=\"nav-item\"><a class=\"nav-link\" [routerLink]=\"['subtab3']\" routerLinkActive=\"active\">Tab 3</a></li>\n\n        </ul>\n    </nav>\n\n    <div class=\"col-sm-9 offset-sm-3 col-md-10 offset-md-2 pt-3\">\n        <div class=\"jumbotron\">\n            <h1>Welcome to my angular two demo project</h1>\n            <p>This is an example to show the potential of an offcanvas layout pattern in Bootstrap. Try some responsive-range viewport sizes to see it in action.</p>\n            <button type=\"button\" class=\"btn btn-primary\" (click)=\"navigateFormPage();\"><i class=\"fa fa-plus\"></i> Navigate to Form Page</button>\n\n\n            <div class=\"btn-group\">\n                <button type=\"button\" class=\"btn btn-danger ropdown-toggle dropdown-toggle-split\" data-toggle=\"dropdown\">{{selectListVal}}</button>\n                <button type=\"button\" class=\"btn btn-danger dropdown-toggle dropdown-toggle-split\" data-toggle=\"dropdown\" aria-expanded=\"false\">\n                    <span class=\"sr-only\">Toggle Dropdown</span>\n                </button>\n                <div class=\"dropdown-menu\">\n                    <a *ngFor=\"let list of dropeDownList\" class=\"dropdown-item\" href=\"#\" (click)=\"selectListVal = list.val\">{{list.val}}</a>\n                    <!--<div class=\"dropdown-divider\"></div>-->\n\n                </div>\n            </div>\n\n            <my-datepicker></my-datepicker>\n\n        </div>\n\n\n\n        <!-- sub tab containt loading div --->\n\n        <div class=\"tab-content\">\n            <div class=\"tab-pane active\">\n                <router-outlet></router-outlet>\n            </div>\n        </div>\n        <!-- --->\n\n    </div>\n\n</div>"
 
 /***/ }),
 
@@ -964,7 +971,7 @@ var HomeComponent = (function () {
     return HomeComponent;
 }());
 HomeComponent = __decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_14" /* Component */])({
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_3" /* Component */])({
         selector: 'app-home',
         template: __webpack_require__("../../../../../src/app/home/home.component.html"),
         styles: [__webpack_require__("../../../../../src/app/home/home.component.css")]
@@ -985,7 +992,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, "", ""]);
+exports.push([module.i, "agm-map {\r\n    height: 300px;\r\n}", ""]);
 
 // exports
 
@@ -998,7 +1005,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/home/subtab/subtab1/subtab1.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<h2>\r\n  subtab1 works!\r\n</h2>"
+module.exports = "<agm-map [latitude]=\"lat\" [longitude]=\"lng\" [zoom]=\"zoom\">\r\n    <!-- <agm-marker  [latitude]=\"m.lat\" [longitude]=\"m.lng\"></agm-marker> -->\r\n</agm-map>"
 
 /***/ }),
 
@@ -1007,6 +1014,7 @@ module.exports = "<h2>\r\n  subtab1 works!\r\n</h2>"
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_mapdata_service__ = __webpack_require__("../../../../../src/app/services/mapdata.service.ts");
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Subtab1Component; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -1018,22 +1026,36 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 
+
 var Subtab1Component = (function () {
-    function Subtab1Component() {
+    function Subtab1Component(_mapdataService) {
+        this._mapdataService = _mapdataService;
+        this.zoom = 5;
+        this.lat = 18.5204;
+        this.lng = 73.8567;
     }
     Subtab1Component.prototype.ngOnInit = function () {
+        var _this = this;
+        this._mapdataService.getmapData()
+            .subscribe(function (resmpaData) {
+            _this.markers = resmpaData;
+            console.log(_this.markers);
+        });
+    };
+    Subtab1Component.prototype.ngAfterViewInit = function () {
     };
     return Subtab1Component;
 }());
 Subtab1Component = __decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_14" /* Component */])({
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_3" /* Component */])({
         selector: 'app-subtab1',
         template: __webpack_require__("../../../../../src/app/home/subtab/subtab1/subtab1.component.html"),
         styles: [__webpack_require__("../../../../../src/app/home/subtab/subtab1/subtab1.component.css")]
     }),
-    __metadata("design:paramtypes", [])
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__services_mapdata_service__["a" /* MapdataService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__services_mapdata_service__["a" /* MapdataService */]) === "function" && _a || Object])
 ], Subtab1Component);
 
+var _a;
 //# sourceMappingURL=subtab1.component.js.map
 
 /***/ }),
@@ -1087,7 +1109,7 @@ var Subtab2Component = (function () {
     return Subtab2Component;
 }());
 Subtab2Component = __decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_14" /* Component */])({
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_3" /* Component */])({
         selector: 'app-subtab2',
         template: __webpack_require__("../../../../../src/app/home/subtab/subtab2/subtab2.component.html"),
         styles: [__webpack_require__("../../../../../src/app/home/subtab/subtab2/subtab2.component.css")]
@@ -1148,7 +1170,7 @@ var Subtab3Component = (function () {
     return Subtab3Component;
 }());
 Subtab3Component = __decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_14" /* Component */])({
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_3" /* Component */])({
         selector: 'app-subtab3',
         template: __webpack_require__("../../../../../src/app/home/subtab/subtab3/subtab3.component.html"),
         styles: [__webpack_require__("../../../../../src/app/home/subtab/subtab3/subtab3.component.css")]
@@ -1209,7 +1231,7 @@ var PageNotFoundComponentComponent = (function () {
     return PageNotFoundComponentComponent;
 }());
 PageNotFoundComponentComponent = __decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_14" /* Component */])({
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_3" /* Component */])({
         selector: 'app-page-not-found-component-',
         template: __webpack_require__("../../../../../src/app/page-not-found-component/page-not-found-component.component.html"),
         styles: [__webpack_require__("../../../../../src/app/page-not-found-component/page-not-found-component.component.css")]
@@ -1254,7 +1276,7 @@ var SortinglistPipe = (function () {
     return SortinglistPipe;
 }());
 SortinglistPipe = __decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["A" /* Pipe */])({
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Y" /* Pipe */])({
         name: 'sortinglist'
     })
 ], SortinglistPipe);
@@ -1279,6 +1301,50 @@ var Student = (function () {
 }());
 
 //# sourceMappingURL=Student.js.map
+
+/***/ }),
+
+/***/ "../../../../../src/app/services/mapdata.service.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__("../../../http/@angular/http.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map__ = __webpack_require__("../../../../rxjs/add/operator/map.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_catch__ = __webpack_require__("../../../../rxjs/add/operator/catch.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_catch___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_catch__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MapdataService; });
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+var MapdataService = (function () {
+    function MapdataService(_http) {
+        this._http = _http;
+        this._url = "../../assets/data/mapdata.json";
+    }
+    MapdataService.prototype.getmapData = function () {
+        return this._http.get(this._url).map(function (response) { return response.json(); });
+    };
+    return MapdataService;
+}());
+MapdataService = __decorate([
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["c" /* Injectable */])(),
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_http__["b" /* Http */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_http__["b" /* Http */]) === "function" && _a || Object])
+], MapdataService);
+
+var _a;
+//# sourceMappingURL=mapdata.service.js.map
 
 /***/ }),
 
