@@ -1,5 +1,7 @@
 https://github.com/angular/angular-cli
 
+When selecting row than bar chart is generated functionality implemented.
+Please check
 
 //angular 2 app demo url
 https://exporter-edward-62476.netlify.com/index.html#/home/subtab1
@@ -109,8 +111,68 @@ opent parent componet.ts file and add below code
 ngOnChanges(changes) {} method call when the input value is changed 
 
 
+//============================= Google Map Api ==================================
+Create googlemap api key 
+
+https://developers.google.com/maps/documentation/javascript/get-api-key?hl=en#key
 
 
+
+npm install @agm/core --save
+
+Add the belo code in app.module.js
+import { AgmCoreModule } from '@agm/core';
+
+imports :[
+AgmCoreModule.forRoot({
+      apiKey: 'YOUR_KEY'
+    })
+}
+
+}
+
+// set paramiter in our component
+https://www.youtube.com/watch?v=YzAsMYXgnHQ&list=PLDmvslp_VR0yrKVkeDmfl8KUvxrevbUey&index=3
+  lat: number = 51.678418;
+  lng: number = 7.809007;
+add the below tag
+
+<agm-map [latitude]="lat" [longitude]="lng">
+  <agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>
+</agm-map>
+
+
+//Creating service to fetch JSON data in component
+
+create map.service.ts file
+import { Injectable } from '@angular/core';
+import { Http, Response } from "@angular/http";
+import {Observable} from 'rxjs/Rx';
+@Injectable()
+export class MapdataService {
+    //studentList:Student[] = new Array<Student>();   
+    private _url: string ="../../assets/data/mapdata.json";
+    constructor(private _http:Http) { }
+    getmapData(){
+        return this._http.get(this._url)
+            .map((response:Response) => response.json());
+    }
+    
+}
+
+import service in other component
+  ngOnInit() {
+        this._mapdataService.getmapData()
+        .subscribe(resmpaData => {
+            this.markerData = resmpaData
+             console.log(this.markerData);
+        });
+       
+    }
+
+add resitraion in app.module.ts file
+import { MapdataService } from './services/mapdata.service';
+providers:[MapdataService]
 
 
 

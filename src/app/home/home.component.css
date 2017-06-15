@@ -13,3 +13,7 @@
 .bg-faded {
     background-color: #f7f7f7;
 }
+
+agm-map {
+    height: 300px;
+}

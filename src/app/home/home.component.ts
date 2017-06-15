@@ -14,6 +14,10 @@ export class HomeComponent implements OnInit, OnDestroy  {
     
     private sub: any;
     id: number;
+   
+    
+    
+    
     private dropeDownList:any[] = [ {
             id: "1",
             val:"Item 1"

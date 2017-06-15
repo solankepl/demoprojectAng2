@@ -19,6 +19,8 @@ import {LocationStrategy, HashLocationStrategy} from '@angular/common';
 import { PageNotFoundComponentComponent } from './page-not-found-component/page-not-found-component.component';
 
 import { StudentdataService } from './services/studentdata.service';
+import { MapdataService } from './services/mapdata.service';
+
 import { StudentlistComponent } from './commancomponent/studentlist/studentlist.component';
 import { SortinglistPipe } from './pipe/sortinglist.pipe';
 import { DragComponent } from './drag/drag.component';
@@ -28,6 +30,9 @@ import {SlickCarouselComponent, SlickCarouselItem} from './drag/slick-carousel.c
 
 import { DatePicker } from './commancomponent/datepicker/date-picker.component';
 import { BarchartComponent } from './commancomponent/barchart/barchart.component';
+
+import { AgmCoreModule } from '@agm/core';
+
 
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
@@ -69,9 +74,13 @@ const routes: Routes = [
     BrowserModule,
     FormsModule,
     HttpModule,
-    RouterModule.forRoot(routes) // <-- installs Router routes, components and services-->
+    RouterModule.forRoot(routes), // <-- installs Router routes, components and services-->
+    AgmCoreModule.forRoot({
+          apiKey: 'AIzaSyCE8lSGYLtw4qX2wrUazXhmxc907Jd8vFc'
+        })
+   
   ],
-  providers: [{ provide: LocationStrategy, useClass: HashLocationStrategy }, StudentdataService], 
+  providers: [{ provide: LocationStrategy, useClass: HashLocationStrategy }, StudentdataService, MapdataService], 
   bootstrap: [AppComponent],
     
 })
