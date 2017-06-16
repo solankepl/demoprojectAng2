@@ -1,7 +1,9 @@
 https://github.com/angular/angular-cli
 
-When selecting row than bar chart is generated functionality implemented.
+When selecting row than bar chart is generated functionality is implemented.
 Please check
+I am out of office for two hourse.
+IF any emergency please contact me on my cell 9890317118 
 
 //angular 2 app demo url
 https://exporter-edward-62476.netlify.com/index.html#/home/subtab1
