@@ -66,7 +66,7 @@ var AboutComponent = (function () {
     return AboutComponent;
 }());
 AboutComponent = __decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_3" /* Component */])({
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["l" /* Component */])({
         selector: 'app-about',
         template: __webpack_require__("../../../../../src/app/about/about.component.html"),
         styles: [__webpack_require__("../../../../../src/app/about/about.component.css")]
@@ -122,7 +122,7 @@ var AppComponent = (function () {
     return AppComponent;
 }());
 AppComponent = __decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_3" /* Component */])({
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["l" /* Component */])({
         selector: 'app-root',
         template: __webpack_require__("../../../../../src/app/app.component.html"),
         styles: [__webpack_require__("../../../../../src/app/app.component.css")]
@@ -158,10 +158,11 @@ AppComponent = __decorate([
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__commancomponent_studentlist_studentlist_component__ = __webpack_require__("../../../../../src/app/commancomponent/studentlist/studentlist.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__pipe_sortinglist_pipe__ = __webpack_require__("../../../../../src/app/pipe/sortinglist.pipe.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__drag_drag_component__ = __webpack_require__("../../../../../src/app/drag/drag.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_21__drag_slick_carousel_component__ = __webpack_require__("../../../../../src/app/drag/slick-carousel.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_22__commancomponent_datepicker_date_picker_component__ = __webpack_require__("../../../../../src/app/commancomponent/datepicker/date-picker.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_23__commancomponent_barchart_barchart_component__ = __webpack_require__("../../../../../src/app/commancomponent/barchart/barchart.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_24__agm_core__ = __webpack_require__("../../../../@agm/core/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_21__custumdirective_myplugin_directive__ = __webpack_require__("../../../../../src/app/custumdirective/myplugin.directive.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_22__drag_slick_carousel_component__ = __webpack_require__("../../../../../src/app/drag/slick-carousel.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_23__commancomponent_datepicker_date_picker_component__ = __webpack_require__("../../../../../src/app/commancomponent/datepicker/date-picker.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_24__commancomponent_barchart_barchart_component__ = __webpack_require__("../../../../../src/app/commancomponent/barchart/barchart.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_25__agm_core__ = __webpack_require__("../../../../@agm/core/index.js");
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppModule; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -190,7 +191,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-//import { MypluginDirective } from './myplugin.directive';
+
 
 
 
@@ -210,7 +211,6 @@ var routes = [
     { path: 'jqueryui', component: __WEBPACK_IMPORTED_MODULE_20__drag_drag_component__["a" /* DragComponent */] },
     { path: '**', component: __WEBPACK_IMPORTED_MODULE_15__page_not_found_component_page_not_found_component_component__["a" /* PageNotFoundComponentComponent */] }
 ];
-//MypluginDirective,
 var AppModule = (function () {
     function AppModule() {
     }
@@ -232,21 +232,23 @@ AppModule = __decorate([
             __WEBPACK_IMPORTED_MODULE_13__home_subtab_subtab3_subtab3_component__["a" /* Subtab3Component */],
             __WEBPACK_IMPORTED_MODULE_18__commancomponent_studentlist_studentlist_component__["a" /* StudentlistComponent */],
             __WEBPACK_IMPORTED_MODULE_20__drag_drag_component__["a" /* DragComponent */],
-            __WEBPACK_IMPORTED_MODULE_21__drag_slick_carousel_component__["a" /* SlickCarouselComponent */],
-            __WEBPACK_IMPORTED_MODULE_21__drag_slick_carousel_component__["b" /* SlickCarouselItem */],
-            __WEBPACK_IMPORTED_MODULE_22__commancomponent_datepicker_date_picker_component__["a" /* DatePicker */],
-            __WEBPACK_IMPORTED_MODULE_23__commancomponent_barchart_barchart_component__["a" /* BarchartComponent */]
+            __WEBPACK_IMPORTED_MODULE_22__drag_slick_carousel_component__["a" /* SlickCarouselComponent */],
+            __WEBPACK_IMPORTED_MODULE_22__drag_slick_carousel_component__["b" /* SlickCarouselItem */],
+            __WEBPACK_IMPORTED_MODULE_23__commancomponent_datepicker_date_picker_component__["a" /* DatePicker */],
+            __WEBPACK_IMPORTED_MODULE_24__commancomponent_barchart_barchart_component__["a" /* BarchartComponent */],
+            __WEBPACK_IMPORTED_MODULE_21__custumdirective_myplugin_directive__["a" /* MypluginDirective */]
         ],
         imports: [
             __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__["a" /* BrowserModule */],
             __WEBPACK_IMPORTED_MODULE_2__angular_forms__["a" /* FormsModule */],
             __WEBPACK_IMPORTED_MODULE_3__angular_http__["a" /* HttpModule */],
             __WEBPACK_IMPORTED_MODULE_4__angular_router__["a" /* RouterModule */].forRoot(routes),
-            __WEBPACK_IMPORTED_MODULE_24__agm_core__["a" /* AgmCoreModule */].forRoot({
+            __WEBPACK_IMPORTED_MODULE_25__agm_core__["a" /* AgmCoreModule */].forRoot({
                 apiKey: 'AIzaSyCE8lSGYLtw4qX2wrUazXhmxc907Jd8vFc'
             })
         ],
-        providers: [{ provide: __WEBPACK_IMPORTED_MODULE_14__angular_common__["a" /* LocationStrategy */], useClass: __WEBPACK_IMPORTED_MODULE_14__angular_common__["b" /* HashLocationStrategy */] }, __WEBPACK_IMPORTED_MODULE_16__services_studentdata_service__["a" /* StudentdataService */], __WEBPACK_IMPORTED_MODULE_17__services_mapdata_service__["a" /* MapdataService */]],
+        exports: [__WEBPACK_IMPORTED_MODULE_25__agm_core__["a" /* AgmCoreModule */]],
+        providers: [{ provide: __WEBPACK_IMPORTED_MODULE_14__angular_common__["a" /* LocationStrategy */], useClass: __WEBPACK_IMPORTED_MODULE_14__angular_common__["b" /* HashLocationStrategy */] }, __WEBPACK_IMPORTED_MODULE_16__services_studentdata_service__["a" /* StudentdataService */], __WEBPACK_IMPORTED_MODULE_17__services_mapdata_service__["a" /* MapdataService */], __WEBPACK_IMPORTED_MODULE_25__agm_core__["b" /* GoogleMapsAPIWrapper */]],
         bootstrap: [__WEBPACK_IMPORTED_MODULE_5__app_component__["a" /* AppComponent */]],
     })
 ], AppModule);
@@ -263,7 +265,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, ".material-charts-chart-area {\r\n    position: relative;\r\n    color: #666666;\r\n}\r\n\r\n.material-charts-hover {\r\n    position: fixed;\r\n    display: none;\r\n    background-color: #FFFFFF;\r\n    padding: 10px;\r\n    border-radius: 3px;\r\n    box-shadow: 0 12px 15px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);\r\n    z-index: 10;\r\n}\r\n\r\n\r\n/* Shadow Styles */\r\n\r\n.material-charts-shadow-1 {\r\n    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);\r\n}\r\n\r\n.material-charts-shadow-2 {\r\n    box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);\r\n}\r\n\r\n.material-charts-shadow-3 {\r\n    box-shadow: 0 12px 15px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);\r\n}\r\n\r\n.material-charts-shadow-4 {\r\n    box-shadow: 0 16px 28px 0 rgba(0, 0, 0, 0.22), 0 25px 55px 0 rgba(0, 0, 0, 0.21);\r\n}\r\n\r\n.material-charts-shadow-5 {\r\n    box-shadow: 0 27px 24px 0 rgba(0, 0, 0, 0.2), 0 40px 77px 0 rgba(0, 0, 0, 0.22);\r\n}\r\n\r\n\r\n/* Colors */\r\n\r\n.material-charts-blue {\r\n    background-color: #1976d2;\r\n}\r\n\r\n.material-charts-red {\r\n    background-color: #d32f2f;\r\n}\r\n\r\n.material-charts-green {\r\n    background-color: #388e3c;\r\n}\r\n\r\n.material-charts-yellow {\r\n    background-color: #fbc02d;\r\n}\r\n\r\n.material-charts-grey {\r\n    background-color: #616161;\r\n}\r\n\r\n.material-charts-black {\r\n    background-color: #000000;\r\n}\r\n\r\n\r\n/* Chart Text */\r\n\r\n.material-charts-chart-title {\r\n    position: absolute;\r\n    top: 5px;\r\n    left: 0;\r\n    right: 0;\r\n    text-align: center;\r\n}\r\n\r\n.material-charts-error-message {\r\n    position: absolute;\r\n    margin: auto;\r\n    top: 0;\r\n    left: 0;\r\n    right: 0;\r\n    bottom: 0;\r\n    height: 18px;\r\n    width: 200px\r\n}\r\n\r\n\r\n/* Axes */\r\n\r\n.material-charts-box-chart-y-axis {\r\n    background-color: #777777;\r\n    position: absolute;\r\n    width: 1px;\r\n    top: 35px;\r\n    left: 25px;\r\n    bottom: 25px;\r\n}\r\n\r\n.material-charts-box-chart-x-axis {\r\n    background-color: #777777;\r\n    position: absolute;\r\n    height: 1px;\r\n    right: 25px;\r\n    left: 25px;\r\n    bottom: 25px;\r\n}\r\n\r\n.material-charts-box-chart-vertical-tick {\r\n    background-color: #777777;\r\n    position: absolute;\r\n    height: 1px;\r\n    left: 20px;\r\n    width: 10px;\r\n}\r\n\r\n.material-charts-box-chart-vertical-tick-label {\r\n    position: absolute;\r\n    left: 5px;\r\n    font-size: 8px;\r\n}\r\n\r\n.material-charts-box-chart-horizontal-label {\r\n    position: absolute;\r\n    bottom: 5px;\r\n    font-size: 12px;\r\n}\r\n\r\n.material-charts-box-chart-vertical-bar {\r\n    position: absolute;\r\n    bottom: 25px;\r\n    box-shadow: 2px -2px 15px 0 rgba(0, 0, 0, 0.16), 2px -2px 15px 0 rgba(0, 0, 0, 0.12);\r\n    border-radius: 3px 3px 0 0;\r\n    /* Safari and Chrome */\r\n    /* Firefox */\r\n    /* IE 9 */\r\n    /* Opera */\r\n    transition: all 0.2s ease;\r\n}\r\n\r\n.material-charts-box-chart-vertical-bar:hover {\r\n    box-shadow: 2px -5px 30px 0 rgba(0, 0, 0, 0.24), 2px -5px 30px 0 rgba(0, 0, 0, 0.19);\r\n    /* Safari and Chrome */\r\n    /* Firefox */\r\n    /* IE 9 */\r\n    /* Opera */\r\n    transition: all 0.2s ease;\r\n    cursor: pointer;\r\n}\r\n\r\n\r\n/* Pie Chart Components */\r\n\r\n.material-charts-pie-chart {\r\n    border-radius: 50%;\r\n    position: absolute;\r\n    top: 0;\r\n    left: 0;\r\n    right: 0;\r\n    bottom: 0;\r\n    margin: auto;\r\n}\r\n\r\n.material-charts-pie-sector {\r\n    position: absolute;\r\n    height: inherit;\r\n    width: inherit;\r\n    border-radius: inherit;\r\n    /* Safari and Chrome */\r\n    /* Firefox */\r\n    /* IE 9 */\r\n    /* Opera */\r\n    transition: all 0.2s ease;\r\n}\r\n\r\n.material-charts-pie-sector:hover {\r\n    box-shadow: 2px -2px 15px 0 rgba(0, 0, 0, 0.16), 2px -2px 15px 0 rgba(0, 0, 0, 0.12);\r\n    /* Safari and Chrome */\r\n    /* Firefox */\r\n    /* IE 9 */\r\n    /* Opera */\r\n    transition: all 0.2s ease;\r\n    cursor: pointer;\r\n}", ""]);
+exports.push([module.i, "", ""]);
 
 // exports
 
@@ -368,11 +370,11 @@ var BarchartComponent = (function () {
     return BarchartComponent;
 }());
 __decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["O" /* Input */])(),
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["i" /* Input */])(),
     __metadata("design:type", String)
 ], BarchartComponent.prototype, "currentIndex", void 0);
 BarchartComponent = __decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_3" /* Component */])({
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["l" /* Component */])({
         selector: 'app-barchart',
         template: __webpack_require__("../../../../../src/app/commancomponent/barchart/barchart.component.html"),
         styles: [__webpack_require__("../../../../../src/app/commancomponent/barchart/barchart.component.css")]
@@ -411,10 +413,10 @@ var DatePicker = (function () {
 }());
 __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_17" /* ViewChild */])('input'),
-    __metadata("design:type", typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["M" /* ElementRef */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["M" /* ElementRef */]) === "function" && _a || Object)
+    __metadata("design:type", typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* ElementRef */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* ElementRef */]) === "function" && _a || Object)
 ], DatePicker.prototype, "input", void 0);
 DatePicker = __decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_3" /* Component */])({
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["l" /* Component */])({
         selector: 'my-datepicker',
         template: "<input #input type=\"text\">"
     })
@@ -446,7 +448,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/commancomponent/studentlist/studentlist.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"panel panel-default panel-table\">\n    <div class=\"panel-heading\">\n        <div class=\"row\">\n            <div class=\"col col-xs-6\">\n                <h3 class=\"panel-title\">Total Student List {{students.length}}</h3>\n            </div>\n            <div class=\"col col-xs-6 text-right\">\n                <button type=\"button\" class=\"btn btn-sm btn-primary btn-create\" (click)=\"router.navigateByUrl('/form');\">Create New</button>\n            </div>\n        </div>\n    </div>\n\n    <table class=\"table  table-sm  table-bordered table-hover\">\n        <thead class=\"thead-inverse\">\n            <tr>\n                <th class=\"text-center\">ID</th>\n                <th class=\"pointer\" (click)=\"sort('name')\">\n                    Name\n                    <i class=\"fa\" [ngClass]=\"{'fa-sort': column != 'name', \n                        'fa-sort-asc': (column == 'name' && !isDesc), \n                        'fa-sort-desc': (column == 'name' && isDesc) }\" aria-hidden=\"true\"> </i>\n\n                </th>\n                <th class=\"pointer\" (click)=\"sort('english')\">ENGLISH\n                    <i class=\"fa\" [ngClass]=\"{'fa-sort': column != 'english', \n                        'fa-sort-asc': (column == 'english' && !isDesc), \n                        'fa-sort-desc': (column == 'english' && isDesc) }\" aria-hidden=\"true\"> </i>\n                </th>\n                <th class=\"pointer\" (click)=\"sort('math')\">\n                    Math\n                    <i class=\"fa\" [ngClass]=\"{'fa-sort': column != 'math', \n                        'fa-sort-asc': (column == 'math' && !isDesc), \n                        'fa-sort-desc': (column == 'math' && isDesc) }\" aria-hidden=\"true\"> </i>\n                </th>\n\n                <th class=\"pointer\" (click)=\"sort('hindi')\">\n                    HINDI\n                    <i class=\"fa\" [ngClass]=\"{'fa-sort': column != 'hindi', \n                        'fa-sort-asc': (column == 'hindi' && !isDesc), \n                        'fa-sort-desc': (column == 'hindi' && isDesc) }\" aria-hidden=\"true\"> </i>\n                </th>\n\n                <th></th>\n                <th></th>\n            </tr>\n        </thead>\n        <tbody>\n            <tr *ngFor=\"let student of students | sortinglist: {property: column, direction: direction}; let i = index;\">\n                <!-- | sortinglist: {property: column, direction: direction} -->\n                <td class=\"text-center\">{{i}}</td>\n                <th>{{student.name}}</th>\n                <td>{{student.english}}</td>\n                <td>{{student.math}}</td>\n                <td>{{student.hindi}}</td>\n                <td class=\"text-center\">\n\n                    <label class=\"custom-control custom-radio\">\n                        <input name=\"optionsRadios\" type=\"radio\" class=\"custom-control-input\" value=\"i\" (change)=\"createChart($event, i)\" [checked]=\" i ===0\">\n                        <span class=\"custom-control-indicator\"></span>\n                        <span class=\"custom-control-description\"></span>\n                    </label>\n\n\n\n                </td>\n                <td class=\"text-center\" (click)=\"deleteReord(i)\"><i class=\"fa fa-trash fa-lg \"></i> </td>\n            </tr>\n        </tbody>\n    </table>\n</div>"
+module.exports = "<div class=\"panel panel-default panel-table\">\n    <div class=\"panel-heading\">\n        <div class=\"row\">\n            <div class=\"col col-xs-6\">\n                <h4 class=\"panel-title\">Total Student List <span class=\"badge badge-pill badge-success\"> {{students.length}} </span></h4>\n            </div>\n            <div class=\"col col-xs-6 text-right\">\n                <button type=\"button\" class=\"btn btn-sm btn-primary btn-create\" (click)=\"router.navigateByUrl('/form');\">Create New</button>\n            </div>\n        </div>\n    </div>\n\n    <table class=\"table  table-sm  table-bordered table-hover \">\n        <thead class=\"thead-inverse \">\n            <tr>\n                <th class=\"text-center\">ID</th>\n                <th class=\"pointer\" (click)=\"sort('name')\">\n                    NAME\n                    <i class=\"fa\" [ngClass]=\"{'fa-sort': column != 'name', \n                        'fa-sort-asc': (column == 'name' && !isDesc), \n                        'fa-sort-desc': (column == 'name' && isDesc) }\" aria-hidden=\"true\"> </i>\n\n                </th>\n                <th class=\"text-center pointer\" (click)=\"sort('english')\">ENGLISH\n                    <i class=\"fa\" [ngClass]=\"{'fa-sort': column != 'english', \n                        'fa-sort-asc': (column == 'english' && !isDesc), \n                        'fa-sort-desc': (column == 'english' && isDesc) }\" aria-hidden=\"true\"> </i>\n                </th>\n                <th class=\"text-center pointer\" (click)=\"sort('math')\">\n                    MATH\n                    <i class=\"fa\" [ngClass]=\"{'fa-sort': column != 'math', \n                        'fa-sort-asc': (column == 'math' && !isDesc), \n                        'fa-sort-desc': (column == 'math' && isDesc) }\" aria-hidden=\"true\"> </i>\n                </th>\n\n                <th class=\"text-center pointer\" (click)=\"sort('hindi')\">\n                    HINDI\n                    <i class=\"fa\" [ngClass]=\"{'fa-sort': column != 'hindi', \n                        'fa-sort-asc': (column == 'hindi' && !isDesc), \n                        'fa-sort-desc': (column == 'hindi' && isDesc) }\" aria-hidden=\"true\"> </i>\n                </th>\n\n                <th></th>\n                <th></th>\n            </tr>\n        </thead>\n        <tbody>\n            <tr *ngFor=\"let student of students | sortinglist: {property: column, direction: direction}; let i = index;\">\n                <!-- | sortinglist: {property: column, direction: direction} -->\n                <td class=\"text-center\">{{i}}</td>\n                <th>{{student.name}}</th>\n                <td class=\"text-center\">{{student.english}}</td>\n                <td class=\"text-center\">{{student.math}}</td>\n                <td class=\"text-center\">{{student.hindi}}</td>\n                <td class=\"text-center\">\n\n                    <label class=\"custom-control custom-radio text-center\">\n                        <input name=\"optionsRadios\" type=\"radio\" class=\"custom-control-input\" value=\"i\" (change)=\"createChart($event, i)\" [checked]=\" i ===0\">\n                        <span class=\"custom-control-indicator\"></span>\n                        <span class=\"custom-control-description\"></span>\n                    </label>\n\n\n\n                </td>\n                <td class=\"text-center\" (click)=\"deleteReord(i)\"><i class=\"fa fa-trash fa-lg \"></i> </td>\n            </tr>\n        </tbody>\n    </table>\n</div>"
 
 /***/ }),
 
@@ -477,7 +479,7 @@ var StudentlistComponent = (function () {
         this.students = new Array();
         this.isDesc = false;
         this.column = 'name';
-        this.notify = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["F" /* EventEmitter */]();
+        this.notify = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["f" /* EventEmitter */]();
     }
     StudentlistComponent.prototype.ngOnInit = function () {
         this.students = this.studentdataService.getStudents();
@@ -506,11 +508,11 @@ var StudentlistComponent = (function () {
     return StudentlistComponent;
 }());
 __decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_1" /* Output */])(),
-    __metadata("design:type", typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["F" /* EventEmitter */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["F" /* EventEmitter */]) === "function" && _a || Object)
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["j" /* Output */])(),
+    __metadata("design:type", typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["f" /* EventEmitter */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["f" /* EventEmitter */]) === "function" && _a || Object)
 ], StudentlistComponent.prototype, "notify", void 0);
 StudentlistComponent = __decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_3" /* Component */])({
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["l" /* Component */])({
         selector: 'app-studentlist',
         template: __webpack_require__("../../../../../src/app/commancomponent/studentlist/studentlist.component.html"),
         styles: [__webpack_require__("../../../../../src/app/commancomponent/studentlist/studentlist.component.css")]
@@ -520,6 +522,54 @@ StudentlistComponent = __decorate([
 
 var _a, _b, _c;
 //# sourceMappingURL=studentlist.component.js.map
+
+/***/ }),
+
+/***/ "../../../../../src/app/custumdirective/myplugin.directive.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MypluginDirective; });
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+var __param = (this && this.__param) || function (paramIndex, decorator) {
+    return function (target, key) { decorator(target, key, paramIndex); }
+};
+
+var MypluginDirective = (function () {
+    function MypluginDirective(elementRef, zone) {
+        this.zone = zone;
+        this.elementRef = elementRef;
+    }
+    MypluginDirective.prototype.ngAfterViewInit = function () {
+        console.log("in directives");
+        console.log($(this.elementRef.nativeElement));
+        $(this.elementRef.nativeElement).myFirstPlugin({
+            text: "Directive Custom",
+            defaultColor: '#FF0F0F',
+            overColor: '#FF00FF'
+        });
+    };
+    return MypluginDirective;
+}());
+MypluginDirective = __decorate([
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["g" /* Directive */])({
+        selector: '[appMyplugin]'
+    }),
+    __param(0, __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["e" /* Inject */])(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* ElementRef */])),
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* ElementRef */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* ElementRef */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["h" /* NgZone */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["h" /* NgZone */]) === "function" && _b || Object])
+], MypluginDirective);
+
+var _a, _b;
+//# sourceMappingURL=myplugin.directive.js.map
 
 /***/ }),
 
@@ -593,7 +643,7 @@ var DragComponent = (function () {
     return DragComponent;
 }());
 DragComponent = __decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_3" /* Component */])({
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["l" /* Component */])({
         selector: 'app-drag',
         template: __webpack_require__("../../../../../src/app/drag/drag.component.html"),
         styles: [__webpack_require__("../../../../../src/app/drag/drag.component.css")],
@@ -655,11 +705,11 @@ var SlickCarouselComponent = (function () {
     return SlickCarouselComponent;
 }());
 SlickCarouselComponent = __decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_3" /* Component */])({
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["l" /* Component */])({
         selector: 'slick-carousel',
         template: "<ng-content></ng-content>"
     }),
-    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["M" /* ElementRef */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["M" /* ElementRef */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* NgZone */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* NgZone */]) === "function" && _b || Object])
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* ElementRef */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* ElementRef */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["h" /* NgZone */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["h" /* NgZone */]) === "function" && _b || Object])
 ], SlickCarouselComponent);
 
 var SlickCarouselItem = (function () {
@@ -676,11 +726,11 @@ var SlickCarouselItem = (function () {
     return SlickCarouselItem;
 }());
 SlickCarouselItem = __decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["J" /* Directive */])({
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["g" /* Directive */])({
         selector: '[slick-carousel-item]',
     }),
-    __param(1, __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["T" /* Host */])()),
-    __metadata("design:paramtypes", [typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["M" /* ElementRef */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["M" /* ElementRef */]) === "function" && _c || Object, SlickCarouselComponent])
+    __param(1, __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Y" /* Host */])()),
+    __metadata("design:paramtypes", [typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* ElementRef */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* ElementRef */]) === "function" && _c || Object, SlickCarouselComponent])
 ], SlickCarouselItem);
 
 var _a, _b, _c;
@@ -737,7 +787,7 @@ var FooterBottomComponent = (function () {
     return FooterBottomComponent;
 }());
 FooterBottomComponent = __decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_3" /* Component */])({
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["l" /* Component */])({
         selector: 'app-footer-bottom',
         template: __webpack_require__("../../../../../src/app/footer-bottom/footer-bottom.component.html"),
         styles: [__webpack_require__("../../../../../src/app/footer-bottom/footer-bottom.component.css")]
@@ -815,7 +865,7 @@ var FormComponent = (function () {
     return FormComponent;
 }());
 FormComponent = __decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_3" /* Component */])({
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["l" /* Component */])({
         selector: 'app-form',
         template: __webpack_require__("../../../../../src/app/form/form.component.html"),
         styles: [__webpack_require__("../../../../../src/app/form/form.component.css")]
@@ -849,7 +899,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/headertop/headertop.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<nav class=\"navbar navbar-toggleable-md navbar-light bg-faded\">\r\n\r\n    <button class=\"navbar-toggler navbar-toggler-right\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarSupportedContent\" aria-controls=\"navbarSupportedContent\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">\r\n        <span class=\"navbar-toggler-icon\"></span>\r\n    </button>\r\n    <a class=\"navbar-brand\" href=\"#\">Angular demo Page</a>\r\n\r\n\r\n\r\n    <div class=\"collapse navbar-collapse\" id=\"navbarSupportedContent\">\r\n        <ul class=\"navbar-nav mr-auto\">\r\n            <li class=\"nav-item\">\r\n                <a class=\"nav-link\" [routerLink]=\"['home']\" routerLinkActive=\"active\">Home</a>\r\n            </li>\r\n            <li class=\"nav-item\">\r\n                <a class=\"nav-link\" [routerLink]=\"['about']\" routerLinkActive=\"active\">About</a>\r\n            </li>\r\n            <li class=\"nav-item\">\r\n                <a class=\"nav-link\" [routerLink]=\"['form']\" routerLinkActive=\"active\">Form</a>\r\n            </li>\r\n            <li class=\"nav-item\">\r\n                <a class=\"nav-link\" [routerLink]=\"['jqueryui']\" routerLinkActive=\"active\">Jquery Plugin</a>\r\n            </li>\r\n        </ul>\r\n        <form class=\"form-inline my-2 my-lg-0\" *ngIf=\"currentRoute == '/about'\">\r\n            <input class=\"form-control mr-sm-2\" type=\"text\" placeholder=\"Search\">\r\n            <button class=\"btn btn-outline-success my-2 my-sm-0\" type=\"submit\">Search</button>\r\n        </form>\r\n    </div>\r\n\r\n</nav>"
+module.exports = "<nav class=\"navbar navbar-toggleable-md navbar-light bg-faded\">\r\n\r\n    <button class=\"navbar-toggler navbar-toggler-right\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarSupportedContent\" aria-controls=\"navbarSupportedContent\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">\r\n        <span class=\"navbar-toggler-icon\"></span>\r\n    </button>\r\n    <a class=\"navbar-brand\" href=\"#\">Angular2 Demo</a>\r\n\r\n\r\n\r\n    <div class=\"collapse navbar-collapse\" id=\"navbarSupportedContent\">\r\n        <ul class=\"navbar-nav mr-auto\">\r\n            <li class=\"nav-item\">\r\n                <a class=\"nav-link\" [routerLink]=\"['home']\" routerLinkActive=\"active\">Home</a>\r\n            </li>\r\n            <li class=\"nav-item\">\r\n                <a class=\"nav-link\" [routerLink]=\"['about']\" routerLinkActive=\"active\">About</a>\r\n            </li>\r\n            <li class=\"nav-item\">\r\n                <a class=\"nav-link\" [routerLink]=\"['form']\" routerLinkActive=\"active\">Form</a>\r\n            </li>\r\n            <li class=\"nav-item\">\r\n                <a class=\"nav-link\" [routerLink]=\"['jqueryui']\" routerLinkActive=\"active\">Jquery Plugin</a>\r\n            </li>\r\n        </ul>\r\n        <form class=\"form-inline my-2 my-lg-0\" *ngIf=\"currentRoute == '/about'\">\r\n            <input class=\"form-control mr-sm-2\" type=\"text\" placeholder=\"Search\">\r\n            <button class=\"btn btn-outline-success my-2 my-sm-0\" type=\"submit\">Search</button>\r\n        </form>\r\n    </div>\r\n\r\n</nav>"
 
 /***/ }),
 
@@ -884,7 +934,7 @@ var HeadertopComponent = (function () {
     return HeadertopComponent;
 }());
 HeadertopComponent = __decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_3" /* Component */])({
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["l" /* Component */])({
         selector: 'app-headertop',
         template: __webpack_require__("../../../../../src/app/headertop/headertop.component.html"),
         styles: [__webpack_require__("../../../../../src/app/headertop/headertop.component.css")]
@@ -905,7 +955,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, ".sidebar {\r\n    position: fixed;\r\n    top: 51px;\r\n    bottom: 0;\r\n    left: 0;\r\n    z-index: 0;\r\n    padding: 20px;\r\n    overflow-x: hidden;\r\n    overflow-y: auto;\r\n    border-right: 1px solid #eee;\r\n}\r\n\r\n.bg-faded {\r\n    background-color: #f7f7f7;\r\n}\r\n\r\nagm-map {\r\n    height: 300px;\r\n}", ""]);
+exports.push([module.i, ".sidebar {\r\n    position: fixed;\r\n    top: 51px;\r\n    bottom: 0;\r\n    left: 0;\r\n    z-index: 0;\r\n    padding: 20px;\r\n    overflow-x: hidden;\r\n    overflow-y: auto;\r\n    border-right: 1px solid #eee;\r\n}\r\n\r\n.bg-faded {\r\n    background-color: #f7f7f7;\r\n}\r\n\r\n", ""]);
 
 // exports
 
@@ -918,7 +968,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/home/home.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"row\">\n\n    <nav class=\"col-sm-3 col-md-2 bg-faded sidebar\">\n        <ul class=\"nav nav-pills flex-column\">\n            <li class=\"nav-item\"><a class=\"nav-link\" [routerLink]=\"['subtab1']\" routerLinkActive=\"active\">Tab 1</a></li>\n            <li class=\"nav-item\"><a class=\"nav-link\" [routerLink]=\"['subtab2']\" routerLinkActive=\"active\">Tab 2</a></li>\n            <li class=\"nav-item\"><a class=\"nav-link\" [routerLink]=\"['subtab3']\" routerLinkActive=\"active\">Tab 3</a></li>\n\n        </ul>\n    </nav>\n\n    <div class=\"col-sm-9 offset-sm-3 col-md-10 offset-md-2 pt-3\">\n        <div class=\"jumbotron\">\n            <h1>Welcome to my angular two demo project</h1>\n            <p>This is an example to show the potential of an offcanvas layout pattern in Bootstrap. Try some responsive-range viewport sizes to see it in action.</p>\n            <button type=\"button\" class=\"btn btn-primary\" (click)=\"navigateFormPage();\"><i class=\"fa fa-plus\"></i> Navigate to Form Page</button>\n\n\n            <div class=\"btn-group\">\n                <button type=\"button\" class=\"btn btn-danger ropdown-toggle dropdown-toggle-split\" data-toggle=\"dropdown\">{{selectListVal}}</button>\n                <button type=\"button\" class=\"btn btn-danger dropdown-toggle dropdown-toggle-split\" data-toggle=\"dropdown\" aria-expanded=\"false\">\n                    <span class=\"sr-only\">Toggle Dropdown</span>\n                </button>\n                <div class=\"dropdown-menu\">\n                    <a *ngFor=\"let list of dropeDownList\" class=\"dropdown-item\" href=\"#\" (click)=\"selectListVal = list.val\">{{list.val}}</a>\n                    <!--<div class=\"dropdown-divider\"></div>-->\n\n                </div>\n            </div>\n\n            <my-datepicker></my-datepicker>\n\n        </div>\n\n\n\n        <!-- sub tab containt loading div --->\n\n        <div class=\"tab-content\">\n            <div class=\"tab-pane active\">\n                <router-outlet></router-outlet>\n            </div>\n        </div>\n        <!-- --->\n\n    </div>\n\n</div>"
+module.exports = "<div class=\"row\">\n\n    <nav class=\"col-sm-3 col-md-2 bg-faded sidebar\">\n        <ul class=\"nav nav-pills flex-column\">\n            <li class=\"nav-item\"><a class=\"nav-link\" [routerLink]=\"['subtab1']\" routerLinkActive=\"active\">Google Map</a></li>\n            <li class=\"nav-item\"><a class=\"nav-link\" [routerLink]=\"['subtab2']\" routerLinkActive=\"active\">Custom Directive </a></li>\n            <li class=\"nav-item\"><a class=\"nav-link\" [routerLink]=\"['subtab3']\" routerLinkActive=\"active\">Tab 3</a></li>\n\n        </ul>\n    </nav>\n\n    <div class=\"col-sm-9 offset-sm-3 col-md-10 offset-md-2 pt-3\">\n        <div class=\"jumbotron\">\n            <h1>Welcome to my angular two demo project</h1>\n            <p>This is an example to show the potential of an offcanvas layout pattern in Bootstrap. Try some responsive-range viewport sizes to see it in action.</p>\n            <button type=\"button\" class=\"btn btn-primary\" (click)=\"navigateFormPage();\"><i class=\"fa fa-plus\"></i> Navigate to Form Page</button>\n\n\n            <div class=\"btn-group\">\n                <button type=\"button\" class=\"btn btn-danger ropdown-toggle dropdown-toggle-split\" data-toggle=\"dropdown\">{{selectListVal}}</button>\n                <button type=\"button\" class=\"btn btn-danger dropdown-toggle dropdown-toggle-split\" data-toggle=\"dropdown\" aria-expanded=\"false\">\n                    <span class=\"sr-only\">Toggle Dropdown</span>\n                </button>\n                <div class=\"dropdown-menu\">\n                    <a *ngFor=\"let list of dropeDownList\" class=\"dropdown-item\" href=\"#\" (click)=\"selectListVal = list.val\">{{list.val}}</a>\n                    <!--<div class=\"dropdown-divider\"></div>-->\n\n                </div>\n            </div>\n\n            <my-datepicker></my-datepicker>\n\n        </div>\n\n\n\n        <!-- sub tab containt loading div --->\n\n        <div class=\"tab-content\">\n            <div class=\"tab-pane active\">\n                <router-outlet></router-outlet>\n            </div>\n        </div>\n        <!-- --->\n\n    </div>\n\n</div>"
 
 /***/ }),
 
@@ -971,7 +1021,7 @@ var HomeComponent = (function () {
     return HomeComponent;
 }());
 HomeComponent = __decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_3" /* Component */])({
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["l" /* Component */])({
         selector: 'app-home',
         template: __webpack_require__("../../../../../src/app/home/home.component.html"),
         styles: [__webpack_require__("../../../../../src/app/home/home.component.css")]
@@ -1005,7 +1055,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/home/subtab/subtab1/subtab1.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<agm-map [latitude]=\"lat\" [longitude]=\"lng\" [zoom]=\"zoom\">\r\n    <!-- <agm-marker  [latitude]=\"m.lat\" [longitude]=\"m.lng\"></agm-marker> -->\r\n</agm-map>"
+module.exports = "<!--<div>\r\n    <input id=\"address\" type=\"textbox\" value=\"Sydney, NSW\">\r\n    <input id=\"submit\" type=\"button\" value=\"Geocode\">\r\n</div> -->\r\n<agm-map [latitude]=\"lat\" [longitude]=\"lng\" [zoom]=\"zoom\" [styles]=\"styleArray\">\r\n    <!-- <agm-marker *ngFor=\"let m of markers\" [latitude]=\"m.lat\" [longitude]=\"m.lng\"></agm-marker> -->\r\n    <agm-marker *ngFor=\"let m of markers; let i = index\" (markerClick)=\"clickedMarker(m.city, i)\" [latitude]=\"m.lat\" [longitude]=\"m.lng\" [label]=\"\" [iconUrl]=\"'../../../assets/images/orangePointer.png'\">\r\n        <agm-info-window>\r\n            <strong>{{m.city}}</strong>\r\n        </agm-info-window>\r\n\r\n    </agm-marker>\r\n</agm-map>"
 
 /***/ }),
 
@@ -1030,9 +1080,306 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var Subtab1Component = (function () {
     function Subtab1Component(_mapdataService) {
         this._mapdataService = _mapdataService;
-        this.zoom = 5;
-        this.lat = 18.5204;
-        this.lng = 73.8567;
+        this.zoom = 8;
+        this.lat = 18.989089;
+        this.lng = 75.760078;
+        this.styleArray = [
+            {
+                "elementType": "geometry",
+                "stylers": [
+                    {
+                        "color": "#1d2c4d"
+                    }
+                ]
+            },
+            {
+                "elementType": "labels",
+                "stylers": [
+                    {
+                        "visibility": "off"
+                    }
+                ]
+            },
+            {
+                "elementType": "labels.text.fill",
+                "stylers": [
+                    {
+                        "color": "#8ec3b9"
+                    }
+                ]
+            },
+            {
+                "elementType": "labels.text.stroke",
+                "stylers": [
+                    {
+                        "color": "#1a3646"
+                    }
+                ]
+            },
+            {
+                "featureType": "administrative.country",
+                "elementType": "geometry.stroke",
+                "stylers": [
+                    {
+                        "color": "#4b6878"
+                    }
+                ]
+            },
+            {
+                "featureType": "administrative.land_parcel",
+                "stylers": [
+                    {
+                        "visibility": "off"
+                    }
+                ]
+            },
+            {
+                "featureType": "administrative.land_parcel",
+                "elementType": "labels.text.fill",
+                "stylers": [
+                    {
+                        "color": "#64779e"
+                    }
+                ]
+            },
+            {
+                "featureType": "administrative.neighborhood",
+                "stylers": [
+                    {
+                        "visibility": "off"
+                    }
+                ]
+            },
+            {
+                "featureType": "administrative.province",
+                "elementType": "geometry.stroke",
+                "stylers": [
+                    {
+                        "color": "#4b6878"
+                    }
+                ]
+            },
+            {
+                "featureType": "landscape.man_made",
+                "elementType": "geometry.stroke",
+                "stylers": [
+                    {
+                        "color": "#334e87"
+                    }
+                ]
+            },
+            {
+                "featureType": "landscape.natural",
+                "elementType": "geometry",
+                "stylers": [
+                    {
+                        "color": "#023e58"
+                    }
+                ]
+            },
+            {
+                "featureType": "poi",
+                "elementType": "geometry",
+                "stylers": [
+                    {
+                        "color": "#283d6a"
+                    }
+                ]
+            },
+            {
+                "featureType": "poi",
+                "elementType": "labels.text.fill",
+                "stylers": [
+                    {
+                        "color": "#6f9ba5"
+                    }
+                ]
+            },
+            {
+                "featureType": "poi",
+                "elementType": "labels.text.stroke",
+                "stylers": [
+                    {
+                        "color": "#1d2c4d"
+                    }
+                ]
+            },
+            {
+                "featureType": "poi.business",
+                "stylers": [
+                    {
+                        "visibility": "off"
+                    }
+                ]
+            },
+            {
+                "featureType": "poi.park",
+                "elementType": "geometry.fill",
+                "stylers": [
+                    {
+                        "color": "#023e58"
+                    }
+                ]
+            },
+            {
+                "featureType": "poi.park",
+                "elementType": "labels.text.fill",
+                "stylers": [
+                    {
+                        "color": "#3C7680"
+                    }
+                ]
+            },
+            {
+                "featureType": "road",
+                "stylers": [
+                    {
+                        "visibility": "off"
+                    }
+                ]
+            },
+            {
+                "featureType": "road",
+                "elementType": "geometry",
+                "stylers": [
+                    {
+                        "color": "#304a7d"
+                    }
+                ]
+            },
+            {
+                "featureType": "road",
+                "elementType": "labels.icon",
+                "stylers": [
+                    {
+                        "visibility": "off"
+                    }
+                ]
+            },
+            {
+                "featureType": "road",
+                "elementType": "labels.text.fill",
+                "stylers": [
+                    {
+                        "color": "#98a5be"
+                    }
+                ]
+            },
+            {
+                "featureType": "road",
+                "elementType": "labels.text.stroke",
+                "stylers": [
+                    {
+                        "color": "#1d2c4d"
+                    }
+                ]
+            },
+            {
+                "featureType": "road.highway",
+                "elementType": "geometry",
+                "stylers": [
+                    {
+                        "color": "#2c6675"
+                    }
+                ]
+            },
+            {
+                "featureType": "road.highway",
+                "elementType": "geometry.stroke",
+                "stylers": [
+                    {
+                        "color": "#255763"
+                    }
+                ]
+            },
+            {
+                "featureType": "road.highway",
+                "elementType": "labels.text.fill",
+                "stylers": [
+                    {
+                        "color": "#b0d5ce"
+                    }
+                ]
+            },
+            {
+                "featureType": "road.highway",
+                "elementType": "labels.text.stroke",
+                "stylers": [
+                    {
+                        "color": "#023e58"
+                    }
+                ]
+            },
+            {
+                "featureType": "transit",
+                "stylers": [
+                    {
+                        "visibility": "off"
+                    }
+                ]
+            },
+            {
+                "featureType": "transit",
+                "elementType": "labels.text.fill",
+                "stylers": [
+                    {
+                        "color": "#98a5be"
+                    }
+                ]
+            },
+            {
+                "featureType": "transit",
+                "elementType": "labels.text.stroke",
+                "stylers": [
+                    {
+                        "color": "#1d2c4d"
+                    }
+                ]
+            },
+            {
+                "featureType": "transit.line",
+                "elementType": "geometry.fill",
+                "stylers": [
+                    {
+                        "color": "#283d6a"
+                    }
+                ]
+            },
+            {
+                "featureType": "transit.station",
+                "elementType": "geometry",
+                "stylers": [
+                    {
+                        "color": "#3a4762"
+                    }
+                ]
+            },
+            {
+                "featureType": "water",
+                "elementType": "geometry",
+                "stylers": [
+                    {
+                        "color": "#0e1626"
+                    }
+                ]
+            },
+            {
+                "featureType": "water",
+                "elementType": "labels.text.fill",
+                "stylers": [
+                    {
+                        "color": "#4e6d70"
+                    }
+                ]
+            }
+        ];
+        /*
+         private _wrapper: GoogleMapsAPIWrapper
+        this._wrapper.getNativeMap().then((m) => {
+             var geocoder = new google.maps.Geocoder();
+             console.log("geocoder");
+             this.geocodeAddress(geocoder);
+         });*/
     }
     Subtab1Component.prototype.ngOnInit = function () {
         var _this = this;
@@ -1043,11 +1390,34 @@ var Subtab1Component = (function () {
         });
     };
     Subtab1Component.prototype.ngAfterViewInit = function () {
+        /*this.mapsApiLoader.init().then(() => {
+            console.log('google script loaded');
+            var geocoder = new google.maps.Geocoder();
+        });*/
+    };
+    Subtab1Component.prototype.clickedMarker = function (label, index) {
+        console.log("clicked the marker: " + (label || index));
+    };
+    Subtab1Component.prototype.geocodeAddress = function (geocoder) {
+        var address = "beed"; //document.getElementById('address').value;
+        geocoder.geocode({ 'address': address }, function (results, status) {
+            if (status === 'OK') {
+                console.log(results[0].geometry.location);
+                /*resultsMap.setCenter(results[0].geometry.location);
+                var marker = new google.maps.Marker({
+                  map: resultsMap,
+                  position: results[0].geometry.location
+                });*/
+            }
+            else {
+                alert('Geocode was not successful for the following reason: ' + status);
+            }
+        });
     };
     return Subtab1Component;
 }());
 Subtab1Component = __decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_3" /* Component */])({
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["l" /* Component */])({
         selector: 'app-subtab1',
         template: __webpack_require__("../../../../../src/app/home/subtab/subtab1/subtab1.component.html"),
         styles: [__webpack_require__("../../../../../src/app/home/subtab/subtab1/subtab1.component.css")]
@@ -1081,7 +1451,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/home/subtab/subtab2/subtab2.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<h2>\r\n  subtab2 works!\r\n</h2>"
+module.exports = "<h2 appMyplugin>\r\n  subtab2 works!\r\n</h2>"
 
 /***/ }),
 
@@ -1109,10 +1479,10 @@ var Subtab2Component = (function () {
     return Subtab2Component;
 }());
 Subtab2Component = __decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_3" /* Component */])({
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["l" /* Component */])({
         selector: 'app-subtab2',
         template: __webpack_require__("../../../../../src/app/home/subtab/subtab2/subtab2.component.html"),
-        styles: [__webpack_require__("../../../../../src/app/home/subtab/subtab2/subtab2.component.css")]
+        styles: [__webpack_require__("../../../../../src/app/home/subtab/subtab2/subtab2.component.css")],
     }),
     __metadata("design:paramtypes", [])
 ], Subtab2Component);
@@ -1170,7 +1540,7 @@ var Subtab3Component = (function () {
     return Subtab3Component;
 }());
 Subtab3Component = __decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_3" /* Component */])({
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["l" /* Component */])({
         selector: 'app-subtab3',
         template: __webpack_require__("../../../../../src/app/home/subtab/subtab3/subtab3.component.html"),
         styles: [__webpack_require__("../../../../../src/app/home/subtab/subtab3/subtab3.component.css")]
@@ -1190,7 +1560,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, "", ""]);
+exports.push([module.i, ".pageNotFound {\r\n    margin: auto;\r\n    color: brown;\r\n    font-size: 30px;\r\n    margin-top: 50px;\r\n    text-align: center;\r\n}", ""]);
 
 // exports
 
@@ -1203,7 +1573,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/page-not-found-component/page-not-found-component.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<p>\r\n  page-not-found-component- works!\r\n</p>\r\n"
+module.exports = "<p class=\"pageNotFound\">\r\n    Page Not Found!\r\n    <i class=\"fa fa-smile-o\" aria-hidden=\"true\"></i>\r\n</p>"
 
 /***/ }),
 
@@ -1231,7 +1601,7 @@ var PageNotFoundComponentComponent = (function () {
     return PageNotFoundComponentComponent;
 }());
 PageNotFoundComponentComponent = __decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_3" /* Component */])({
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["l" /* Component */])({
         selector: 'app-page-not-found-component-',
         template: __webpack_require__("../../../../../src/app/page-not-found-component/page-not-found-component.component.html"),
         styles: [__webpack_require__("../../../../../src/app/page-not-found-component/page-not-found-component.component.css")]
@@ -1276,7 +1646,7 @@ var SortinglistPipe = (function () {
     return SortinglistPipe;
 }());
 SortinglistPipe = __decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Y" /* Pipe */])({
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_3" /* Pipe */])({
         name: 'sortinglist'
     })
 ], SortinglistPipe);
@@ -1339,7 +1709,7 @@ var MapdataService = (function () {
     return MapdataService;
 }());
 MapdataService = __decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["c" /* Injectable */])(),
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["d" /* Injectable */])(),
     __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_http__["b" /* Http */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_http__["b" /* Http */]) === "function" && _a || Object])
 ], MapdataService);
 
@@ -1391,7 +1761,7 @@ var StudentdataService = (function () {
     return StudentdataService;
 }());
 StudentdataService = __decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["c" /* Injectable */])(),
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["d" /* Injectable */])(),
     __metadata("design:paramtypes", [])
 ], StudentdataService);
 
