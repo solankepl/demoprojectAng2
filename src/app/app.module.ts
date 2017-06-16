@@ -24,14 +24,14 @@ import { MapdataService } from './services/mapdata.service';
 import { StudentlistComponent } from './commancomponent/studentlist/studentlist.component';
 import { SortinglistPipe } from './pipe/sortinglist.pipe';
 import { DragComponent } from './drag/drag.component';
-//import { MypluginDirective } from './myplugin.directive';
+import { MypluginDirective } from './custumdirective/myplugin.directive';
 
 import {SlickCarouselComponent, SlickCarouselItem} from './drag/slick-carousel.component'
 
 import { DatePicker } from './commancomponent/datepicker/date-picker.component';
 import { BarchartComponent } from './commancomponent/barchart/barchart.component';
 
-import { AgmCoreModule } from '@agm/core';
+import { AgmCoreModule, GoogleMapsAPIWrapper } from '@agm/core';
 
 
 const routes: Routes = [
@@ -49,7 +49,7 @@ const routes: Routes = [
   { path: 'jqueryui', component: DragComponent },    
   { path: '**', component: PageNotFoundComponentComponent }    
 ];
-//MypluginDirective,
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -68,7 +68,8 @@ const routes: Routes = [
     SlickCarouselComponent, 
     SlickCarouselItem,
       DatePicker,
-      BarchartComponent
+      BarchartComponent,
+      MypluginDirective
   ],
   imports: [
     BrowserModule,
@@ -80,8 +81,9 @@ const routes: Routes = [
         })
    
   ],
-  providers: [{ provide: LocationStrategy, useClass: HashLocationStrategy }, StudentdataService, MapdataService], 
+  exports: [AgmCoreModule],    
+  providers: [{ provide: LocationStrategy, useClass: HashLocationStrategy }, StudentdataService, MapdataService, GoogleMapsAPIWrapper ], 
   bootstrap: [AppComponent],
     
-})
+}) 
 export class AppModule { }

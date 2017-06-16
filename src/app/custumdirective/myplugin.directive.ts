@@ -19,11 +19,11 @@ export class MypluginDirective implements AfterViewInit{
         
           console.log("in directives");
           console.log($(this.elementRef.nativeElement));
-       /*$(this.elementRef.nativeElement).myFirstPlugin({
-            text: "Directive Custum", 
-            defaultColor:'#FF0F0F' ,
-            overColor:'#FF00FF'
-        });*/
+           $(this.elementRef.nativeElement).myFirstPlugin({
+                text: "Directive Custom", 
+                defaultColor:'#FF0F0F' ,
+                overColor:'#FF00FF'
+            });
       }
    
 
