@@ -86,7 +86,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, ".pt-3 {\r\n    padding-top: 1rem!important;\r\n}\r\n\r\nmain {\r\n    margin-bottom: 65px\r\n}", ""]);
+exports.push([module.i, ".pt-3 {\r\n    padding-top: 1rem!important;\r\n}\r\n\r\nmain {\r\n    margin-bottom: 100px\r\n}", ""]);
 
 // exports
 
@@ -1055,7 +1055,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/home/subtab/subtab1/subtab1.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<!--<div>\r\n    <input id=\"address\" type=\"textbox\" value=\"Sydney, NSW\">\r\n    <input id=\"submit\" type=\"button\" value=\"Geocode\">\r\n</div> -->\r\n<agm-map [latitude]=\"lat\" [longitude]=\"lng\" [zoom]=\"zoom\" [styles]=\"styleArray\">\r\n    <!-- <agm-marker *ngFor=\"let m of markers\" [latitude]=\"m.lat\" [longitude]=\"m.lng\"></agm-marker> -->\r\n    <agm-marker *ngFor=\"let m of markers; let i = index\" (markerClick)=\"clickedMarker(m.city, i)\" [latitude]=\"m.lat\" [longitude]=\"m.lng\" [label]=\"\" [iconUrl]=\"'../../../assets/images/orangePointer.png'\">\r\n        <agm-info-window>\r\n            <strong>{{m.city}}</strong>\r\n        </agm-info-window>\r\n\r\n    </agm-marker>\r\n</agm-map>"
+module.exports = "<div class=\"row\">\r\n    <div class=\"col-lg-12 pull-right\">\r\n        <div class=\"input-group\">\r\n            <input type=\"text\" class=\"form-control\" placeholder=\"Search Location\" [(ngModel)]=\"location\">\r\n            <span class=\"input-group-btn\">\r\n        <button class=\"btn btn-secondary\" type=\"button\" (click)=\"findLocation($event)\">Go!</button>\r\n      </span>\r\n        </div>\r\n    </div>\r\n</div>\r\n\r\n\r\n\r\n<agm-map [latitude]=\"lat\" [longitude]=\"lng\" [zoom]=\"zoom\" [styles]=\"styleArray\">\r\n    <!-- <agm-marker *ngFor=\"let m of markers\" [latitude]=\"m.lat\" [longitude]=\"m.lng\"></agm-marker> -->\r\n    <agm-marker *ngFor=\"let m of markers; let i = index\" (markerClick)=\"clickedMarker(m.city, i)\" [latitude]=\"m.lat\" [longitude]=\"m.lng\" [label]=\"\" [iconUrl]=\"'../../../assets/images/orangePointer.png'\">\r\n        <agm-info-window>\r\n            <strong>{{m.city}}</strong>\r\n        </agm-info-window>\r\n\r\n    </agm-marker>\r\n</agm-map>"
 
 /***/ }),
 
@@ -1065,6 +1065,7 @@ module.exports = "<!--<div>\r\n    <input id=\"address\" type=\"textbox\" value=
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_mapdata_service__ = __webpack_require__("../../../../../src/app/services/mapdata.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__agm_core__ = __webpack_require__("../../../../@agm/core/index.js");
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Subtab1Component; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -1077,12 +1078,18 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 
 
+
 var Subtab1Component = (function () {
-    function Subtab1Component(_mapdataService) {
+    function Subtab1Component(_mapdataService, mapsAPILoader) {
         this._mapdataService = _mapdataService;
-        this.zoom = 8;
+        this.mapsAPILoader = mapsAPILoader;
+        this.zoom = 5;
         this.lat = 18.989089;
         this.lng = 75.760078;
+        //markers : Array<any>;
+        this.markers = [];
+        //markers:marker[] = [];
+        // markers =  new Array<marker>();
         this.styleArray = [
             {
                 "elementType": "geometry",
@@ -1373,41 +1380,42 @@ var Subtab1Component = (function () {
                 ]
             }
         ];
-        /*
-         private _wrapper: GoogleMapsAPIWrapper
-        this._wrapper.getNativeMap().then((m) => {
-             var geocoder = new google.maps.Geocoder();
-             console.log("geocoder");
-             this.geocodeAddress(geocoder);
-         });*/
     }
     Subtab1Component.prototype.ngOnInit = function () {
         var _this = this;
         this._mapdataService.getmapData()
             .subscribe(function (resmpaData) {
             _this.markers = resmpaData;
-            console.log(_this.markers);
+            //console.log(this.markers);
         });
     };
     Subtab1Component.prototype.ngAfterViewInit = function () {
-        /*this.mapsApiLoader.init().then(() => {
+        var _this = this;
+        this.mapsAPILoader.load().then(function () {
             console.log('google script loaded');
-            var geocoder = new google.maps.Geocoder();
-        });*/
+            _this.geocoder = new google.maps.Geocoder();
+        });
+    };
+    Subtab1Component.prototype.findLocation = function () {
+        this.geocodeAddress(this.location);
     };
     Subtab1Component.prototype.clickedMarker = function (label, index) {
         console.log("clicked the marker: " + (label || index));
     };
-    Subtab1Component.prototype.geocodeAddress = function (geocoder) {
-        var address = "beed"; //document.getElementById('address').value;
-        geocoder.geocode({ 'address': address }, function (results, status) {
+    Subtab1Component.prototype.geocodeAddress = function (address) {
+        var _self = this;
+        this.geocoder.geocode({ 'address': address }, function (results, status) {
             if (status === 'OK') {
-                console.log(results[0].geometry.location);
-                /*resultsMap.setCenter(results[0].geometry.location);
-                var marker = new google.maps.Marker({
-                  map: resultsMap,
-                  position: results[0].geometry.location
-                });*/
+                var location = results[0].geometry.location;
+                var temp = {
+                    "city": address,
+                    "lat": location.lat(),
+                    "lng": location.lng()
+                };
+                //console.log(_self.markers);
+                _self.lat = location.lat();
+                _self.lng = location.lng();
+                _self.markers.push(temp);
             }
             else {
                 alert('Geocode was not successful for the following reason: ' + status);
@@ -1420,12 +1428,13 @@ Subtab1Component = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["l" /* Component */])({
         selector: 'app-subtab1',
         template: __webpack_require__("../../../../../src/app/home/subtab/subtab1/subtab1.component.html"),
-        styles: [__webpack_require__("../../../../../src/app/home/subtab/subtab1/subtab1.component.css")]
+        styles: [__webpack_require__("../../../../../src/app/home/subtab/subtab1/subtab1.component.css")],
+        providers: [],
     }),
-    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__services_mapdata_service__["a" /* MapdataService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__services_mapdata_service__["a" /* MapdataService */]) === "function" && _a || Object])
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__services_mapdata_service__["a" /* MapdataService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__services_mapdata_service__["a" /* MapdataService */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__agm_core__["c" /* MapsAPILoader */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__agm_core__["c" /* MapsAPILoader */]) === "function" && _b || Object])
 ], Subtab1Component);
 
-var _a;
+var _a, _b;
 //# sourceMappingURL=subtab1.component.js.map
 
 /***/ }),
