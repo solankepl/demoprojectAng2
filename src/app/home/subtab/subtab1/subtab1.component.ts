@@ -1,20 +1,23 @@
 import { Component, OnInit, AfterViewInit } from '@angular/core';
 import { MapdataService } from '../../../services/mapdata.service'
-//import { AgmCoreModule, GoogleMapsAPIWrapper, MapsAPILoader  } from '@agm/core';
+import { AgmCoreModule, MapsAPILoader  } from '@agm/core';
+declare var google:any;
 
-
-
-declare var google: any;
 @Component({
     selector: 'app-subtab1',
     templateUrl: './subtab1.component.html',
-    styleUrls: ['./subtab1.component.css']
+    styleUrls: ['./subtab1.component.css'],
+    providers :[],
+    
 })
 export class Subtab1Component implements OnInit, AfterViewInit {  
-    zoom:number = 8;
+    zoom:number = 5;
     lat: number = 18.989089;
     lng: number = 75.760078;
-    markers:marker[];
+    //markers : Array<any>;
+    markers : Array<any> = [];
+    //markers:marker[] = [];
+    // markers =  new Array<marker>();
     styleArray:any[] = [
                           {
                             "elementType": "geometry",
@@ -306,50 +309,51 @@ export class Subtab1Component implements OnInit, AfterViewInit {
                           }
                         ];
 
+location: string;
+geocoder:any;
+
     
     
-    
-constructor(private _mapdataService:MapdataService, ) {        
-       /*
-        private _wrapper: GoogleMapsAPIWrapper
-       this._wrapper.getNativeMap().then((m) => {
-            var geocoder = new google.maps.Geocoder();
-            console.log("geocoder");
-            this.geocodeAddress(geocoder);
-        });*/
-    }
+constructor(private _mapdataService:MapdataService, private mapsAPILoader:MapsAPILoader) { }
 
     ngOnInit() {
         this._mapdataService.getmapData()
         .subscribe(resmpaData => {
             this.markers = resmpaData
-             console.log(this.markers);
+             //console.log(this.markers);
         });
        
     }
     
-    ngAfterViewInit(){
-   
-        /*this.mapsApiLoader.init().then(() => {
+    ngAfterViewInit(){   
+        this.mapsAPILoader.load().then(() => {
             console.log('google script loaded');
-            var geocoder = new google.maps.Geocoder();
-        });*/
+            this.geocoder = new google.maps.Geocoder();
+        });
     }
     
+    findLocation(): void {    
+        this.geocodeAddress(this.location);
+    } 
+
     clickedMarker(label: string, index: number) {
         console.log(`clicked the marker: ${label || index}`)
     }
     
-    geocodeAddress(geocoder) {
-        var address = "beed" //document.getElementById('address').value;
-        geocoder.geocode({'address': address}, function(results, status) {
+    geocodeAddress(address) { 
+        var _self = this;
+        this.geocoder.geocode({'address': address}, function(results, status) {
           if (status === 'OK') {
-            console.log(results[0].geometry.location);
-            /*resultsMap.setCenter(results[0].geometry.location);
-            var marker = new google.maps.Marker({
-              map: resultsMap,
-              position: results[0].geometry.location
-            });*/
+            var location = results[0].geometry.location;
+            var temp = {
+                "city": address,
+                "lat": location.lat(),
+                "lng": location.lng()    
+            }
+              //console.log(_self.markers);
+              _self.lat = location.lat();
+              _self.lng = location.lng();
+              _self.markers.push(temp);            
           } else {
             alert('Geocode was not successful for the following reason: ' + status);
           }

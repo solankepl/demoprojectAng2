@@ -31,7 +31,7 @@ import {SlickCarouselComponent, SlickCarouselItem} from './drag/slick-carousel.c
 import { DatePicker } from './commancomponent/datepicker/date-picker.component';
 import { BarchartComponent } from './commancomponent/barchart/barchart.component';
 
-import { AgmCoreModule, GoogleMapsAPIWrapper } from '@agm/core';
+import { AgmCoreModule, GoogleMapsAPIWrapper, MapsAPILoader } from '@agm/core';
 
 
 const routes: Routes = [

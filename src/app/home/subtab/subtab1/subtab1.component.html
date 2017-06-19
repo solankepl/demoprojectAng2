@@ -1,7 +1,16 @@
-<!--<div>
-    <input id="address" type="textbox" value="Sydney, NSW">
-    <input id="submit" type="button" value="Geocode">
-</div> -->
+<div class="row">
+    <div class="col-lg-12 pull-right">
+        <div class="input-group">
+            <input type="text" class="form-control" placeholder="Search Location" [(ngModel)]="location">
+            <span class="input-group-btn">
+        <button class="btn btn-secondary" type="button" (click)="findLocation($event)">Go!</button>
+      </span>
+        </div>
+    </div>
+</div>
+
+
+
 <agm-map [latitude]="lat" [longitude]="lng" [zoom]="zoom" [styles]="styleArray">
     <!-- <agm-marker *ngFor="let m of markers" [latitude]="m.lat" [longitude]="m.lng"></agm-marker> -->
     <agm-marker *ngFor="let m of markers; let i = index" (markerClick)="clickedMarker(m.city, i)" [latitude]="m.lat" [longitude]="m.lng" [label]="" [iconUrl]="'../../../assets/images/orangePointer.png'">
