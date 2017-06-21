@@ -1,4 +1,5 @@
 https://github.com/angular/angular-cli
+https://www.sitepoint.com/ultimate-angular-cli-reference/
 
 When selecting row than bar chart is generated functionality is implemented.
 Please check
@@ -20,9 +21,12 @@ ng update
 
 
 ng new ng-cli-test --style scss (sass project ganrated)
+ng new project_name --style less (less project ganrated)
 
 
 ng new projectFolder
+
+ng g component nav
 
 ng g component [name] generates a component
 
@@ -43,7 +47,7 @@ Module		ng g module my-module
 
 
 ng serve
-
+ng serve --port 4201
 
 
 ng build --env=prod
@@ -55,6 +59,13 @@ Refresh issue ang 2 app
 Change base url from index.html file "./index.html" 
 import file  "import {LocationStrategy, HashLocationStrategy} from '@angular/common';" in app.module ts file
 and add  providers: [{ provide: LocationStrategy, useClass: HashLocationStrategy }] this ocde in app.module ts file.
+
+//=========install bootstape
+npm install --save bootstrap@4.0.0-alpha.6 font-awesome
+import file style.css file 
+
+@import "~bootstrap/dist/css/bootstrap.min.css";
+@import "~font-awesome/css/font-awesome.css";
 
 
 install jquery ui and external laibrary
@@ -241,3 +252,4 @@ git push --force origin master //revert back chnage versiton
 
 git diff master..origin/master
 
+https://scotch.io/tutorials/creating-your-first-angular-2-components/

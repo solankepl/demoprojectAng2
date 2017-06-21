@@ -33,6 +33,10 @@ import { BarchartComponent } from './commancomponent/barchart/barchart.component
 
 import { AgmCoreModule, GoogleMapsAPIWrapper, MapsAPILoader } from '@agm/core';
 
+import { YoutubePlaylistService,HttpUtilService } from 'angular2-youtube';
+import { YoutubeplayerComponent } from './commancomponent/youtubeplayer/youtubeplayer.component';
+import { AddzeroPipe } from './pipes/addzero.pipe';
+
 
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
@@ -69,7 +73,10 @@ const routes: Routes = [
     SlickCarouselItem,
       DatePicker,
       BarchartComponent,
-      MypluginDirective
+      MypluginDirective,
+      YoutubeplayerComponent,
+      AddzeroPipe
+      
   ],
   imports: [
     BrowserModule,
@@ -82,7 +89,7 @@ const routes: Routes = [
    
   ],
   exports: [AgmCoreModule],    
-  providers: [{ provide: LocationStrategy, useClass: HashLocationStrategy }, StudentdataService, MapdataService, GoogleMapsAPIWrapper ], 
+  providers: [{ provide: LocationStrategy, useClass: HashLocationStrategy }, StudentdataService, MapdataService, GoogleMapsAPIWrapper, YoutubePlaylistService,HttpUtilService ], 
   bootstrap: [AppComponent],
     
 }) 

@@ -17,5 +17,4 @@ export class HeadertopComponent implements OnInit {
   ngOnInit() {
       
   }
-
 }
