@@ -66,7 +66,7 @@ var AboutComponent = (function () {
     return AboutComponent;
 }());
 AboutComponent = __decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["l" /* Component */])({
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["c" /* Component */])({
         selector: 'app-about',
         template: __webpack_require__("../../../../../src/app/about/about.component.html"),
         styles: [__webpack_require__("../../../../../src/app/about/about.component.css")]
@@ -122,7 +122,7 @@ var AppComponent = (function () {
     return AppComponent;
 }());
 AppComponent = __decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["l" /* Component */])({
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["c" /* Component */])({
         selector: 'app-root',
         template: __webpack_require__("../../../../../src/app/app.component.html"),
         styles: [__webpack_require__("../../../../../src/app/app.component.css")]
@@ -163,6 +163,9 @@ AppComponent = __decorate([
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_23__commancomponent_datepicker_date_picker_component__ = __webpack_require__("../../../../../src/app/commancomponent/datepicker/date-picker.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_24__commancomponent_barchart_barchart_component__ = __webpack_require__("../../../../../src/app/commancomponent/barchart/barchart.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_25__agm_core__ = __webpack_require__("../../../../@agm/core/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_26_angular2_youtube__ = __webpack_require__("../../../../angular2-youtube/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_27__commancomponent_youtubeplayer_youtubeplayer_component__ = __webpack_require__("../../../../../src/app/commancomponent/youtubeplayer/youtubeplayer.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_28__pipes_addzero_pipe__ = __webpack_require__("../../../../../src/app/pipes/addzero.pipe.ts");
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppModule; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -170,6 +173,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
+
+
 
 
 
@@ -236,7 +242,9 @@ AppModule = __decorate([
             __WEBPACK_IMPORTED_MODULE_22__drag_slick_carousel_component__["b" /* SlickCarouselItem */],
             __WEBPACK_IMPORTED_MODULE_23__commancomponent_datepicker_date_picker_component__["a" /* DatePicker */],
             __WEBPACK_IMPORTED_MODULE_24__commancomponent_barchart_barchart_component__["a" /* BarchartComponent */],
-            __WEBPACK_IMPORTED_MODULE_21__custumdirective_myplugin_directive__["a" /* MypluginDirective */]
+            __WEBPACK_IMPORTED_MODULE_21__custumdirective_myplugin_directive__["a" /* MypluginDirective */],
+            __WEBPACK_IMPORTED_MODULE_27__commancomponent_youtubeplayer_youtubeplayer_component__["a" /* YoutubeplayerComponent */],
+            __WEBPACK_IMPORTED_MODULE_28__pipes_addzero_pipe__["a" /* AddzeroPipe */]
         ],
         imports: [
             __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__["a" /* BrowserModule */],
@@ -248,7 +256,7 @@ AppModule = __decorate([
             })
         ],
         exports: [__WEBPACK_IMPORTED_MODULE_25__agm_core__["a" /* AgmCoreModule */]],
-        providers: [{ provide: __WEBPACK_IMPORTED_MODULE_14__angular_common__["a" /* LocationStrategy */], useClass: __WEBPACK_IMPORTED_MODULE_14__angular_common__["b" /* HashLocationStrategy */] }, __WEBPACK_IMPORTED_MODULE_16__services_studentdata_service__["a" /* StudentdataService */], __WEBPACK_IMPORTED_MODULE_17__services_mapdata_service__["a" /* MapdataService */], __WEBPACK_IMPORTED_MODULE_25__agm_core__["b" /* GoogleMapsAPIWrapper */]],
+        providers: [{ provide: __WEBPACK_IMPORTED_MODULE_14__angular_common__["a" /* LocationStrategy */], useClass: __WEBPACK_IMPORTED_MODULE_14__angular_common__["b" /* HashLocationStrategy */] }, __WEBPACK_IMPORTED_MODULE_16__services_studentdata_service__["a" /* StudentdataService */], __WEBPACK_IMPORTED_MODULE_17__services_mapdata_service__["a" /* MapdataService */], __WEBPACK_IMPORTED_MODULE_25__agm_core__["b" /* GoogleMapsAPIWrapper */], __WEBPACK_IMPORTED_MODULE_26_angular2_youtube__["a" /* YoutubePlaylistService */], __WEBPACK_IMPORTED_MODULE_26_angular2_youtube__["b" /* HttpUtilService */]],
         bootstrap: [__WEBPACK_IMPORTED_MODULE_5__app_component__["a" /* AppComponent */]],
     })
 ], AppModule);
@@ -370,11 +378,11 @@ var BarchartComponent = (function () {
     return BarchartComponent;
 }());
 __decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["i" /* Input */])(),
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["r" /* Input */])(),
     __metadata("design:type", String)
 ], BarchartComponent.prototype, "currentIndex", void 0);
 BarchartComponent = __decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["l" /* Component */])({
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["c" /* Component */])({
         selector: 'app-barchart',
         template: __webpack_require__("../../../../../src/app/commancomponent/barchart/barchart.component.html"),
         styles: [__webpack_require__("../../../../../src/app/commancomponent/barchart/barchart.component.css")]
@@ -413,10 +421,10 @@ var DatePicker = (function () {
 }());
 __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_17" /* ViewChild */])('input'),
-    __metadata("design:type", typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* ElementRef */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* ElementRef */]) === "function" && _a || Object)
+    __metadata("design:type", typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["e" /* ElementRef */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["e" /* ElementRef */]) === "function" && _a || Object)
 ], DatePicker.prototype, "input", void 0);
 DatePicker = __decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["l" /* Component */])({
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["c" /* Component */])({
         selector: 'my-datepicker',
         template: "<input #input type=\"text\">"
     })
@@ -479,7 +487,7 @@ var StudentlistComponent = (function () {
         this.students = new Array();
         this.isDesc = false;
         this.column = 'name';
-        this.notify = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["f" /* EventEmitter */]();
+        this.notify = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["i" /* EventEmitter */]();
     }
     StudentlistComponent.prototype.ngOnInit = function () {
         this.students = this.studentdataService.getStudents();
@@ -508,11 +516,11 @@ var StudentlistComponent = (function () {
     return StudentlistComponent;
 }());
 __decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["j" /* Output */])(),
-    __metadata("design:type", typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["f" /* EventEmitter */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["f" /* EventEmitter */]) === "function" && _a || Object)
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_2" /* Output */])(),
+    __metadata("design:type", typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["i" /* EventEmitter */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["i" /* EventEmitter */]) === "function" && _a || Object)
 ], StudentlistComponent.prototype, "notify", void 0);
 StudentlistComponent = __decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["l" /* Component */])({
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["c" /* Component */])({
         selector: 'app-studentlist',
         template: __webpack_require__("../../../../../src/app/commancomponent/studentlist/studentlist.component.html"),
         styles: [__webpack_require__("../../../../../src/app/commancomponent/studentlist/studentlist.component.css")]
@@ -522,6 +530,67 @@ StudentlistComponent = __decorate([
 
 var _a, _b, _c;
 //# sourceMappingURL=studentlist.component.js.map
+
+/***/ }),
+
+/***/ "../../../../../src/app/commancomponent/youtubeplayer/youtubeplayer.component.css":
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, "", ""]);
+
+// exports
+
+
+/*** EXPORTS FROM exports-loader ***/
+module.exports = module.exports.toString();
+
+/***/ }),
+
+/***/ "../../../../../src/app/commancomponent/youtubeplayer/youtubeplayer.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "<p>\n  youtubeplayer works!\n</p>\n"
+
+/***/ }),
+
+/***/ "../../../../../src/app/commancomponent/youtubeplayer/youtubeplayer.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return YoutubeplayerComponent; });
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+var YoutubeplayerComponent = (function () {
+    function YoutubeplayerComponent() {
+    }
+    YoutubeplayerComponent.prototype.ngOnInit = function () {
+    };
+    return YoutubeplayerComponent;
+}());
+YoutubeplayerComponent = __decorate([
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["c" /* Component */])({
+        selector: 'app-youtubeplayer',
+        template: __webpack_require__("../../../../../src/app/commancomponent/youtubeplayer/youtubeplayer.component.html"),
+        styles: [__webpack_require__("../../../../../src/app/commancomponent/youtubeplayer/youtubeplayer.component.css")]
+    }),
+    __metadata("design:paramtypes", [])
+], YoutubeplayerComponent);
+
+//# sourceMappingURL=youtubeplayer.component.js.map
 
 /***/ }),
 
@@ -561,11 +630,11 @@ var MypluginDirective = (function () {
     return MypluginDirective;
 }());
 MypluginDirective = __decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["g" /* Directive */])({
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["d" /* Directive */])({
         selector: '[appMyplugin]'
     }),
-    __param(0, __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["e" /* Inject */])(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* ElementRef */])),
-    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* ElementRef */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* ElementRef */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["h" /* NgZone */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["h" /* NgZone */]) === "function" && _b || Object])
+    __param(0, __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["k" /* Inject */])(__WEBPACK_IMPORTED_MODULE_0__angular_core__["e" /* ElementRef */])),
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["e" /* ElementRef */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["e" /* ElementRef */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["K" /* NgZone */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["K" /* NgZone */]) === "function" && _b || Object])
 ], MypluginDirective);
 
 var _a, _b;
@@ -643,7 +712,7 @@ var DragComponent = (function () {
     return DragComponent;
 }());
 DragComponent = __decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["l" /* Component */])({
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["c" /* Component */])({
         selector: 'app-drag',
         template: __webpack_require__("../../../../../src/app/drag/drag.component.html"),
         styles: [__webpack_require__("../../../../../src/app/drag/drag.component.css")],
@@ -705,11 +774,11 @@ var SlickCarouselComponent = (function () {
     return SlickCarouselComponent;
 }());
 SlickCarouselComponent = __decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["l" /* Component */])({
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["c" /* Component */])({
         selector: 'slick-carousel',
         template: "<ng-content></ng-content>"
     }),
-    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* ElementRef */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* ElementRef */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["h" /* NgZone */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["h" /* NgZone */]) === "function" && _b || Object])
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["e" /* ElementRef */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["e" /* ElementRef */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["K" /* NgZone */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["K" /* NgZone */]) === "function" && _b || Object])
 ], SlickCarouselComponent);
 
 var SlickCarouselItem = (function () {
@@ -726,11 +795,11 @@ var SlickCarouselItem = (function () {
     return SlickCarouselItem;
 }());
 SlickCarouselItem = __decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["g" /* Directive */])({
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["d" /* Directive */])({
         selector: '[slick-carousel-item]',
     }),
-    __param(1, __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Y" /* Host */])()),
-    __metadata("design:paramtypes", [typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* ElementRef */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* ElementRef */]) === "function" && _c || Object, SlickCarouselComponent])
+    __param(1, __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["x" /* Host */])()),
+    __metadata("design:paramtypes", [typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["e" /* ElementRef */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["e" /* ElementRef */]) === "function" && _c || Object, SlickCarouselComponent])
 ], SlickCarouselItem);
 
 var _a, _b, _c;
@@ -787,7 +856,7 @@ var FooterBottomComponent = (function () {
     return FooterBottomComponent;
 }());
 FooterBottomComponent = __decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["l" /* Component */])({
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["c" /* Component */])({
         selector: 'app-footer-bottom',
         template: __webpack_require__("../../../../../src/app/footer-bottom/footer-bottom.component.html"),
         styles: [__webpack_require__("../../../../../src/app/footer-bottom/footer-bottom.component.css")]
@@ -865,7 +934,7 @@ var FormComponent = (function () {
     return FormComponent;
 }());
 FormComponent = __decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["l" /* Component */])({
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["c" /* Component */])({
         selector: 'app-form',
         template: __webpack_require__("../../../../../src/app/form/form.component.html"),
         styles: [__webpack_require__("../../../../../src/app/form/form.component.css")]
@@ -934,7 +1003,7 @@ var HeadertopComponent = (function () {
     return HeadertopComponent;
 }());
 HeadertopComponent = __decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["l" /* Component */])({
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["c" /* Component */])({
         selector: 'app-headertop',
         template: __webpack_require__("../../../../../src/app/headertop/headertop.component.html"),
         styles: [__webpack_require__("../../../../../src/app/headertop/headertop.component.css")]
@@ -968,7 +1037,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/home/home.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"row\">\n\n    <nav class=\"col-sm-3 col-md-2 bg-faded sidebar\">\n        <ul class=\"nav nav-pills flex-column\">\n            <li class=\"nav-item\"><a class=\"nav-link\" [routerLink]=\"['subtab1']\" routerLinkActive=\"active\">Google Map</a></li>\n            <li class=\"nav-item\"><a class=\"nav-link\" [routerLink]=\"['subtab2']\" routerLinkActive=\"active\">Custom Directive </a></li>\n            <li class=\"nav-item\"><a class=\"nav-link\" [routerLink]=\"['subtab3']\" routerLinkActive=\"active\">Tab 3</a></li>\n\n        </ul>\n    </nav>\n\n    <div class=\"col-sm-9 offset-sm-3 col-md-10 offset-md-2 pt-3\">\n        <div class=\"jumbotron\">\n            <h1>Welcome to my angular two demo project</h1>\n            <p>This is an example to show the potential of an offcanvas layout pattern in Bootstrap. Try some responsive-range viewport sizes to see it in action.</p>\n            <button type=\"button\" class=\"btn btn-primary\" (click)=\"navigateFormPage();\"><i class=\"fa fa-plus\"></i> Navigate to Form Page</button>\n\n\n            <div class=\"btn-group\">\n                <button type=\"button\" class=\"btn btn-danger ropdown-toggle dropdown-toggle-split\" data-toggle=\"dropdown\">{{selectListVal}}</button>\n                <button type=\"button\" class=\"btn btn-danger dropdown-toggle dropdown-toggle-split\" data-toggle=\"dropdown\" aria-expanded=\"false\">\n                    <span class=\"sr-only\">Toggle Dropdown</span>\n                </button>\n                <div class=\"dropdown-menu\">\n                    <a *ngFor=\"let list of dropeDownList\" class=\"dropdown-item\" href=\"#\" (click)=\"selectListVal = list.val\">{{list.val}}</a>\n                    <!--<div class=\"dropdown-divider\"></div>-->\n\n                </div>\n            </div>\n\n            <my-datepicker></my-datepicker>\n\n        </div>\n\n\n\n        <!-- sub tab containt loading div --->\n\n        <div class=\"tab-content\">\n            <div class=\"tab-pane active\">\n                <router-outlet></router-outlet>\n            </div>\n        </div>\n        <!-- --->\n\n    </div>\n\n</div>"
+module.exports = "<div class=\"row\">\n\n    <nav class=\"col-sm-3 col-md-2 bg-faded sidebar\">\n        <ul class=\"nav nav-pills flex-column\">\n            <li class=\"nav-item\"><a class=\"nav-link\" [routerLink]=\"['subtab1']\" routerLinkActive=\"active\">Google Map</a></li>\n            <li class=\"nav-item\"><a class=\"nav-link\" [routerLink]=\"['subtab2']\" routerLinkActive=\"active\">Custom Directive </a></li>\n            <li class=\"nav-item\"><a class=\"nav-link\" [routerLink]=\"['subtab3']\" routerLinkActive=\"active\">Custom Pipe</a></li>\n\n        </ul>\n    </nav>\n\n    <div class=\"col-sm-9 offset-sm-3 col-md-10 offset-md-2 pt-3\">\n        <div class=\"jumbotron\">\n            <h1>Welcome to my angular two demo project</h1>\n            <p>This is an example to show the potential of an offcanvas layout pattern in Bootstrap. Try some responsive-range viewport sizes to see it in action.</p>\n            <button type=\"button\" class=\"btn btn-primary\" (click)=\"navigateFormPage();\"><i class=\"fa fa-plus\"></i> Navigate to Form Page</button>\n\n\n            <div class=\"btn-group\">\n                <button type=\"button\" class=\"btn btn-danger ropdown-toggle dropdown-toggle-split\" data-toggle=\"dropdown\">{{selectListVal}}</button>\n                <button type=\"button\" class=\"btn btn-danger dropdown-toggle dropdown-toggle-split\" data-toggle=\"dropdown\" aria-expanded=\"false\">\n                    <span class=\"sr-only\">Toggle Dropdown</span>\n                </button>\n                <div class=\"dropdown-menu\">\n                    <a *ngFor=\"let list of dropeDownList\" class=\"dropdown-item\" href=\"#\" (click)=\"selectListVal = list.val\">{{list.val}}</a>\n                    <!--<div class=\"dropdown-divider\"></div>-->\n\n                </div>\n            </div>\n\n            <my-datepicker></my-datepicker>\n\n        </div>\n\n\n\n        <!-- sub tab containt loading div --->\n\n        <div class=\"tab-content\">\n            <div class=\"tab-pane active\">\n                <router-outlet></router-outlet>\n            </div>\n        </div>\n        <!-- --->\n\n    </div>\n\n</div>"
 
 /***/ }),
 
@@ -1021,7 +1090,7 @@ var HomeComponent = (function () {
     return HomeComponent;
 }());
 HomeComponent = __decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["l" /* Component */])({
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["c" /* Component */])({
         selector: 'app-home',
         template: __webpack_require__("../../../../../src/app/home/home.component.html"),
         styles: [__webpack_require__("../../../../../src/app/home/home.component.css")]
@@ -1042,7 +1111,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, "agm-map {\r\n    height: 300px;\r\n}", ""]);
+exports.push([module.i, "agm-map {\r\n    height: 300px;\r\n}\r\n\r\n.locationTxt {\r\n    z-index: 1;\r\n}", ""]);
 
 // exports
 
@@ -1055,7 +1124,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/home/subtab/subtab1/subtab1.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"row\">\r\n    <div class=\"col-lg-12 pull-right\">\r\n        <div class=\"input-group\">\r\n            <input type=\"text\" class=\"form-control\" placeholder=\"Search Location\" [(ngModel)]=\"location\">\r\n            <span class=\"input-group-btn\">\r\n        <button class=\"btn btn-secondary\" type=\"button\" (click)=\"findLocation($event)\">Go!</button>\r\n      </span>\r\n        </div>\r\n    </div>\r\n</div>\r\n\r\n\r\n\r\n<agm-map [latitude]=\"lat\" [longitude]=\"lng\" [zoom]=\"zoom\" [styles]=\"styleArray\">\r\n    <!-- <agm-marker *ngFor=\"let m of markers\" [latitude]=\"m.lat\" [longitude]=\"m.lng\"></agm-marker> -->\r\n    <agm-marker *ngFor=\"let m of markers; let i = index\" (markerClick)=\"clickedMarker(m.city, i)\" [latitude]=\"m.lat\" [longitude]=\"m.lng\" [label]=\"\" [iconUrl]=\"'../../../assets/images/orangePointer.png'\">\r\n        <agm-info-window>\r\n            <strong>{{m.city}}</strong>\r\n        </agm-info-window>\r\n\r\n    </agm-marker>\r\n</agm-map>"
+module.exports = "<div class=\"row\">\r\n    <div class=\"col-lg-12 pull-right\">\r\n        <div class=\"input-group\">\r\n            <input type=\"text\" class=\"form-control locationTxt\" placeholder=\"Search Location\" [(ngModel)]=\"location\">\r\n            <span class=\"input-group-btn\">\r\n        <button class=\"btn btn-secondary\" type=\"button\" (click)=\"findLocation($event)\">Go!</button>\r\n      </span>\r\n        </div>\r\n    </div>\r\n</div>\r\n\r\n\r\n\r\n<agm-map [latitude]=\"lat\" [longitude]=\"lng\" [zoom]=\"zoom\" [styles]=\"styleArray\">\r\n    <!-- <agm-marker *ngFor=\"let m of markers\" [latitude]=\"m.lat\" [longitude]=\"m.lng\"></agm-marker> -->\r\n    <agm-marker *ngFor=\"let m of markers; let i = index\" (markerClick)=\"clickedMarker(m.city, i)\" [latitude]=\"m.lat\" [longitude]=\"m.lng\" [label]=\"\" [iconUrl]=\"'../../../assets/images/orangePointer.png'\">\r\n        <agm-info-window>\r\n            <strong>{{m.city}}</strong>\r\n        </agm-info-window>\r\n\r\n    </agm-marker>\r\n</agm-map>"
 
 /***/ }),
 
@@ -1425,7 +1494,7 @@ var Subtab1Component = (function () {
     return Subtab1Component;
 }());
 Subtab1Component = __decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["l" /* Component */])({
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["c" /* Component */])({
         selector: 'app-subtab1',
         template: __webpack_require__("../../../../../src/app/home/subtab/subtab1/subtab1.component.html"),
         styles: [__webpack_require__("../../../../../src/app/home/subtab/subtab1/subtab1.component.css")],
@@ -1488,7 +1557,7 @@ var Subtab2Component = (function () {
     return Subtab2Component;
 }());
 Subtab2Component = __decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["l" /* Component */])({
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["c" /* Component */])({
         selector: 'app-subtab2',
         template: __webpack_require__("../../../../../src/app/home/subtab/subtab2/subtab2.component.html"),
         styles: [__webpack_require__("../../../../../src/app/home/subtab/subtab2/subtab2.component.css")],
@@ -1521,7 +1590,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/home/subtab/subtab3/subtab3.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<h2>\r\n  subtab3 works!\r\n</h2>"
+module.exports = "<h2>\r\n  $ {{ 5 | addzero:5 }}\r\n</h2>"
 
 /***/ }),
 
@@ -1549,7 +1618,7 @@ var Subtab3Component = (function () {
     return Subtab3Component;
 }());
 Subtab3Component = __decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["l" /* Component */])({
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["c" /* Component */])({
         selector: 'app-subtab3',
         template: __webpack_require__("../../../../../src/app/home/subtab/subtab3/subtab3.component.html"),
         styles: [__webpack_require__("../../../../../src/app/home/subtab/subtab3/subtab3.component.css")]
@@ -1610,7 +1679,7 @@ var PageNotFoundComponentComponent = (function () {
     return PageNotFoundComponentComponent;
 }());
 PageNotFoundComponentComponent = __decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["l" /* Component */])({
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["c" /* Component */])({
         selector: 'app-page-not-found-component-',
         template: __webpack_require__("../../../../../src/app/page-not-found-component/page-not-found-component.component.html"),
         styles: [__webpack_require__("../../../../../src/app/page-not-found-component/page-not-found-component.component.css")]
@@ -1655,12 +1724,44 @@ var SortinglistPipe = (function () {
     return SortinglistPipe;
 }());
 SortinglistPipe = __decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_3" /* Pipe */])({
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["f" /* Pipe */])({
         name: 'sortinglist'
     })
 ], SortinglistPipe);
 
 //# sourceMappingURL=sortinglist.pipe.js.map
+
+/***/ }),
+
+/***/ "../../../../../src/app/pipes/addzero.pipe.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AddzeroPipe; });
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+var AddzeroPipe = (function () {
+    function AddzeroPipe() {
+    }
+    AddzeroPipe.prototype.transform = function (value, args) {
+        var addDigit = parseFloat(args);
+        return value.toFixed(addDigit);
+    };
+    return AddzeroPipe;
+}());
+AddzeroPipe = __decorate([
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["f" /* Pipe */])({
+        name: 'addzero'
+    })
+], AddzeroPipe);
+
+//# sourceMappingURL=addzero.pipe.js.map
 
 /***/ }),
 
@@ -1718,8 +1819,8 @@ var MapdataService = (function () {
     return MapdataService;
 }());
 MapdataService = __decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["d" /* Injectable */])(),
-    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_http__["b" /* Http */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_http__["b" /* Http */]) === "function" && _a || Object])
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["g" /* Injectable */])(),
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_http__["d" /* Http */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_http__["d" /* Http */]) === "function" && _a || Object])
 ], MapdataService);
 
 var _a;
@@ -1770,7 +1871,7 @@ var StudentdataService = (function () {
     return StudentdataService;
 }());
 StudentdataService = __decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["d" /* Injectable */])(),
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["g" /* Injectable */])(),
     __metadata("design:paramtypes", [])
 ], StudentdataService);
 
