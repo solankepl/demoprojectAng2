@@ -1,4 +1,4 @@
-import { Component, OnInit, OnDestroy } from '@angular/core';
+import { Component, OnInit, OnDestroy, AfterViewInit } from '@angular/core';
 import { ActivatedRoute, Router} from '@angular/router';
 declare var $: any;
 
@@ -10,11 +10,11 @@ import { DatePicker } from '../commancomponent/datepicker/date-picker.component'
     templateUrl: './home.component.html',    
     styleUrls: ['./home.component.css']
 })
-export class HomeComponent implements OnInit, OnDestroy  {
+export class HomeComponent implements OnInit, OnDestroy, AfterViewInit  {
     
     private sub: any;
-    id: number;
-   
+    private id: number;
+    private currentTab:any; 
     
     
     
@@ -30,21 +30,30 @@ export class HomeComponent implements OnInit, OnDestroy  {
     
     private selectListVal:string; 
     
-    constructor(private router: Router, private route: ActivatedRoute) { }
-    ngOnInit() {
-       this.sub = this.route.params.subscribe(params => {
-       this.id = +params['id']; // (+) converts string 'id' to a number
-       this.selectListVal = this.dropeDownList[0].val;
-       console.log(this.selectListVal);   
-    });
+    constructor(private router: Router, private route: ActivatedRoute) { 
+        router.events.subscribe((url:any) =>{
+            this.currentTab = url.url;
+            console.log(this.currentTab );
+        })
     }
+    ngOnInit() {
+       /* this.sub = this.route.params.subscribe(params => {
+          this.id = +params['id']; 
+           this.selectListVal = this.dropeDownList[0].val;            
+        });*/
+        
+    }
+    
+    ngAfterViewInit() {
+         this.selectListVal = this.dropeDownList[0].val; 
+      }
 
     navigateFormPage = function () {
         this.router.navigateByUrl('/form');
     };    
 
     ngOnDestroy() {
-        this.sub.unsubscribe();
+        //this.sub.unsubscribe();
     }
 
 }

@@ -14,6 +14,7 @@ import { HomeComponent } from './home/home.component';
 import { Subtab1Component } from './home/subtab/subtab1/subtab1.component';
 import { Subtab2Component } from './home/subtab/subtab2/subtab2.component';
 import { Subtab3Component } from './home/subtab/subtab3/subtab3.component';
+import { Subtab4Component } from './home/subtab/subtab4/subtab4.component';
 
 import {LocationStrategy, HashLocationStrategy} from '@angular/common';
 import { PageNotFoundComponentComponent } from './page-not-found-component/page-not-found-component.component';
@@ -22,7 +23,7 @@ import { StudentdataService } from './services/studentdata.service';
 import { MapdataService } from './services/mapdata.service';
 
 import { StudentlistComponent } from './commancomponent/studentlist/studentlist.component';
-import { SortinglistPipe } from './pipe/sortinglist.pipe';
+import { SortinglistPipe } from './pipes/sortinglist.pipe';
 import { DragComponent } from './drag/drag.component';
 import { MypluginDirective } from './custumdirective/myplugin.directive';
 
@@ -34,6 +35,7 @@ import { BarchartComponent } from './commancomponent/barchart/barchart.component
 import { AgmCoreModule, GoogleMapsAPIWrapper, MapsAPILoader } from '@agm/core';
 
 import { YoutubePlaylistService,HttpUtilService } from 'angular2-youtube';
+import { YoutubePlayerMiniModule }  from 'ng2-youtube-player-mini'
 import { YoutubeplayerComponent } from './commancomponent/youtubeplayer/youtubeplayer.component';
 import { AddzeroPipe } from './pipes/addzero.pipe';
 
@@ -45,7 +47,8 @@ const routes: Routes = [
       { path: '', redirectTo: 'subtab1', pathMatch: 'full' },
       { path: 'subtab1', component: Subtab1Component},
       { path: 'subtab2', component: Subtab2Component },
-      { path: 'subtab3', component: Subtab3Component }
+      { path: 'subtab3', component: Subtab3Component },
+      { path: 'subtab4', component: Subtab4Component},    
     ]     
    },
   { path: 'about', component: AboutComponent },
@@ -67,6 +70,7 @@ const routes: Routes = [
     Subtab1Component,
     Subtab2Component,
     Subtab3Component,
+    Subtab4Component,  
     StudentlistComponent,
     DragComponent,
     SlickCarouselComponent, 
@@ -79,8 +83,9 @@ const routes: Routes = [
       
   ],
   imports: [
-    BrowserModule,
+    BrowserModule,   
     FormsModule,
+    YoutubePlayerMiniModule,  
     HttpModule,
     RouterModule.forRoot(routes), // <-- installs Router routes, components and services-->
     AgmCoreModule.forRoot({

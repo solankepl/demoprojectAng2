@@ -28,6 +28,7 @@
             'bootstrap': 'npm:/bootstrap/dist/js/bootstrap.min.js',
             'rxjs': 'npm:rxjs',
             'angular-in-memory-web-api': 'npm:angular-in-memory-web-api/bundles/in-memory-web-api.umd.js',
+            'ng2-youtube-player-mini': 'npm:ng2-youtube-player-mini'
         },
         // packages tells the System loader how to load when no filename and/or no extension
         packages: {
@@ -41,7 +42,10 @@
             },
             rxjs: {
                 defaultExtension: 'js'
-            }
+            },
+            'ng2-youtube-player-mini': {
+                defaultExtension: 'js'
+            },
         }
     });
 })(this);

@@ -5,7 +5,7 @@
             <li class="nav-item"><a class="nav-link" [routerLink]="['subtab1']" routerLinkActive="active">Google Map</a></li>
             <li class="nav-item"><a class="nav-link" [routerLink]="['subtab2']" routerLinkActive="active">Custom Directive </a></li>
             <li class="nav-item"><a class="nav-link" [routerLink]="['subtab3']" routerLinkActive="active">Custom Pipe</a></li>
-
+            <li class="nav-item"><a class="nav-link" [routerLink]="['subtab4']" routerLinkActive="active">Youtube Player</a></li>
         </ul>
     </nav>
 
@@ -37,7 +37,7 @@
         <!-- sub tab containt loading div --->
 
         <div class="tab-content">
-            <div class="tab-pane active">
+            <div class="tab-pane active" [ngClass]="{'text-center': currentTab == '/home/subtab4'}">
                 <router-outlet></router-outlet>
             </div>
         </div>
