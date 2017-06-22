@@ -23,8 +23,8 @@
                     <span class="sr-only">Toggle Dropdown</span>
                 </button>
                 <div class="dropdown-menu">
-                    <a *ngFor="let list of dropeDownList" class="dropdown-item" href="#" (click)="selectListVal = list.val">{{list.val}}</a>
-                    <!--<div class="dropdown-divider"></div>-->
+                    <span *ngFor="let list of dropeDownList" class="dropdown-item" (click)="selectListVal = list.val">{{list.val}} <div class="dropdown-divider"></div></span>
+
 
                 </div>
             </div>
