@@ -1,4 +1,4 @@
-import { Component, OnInit, OnDestroy, AfterViewInit } from '@angular/core';
+import { Component, OnInit, OnDestroy, AfterViewInit,  NgZone} from '@angular/core';
 import { ActivatedRoute, Router} from '@angular/router';
 declare var $: any;
 
@@ -55,5 +55,9 @@ export class HomeComponent implements OnInit, OnDestroy, AfterViewInit  {
     ngOnDestroy() {
         //this.sub.unsubscribe();
     }
+    
+    
+    
+    
 
 }

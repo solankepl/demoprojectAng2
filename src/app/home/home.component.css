@@ -1,6 +1,10 @@
+.home-container {
+    margin-top: 15px;
+}
+
 .sidebar {
     position: fixed;
-    top: 51px;
+    top: 0px;
     bottom: 0;
     left: 0;
     z-index: 0;
@@ -10,7 +14,10 @@
     border-right: 1px solid #eee;
 }
 
+.sidebar .nav {
+    margin-top: 51px;
+}
+
 .bg-faded {
     background-color: #f7f7f7;
 }
-

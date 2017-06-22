@@ -1,5 +1,9 @@
-.navbar .active {
-    background: #000000 !important;
-    color: #ffffff !important;
+.navbar {
+    position: relative;
+    z-index: 2;
 }
 
+.navbar .active {
+    background: #0275d8 !important;
+    color: #ffffff !important;
+}
