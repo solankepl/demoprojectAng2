@@ -549,7 +549,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, ".videoWrapperInner {\r\n    float: none;\r\n    clear: both;\r\n    width: 100%;\r\n    position: relative;\r\n    padding-top: 0px;\r\n    height: 0;\r\n    background: #ff00ff;\r\n}\r\n\r\niframe {\r\n    top: 0;\r\n    left: 0;\r\n    width: 100%;\r\n    height: 100%;\r\n}", ""]);
+exports.push([module.i, ".videoWrapperInner {\r\n    float: none;\r\n    clear: both;\r\n    width: 100%;\r\n    position: relative;\r\n    padding-top: 0px;\r\n    height: 0;\r\n}\r\n\r\niframe {\r\n    top: 0;\r\n    left: 0;\r\n    width: 100%;\r\n    height: 100%;\r\n}", ""]);
 
 // exports
 
@@ -562,7 +562,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/commancomponent/youtubeplayer/youtubeplayer.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<youtube-player class=\"videoWrapperInner\" [playerId]='\"player\"' [width]=\"\" [height]=\"\" [videoId]='\"r9dVfKUNfoU\"' [playlistId]=''> </youtube-player>"
+module.exports = "<youtube-player class=\"videoWrapperInner\" [playerId]='\"player\"' [width]=\"\" [height]=\"390\" [videoId]='\"r9dVfKUNfoU\"' [playlistId]=''> </youtube-player>"
 
 /***/ }),
 
@@ -583,7 +583,21 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 
 var YoutubeplayerComponent = (function () {
-    function YoutubeplayerComponent() {
+    function YoutubeplayerComponent(ngZone) {
+        var _this = this;
+        this.ngZone = ngZone;
+        window.onresize = function (e) {
+            _this.ngZone.run(function () {
+                //console.log("Width: " + window.innerWidth);
+                //console.log("Height: " + window.innerHeight);
+                var playerW = (window.innerWidth - 30);
+                $(".videoWrapperInner iframe").css({
+                    "width": playerW + "px",
+                    "max-width": 640 + "px",
+                    "padding-right": "20px"
+                });
+            });
+        };
     }
     YoutubeplayerComponent.prototype.ngOnInit = function () {
     };
@@ -595,9 +609,10 @@ YoutubeplayerComponent = __decorate([
         template: __webpack_require__("../../../../../src/app/commancomponent/youtubeplayer/youtubeplayer.component.html"),
         styles: [__webpack_require__("../../../../../src/app/commancomponent/youtubeplayer/youtubeplayer.component.css")]
     }),
-    __metadata("design:paramtypes", [])
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["NgZone"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["NgZone"]) === "function" && _a || Object])
 ], YoutubeplayerComponent);
 
+var _a;
 //# sourceMappingURL=youtubeplayer.component.js.map
 
 /***/ }),
@@ -963,7 +978,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, ".navbar .active {\r\n    background: #000000 !important;\r\n    color: #ffffff !important;\r\n}\r\n\r\n", ""]);
+exports.push([module.i, ".navbar {\r\n    position: relative;\r\n    z-index: 2;\r\n}\r\n\r\n.navbar .active {\r\n    background: #0275d8 !important;\r\n    color: #ffffff !important;\r\n}", ""]);
 
 // exports
 
@@ -1032,7 +1047,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, ".sidebar {\r\n    position: fixed;\r\n    top: 51px;\r\n    bottom: 0;\r\n    left: 0;\r\n    z-index: 0;\r\n    padding: 20px;\r\n    overflow-x: hidden;\r\n    overflow-y: auto;\r\n    border-right: 1px solid #eee;\r\n}\r\n\r\n.bg-faded {\r\n    background-color: #f7f7f7;\r\n}\r\n\r\n", ""]);
+exports.push([module.i, ".home-container {\r\n    margin-top: 15px;\r\n}\r\n\r\n.sidebar {\r\n    position: fixed;\r\n    top: 0px;\r\n    bottom: 0;\r\n    left: 0;\r\n    z-index: 0;\r\n    padding: 20px;\r\n    overflow-x: hidden;\r\n    overflow-y: auto;\r\n    border-right: 1px solid #eee;\r\n}\r\n\r\n.sidebar .nav {\r\n    margin-top: 51px;\r\n}\r\n\r\n.bg-faded {\r\n    background-color: #f7f7f7;\r\n}", ""]);
 
 // exports
 
@@ -1045,7 +1060,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/home/home.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"row\">\n\n    <nav class=\"col-sm-3 col-md-2 bg-faded sidebar\">\n        <ul class=\"nav nav-pills flex-column\">\n            <li class=\"nav-item\"><a class=\"nav-link\" [routerLink]=\"['subtab1']\" routerLinkActive=\"active\">Google Map</a></li>\n            <li class=\"nav-item\"><a class=\"nav-link\" [routerLink]=\"['subtab2']\" routerLinkActive=\"active\">Custom Directive </a></li>\n            <li class=\"nav-item\"><a class=\"nav-link\" [routerLink]=\"['subtab3']\" routerLinkActive=\"active\">Custom Pipe</a></li>\n            <li class=\"nav-item\"><a class=\"nav-link\" [routerLink]=\"['subtab4']\" routerLinkActive=\"active\">Youtube Player</a></li>\n        </ul>\n    </nav>\n\n    <div class=\"col-sm-9 offset-sm-3 col-md-10 offset-md-2 pt-3\">\n        <div class=\"jumbotron\">\n            <h1>Welcome to my angular two demo project</h1>\n            <p>This is an example to show the potential of an offcanvas layout pattern in Bootstrap. Try some responsive-range viewport sizes to see it in action.</p>\n            <button type=\"button\" class=\"btn btn-primary\" (click)=\"navigateFormPage();\"><i class=\"fa fa-plus\"></i> Navigate to Form Page</button>\n\n\n            <div class=\"btn-group\">\n                <button type=\"button\" class=\"btn btn-danger ropdown-toggle dropdown-toggle-split\" data-toggle=\"dropdown\">{{selectListVal}}</button>\n                <button type=\"button\" class=\"btn btn-danger dropdown-toggle dropdown-toggle-split\" data-toggle=\"dropdown\" aria-expanded=\"false\">\n                    <span class=\"sr-only\">Toggle Dropdown</span>\n                </button>\n                <div class=\"dropdown-menu\">\n                    <a *ngFor=\"let list of dropeDownList\" class=\"dropdown-item\" href=\"#\" (click)=\"selectListVal = list.val\">{{list.val}}</a>\n                    <!--<div class=\"dropdown-divider\"></div>-->\n\n                </div>\n            </div>\n\n            <my-datepicker></my-datepicker>\n\n        </div>\n\n\n\n        <!-- sub tab containt loading div --->\n\n        <div class=\"tab-content\">\n            <div class=\"tab-pane active\" [ngClass]=\"{'text-center': currentTab == '/home/subtab4'}\">\n                <router-outlet></router-outlet>\n            </div>\n        </div>\n        <!-- --->\n\n    </div>\n\n</div>"
+module.exports = "<div class=\"row\">\n\n    <nav class=\" col-md-2 bg-faded sidebar\">\n        <ul class=\"nav nav-pills flex-column\">\n            <li class=\"nav-item\"><a class=\"nav-link\" [routerLink]=\"['subtab1']\" routerLinkActive=\"active\">Google Map</a></li>\n            <li class=\"nav-item\"><a class=\"nav-link\" [routerLink]=\"['subtab4']\" routerLinkActive=\"active\">Youtube Player</a></li>\n            <li class=\"nav-item\"><a class=\"nav-link\" [routerLink]=\"['subtab2']\" routerLinkActive=\"active\">Custom Directive </a></li>\n            <li class=\"nav-item\"><a class=\"nav-link\" [routerLink]=\"['subtab3']\" routerLinkActive=\"active\">Custom Pipe</a></li>\n\n        </ul>\n    </nav>\n\n    <div class=\"col-md-10 offset-md-2 home-container\">\n        <div class=\"jumbotron\">\n            <h1>Welcome to my angular two demo project</h1>\n            <p>This is an example to show the potential of an offcanvas layout pattern in Bootstrap. Try some responsive-range viewport sizes to see it in action.</p>\n            <button type=\"button\" class=\"btn btn-primary\" (click)=\"navigateFormPage();\"><i class=\"fa fa-plus\"></i> Navigate to Form Page</button>\n\n\n            <div class=\"btn-group\">\n                <button type=\"button\" class=\"btn btn-danger ropdown-toggle dropdown-toggle-split\" data-toggle=\"dropdown\">{{selectListVal}}</button>\n                <button type=\"button\" class=\"btn btn-danger dropdown-toggle dropdown-toggle-split\" data-toggle=\"dropdown\" aria-expanded=\"false\">\n                    <span class=\"sr-only\">Toggle Dropdown</span>\n                </button>\n                <div class=\"dropdown-menu\">\n                    <a *ngFor=\"let list of dropeDownList\" class=\"dropdown-item\" href=\"#\" (click)=\"selectListVal = list.val\">{{list.val}}</a>\n                    <!--<div class=\"dropdown-divider\"></div>-->\n\n                </div>\n            </div>\n\n            <my-datepicker></my-datepicker>\n\n        </div>\n\n\n\n        <!-- sub tab containt loading div --->\n\n        <div class=\"tab-content\">\n            <div class=\"tab-pane active\" [ngClass]=\"{'text-center': currentTab == '/home/subtab4'}\">\n                <router-outlet></router-outlet>\n            </div>\n        </div>\n        <!-- --->\n\n    </div>\n\n</div>"
 
 /***/ }),
 
