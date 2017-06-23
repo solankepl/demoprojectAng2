@@ -169,6 +169,7 @@ AppComponent = __decorate([
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_28_ng2_youtube_player_mini___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_28_ng2_youtube_player_mini__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_29__commancomponent_youtubeplayer_youtubeplayer_component__ = __webpack_require__("../../../../../src/app/commancomponent/youtubeplayer/youtubeplayer.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_30__pipes_addzero_pipe__ = __webpack_require__("../../../../../src/app/pipes/addzero.pipe.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_31__zigsawpuzzle_zigsawpuzzle_component__ = __webpack_require__("../../../../../src/app/zigsawpuzzle/zigsawpuzzle.component.ts");
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppModule; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -176,6 +177,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
 
 
 
@@ -251,7 +253,8 @@ AppModule = __decorate([
             __WEBPACK_IMPORTED_MODULE_25__commancomponent_barchart_barchart_component__["a" /* BarchartComponent */],
             __WEBPACK_IMPORTED_MODULE_22__custumdirective_myplugin_directive__["a" /* MypluginDirective */],
             __WEBPACK_IMPORTED_MODULE_29__commancomponent_youtubeplayer_youtubeplayer_component__["a" /* YoutubeplayerComponent */],
-            __WEBPACK_IMPORTED_MODULE_30__pipes_addzero_pipe__["a" /* AddzeroPipe */]
+            __WEBPACK_IMPORTED_MODULE_30__pipes_addzero_pipe__["a" /* AddzeroPipe */],
+            __WEBPACK_IMPORTED_MODULE_31__zigsawpuzzle_zigsawpuzzle_component__["a" /* ZigsawpuzzleComponent */]
         ],
         imports: [
             __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__["BrowserModule"],
@@ -1047,7 +1050,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, ".home-container {\r\n    margin-top: 15px;\r\n}\r\n\r\n.sidebar {\r\n    position: fixed;\r\n    top: 0px;\r\n    bottom: 0;\r\n    left: 0;\r\n    z-index: 0;\r\n    padding: 20px;\r\n    overflow-x: hidden;\r\n    overflow-y: auto;\r\n    border-right: 1px solid #eee;\r\n}\r\n\r\n.sidebar .nav {\r\n    margin-top: 51px;\r\n}\r\n\r\n.bg-faded {\r\n    background-color: #f7f7f7;\r\n}", ""]);
+exports.push([module.i, ".home-container {\r\n    margin-top: 15px;\r\n}\r\n\r\n.sidebar {\r\n    position: fixed;\r\n    top: 0px;\r\n    bottom: 0;\r\n    left: 0;\r\n    z-index: 0;\r\n    padding: 20px;\r\n    overflow-x: hidden;\r\n    overflow-y: auto;\r\n    border-right: 1px solid #eee;\r\n}\r\n\r\n.sidebar .nav {\r\n    margin-top: 51px;\r\n}\r\n\r\n.bg-faded {\r\n    background-color: #f7f7f7;\r\n}\r\n\r\n#slideshow img {\r\n    display: none;\r\n    position: absolute;\r\n    width: 81%;\r\n}", ""]);
 
 // exports
 
@@ -1060,7 +1063,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/home/home.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"row\">\n\n    <nav class=\" col-md-2 bg-faded sidebar\">\n        <ul class=\"nav nav-pills flex-column\">\n            <li class=\"nav-item\"><a class=\"nav-link\" [routerLink]=\"['subtab1']\" routerLinkActive=\"active\">Google Map</a></li>\n            <li class=\"nav-item\"><a class=\"nav-link\" [routerLink]=\"['subtab4']\" routerLinkActive=\"active\">Youtube Player</a></li>\n            <li class=\"nav-item\"><a class=\"nav-link\" [routerLink]=\"['subtab2']\" routerLinkActive=\"active\">Custom Directive </a></li>\n            <li class=\"nav-item\"><a class=\"nav-link\" [routerLink]=\"['subtab3']\" routerLinkActive=\"active\">Custom Pipe</a></li>\n\n        </ul>\n    </nav>\n\n    <div class=\"col-md-10 offset-md-2 home-container\">\n        <div class=\"jumbotron\">\n            <h1>Welcome to my angular two demo project</h1>\n            <p>This is an example to show the potential of an offcanvas layout pattern in Bootstrap. Try some responsive-range viewport sizes to see it in action.</p>\n            <button type=\"button\" class=\"btn btn-primary\" (click)=\"navigateFormPage();\"><i class=\"fa fa-plus\"></i> Navigate to Form Page</button>\n\n\n            <div class=\"btn-group\">\n                <button type=\"button\" class=\"btn btn-danger ropdown-toggle dropdown-toggle-split\" data-toggle=\"dropdown\">{{selectListVal}}</button>\n                <button type=\"button\" class=\"btn btn-danger dropdown-toggle dropdown-toggle-split\" data-toggle=\"dropdown\" aria-expanded=\"false\">\n                    <span class=\"sr-only\">Toggle Dropdown</span>\n                </button>\n                <div class=\"dropdown-menu\">\n                    <a *ngFor=\"let list of dropeDownList\" class=\"dropdown-item\" href=\"#\" (click)=\"selectListVal = list.val\">{{list.val}}</a>\n                    <!--<div class=\"dropdown-divider\"></div>-->\n\n                </div>\n            </div>\n\n            <my-datepicker></my-datepicker>\n\n        </div>\n\n\n\n        <!-- sub tab containt loading div --->\n\n        <div class=\"tab-content\">\n            <div class=\"tab-pane active\" [ngClass]=\"{'text-center': currentTab == '/home/subtab4'}\">\n                <router-outlet></router-outlet>\n            </div>\n        </div>\n        <!-- --->\n\n    </div>\n\n</div>"
+module.exports = "<div class=\"row\">\n\n    <nav class=\" col-md-2 bg-faded sidebar\">\n        <ul class=\"nav nav-pills flex-column\">\n            <li class=\"nav-item\"><a class=\"nav-link\" [routerLink]=\"['subtab1']\" routerLinkActive=\"active\">Google Map</a></li>\n            <li class=\"nav-item\"><a class=\"nav-link\" [routerLink]=\"['subtab4']\" routerLinkActive=\"active\">Youtube Player</a></li>\n            <li class=\"nav-item\"><a class=\"nav-link\" [routerLink]=\"['subtab2']\" routerLinkActive=\"active\">Custom Directive </a></li>\n            <li class=\"nav-item\"><a class=\"nav-link\" [routerLink]=\"['subtab3']\" routerLinkActive=\"active\">Custom Pipe</a></li>\n\n        </ul>\n\n        <div id=\"slideshow\">\n            <img src=\"../assets/images/logo-1.png\" alt=\"\" />\n            <img src=\"../assets/images/logo-2.png\" alt=\"\" />\n            <img src=\"../assets/images/logo-3.png\" alt=\"\" />\n            <img src=\"../assets/images/logo-4.png\" alt=\"\" />\n            <img src=\"../assets/images/logo-5.png\" alt=\"\" />\n            <img src=\"../assets/images/logo-6.png\" alt=\"\" />\n        </div>\n    </nav>\n\n    <div class=\"col-md-10 offset-md-2 home-container\">\n        <div class=\"jumbotron\">\n            <h1>Welcome to my angular two demo project</h1>\n            <p>This is an example to show the potential of an offcanvas layout pattern in Bootstrap. Try some responsive-range viewport sizes to see it in action.</p>\n            <button type=\"button\" class=\"btn btn-primary\" (click)=\"navigateFormPage();\"><i class=\"fa fa-plus\"></i> Navigate to Form Page</button>\n\n\n            <div class=\"btn-group\">\n                <button type=\"button\" class=\"btn btn-danger ropdown-toggle dropdown-toggle-split\" data-toggle=\"dropdown\">{{selectListVal}}</button>\n                <button type=\"button\" class=\"btn btn-danger dropdown-toggle dropdown-toggle-split\" data-toggle=\"dropdown\" aria-expanded=\"false\">\n                    <span class=\"sr-only\">Toggle Dropdown</span>\n                </button>\n                <div class=\"dropdown-menu\">\n                    <span *ngFor=\"let list of dropeDownList\" class=\"dropdown-item\" (click)=\"selectListVal = list.val\">{{list.val}} <div class=\"dropdown-divider\"></div></span>\n\n\n                </div>\n            </div>\n\n            <my-datepicker></my-datepicker>\n\n        </div>\n\n\n\n        <!-- sub tab containt loading div --->\n\n        <div class=\"tab-content\">\n            <div class=\"tab-pane active\" [ngClass]=\"{'text-center': currentTab == '/home/subtab4'}\">\n                <router-outlet></router-outlet>\n            </div>\n        </div>\n        <!-- --->\n\n    </div>\n\n</div>"
 
 /***/ }),
 
@@ -1112,6 +1115,7 @@ var HomeComponent = (function () {
     };
     HomeComponent.prototype.ngAfterViewInit = function () {
         this.selectListVal = this.dropeDownList[0].val;
+        $.simpleSlideShow('#slideshow');
     };
     HomeComponent.prototype.ngOnDestroy = function () {
         //this.sub.unsubscribe();
@@ -1667,7 +1671,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, ".videoWrapperOuter {\r\n  max-width:640px; \r\n  margin-left:auto;\r\n  margin-right:auto;\r\n}", ""]);
+exports.push([module.i, ".videoWrapperOuter {\r\n    max-width: 640px;\r\n    margin-left: auto;\r\n    margin-right: auto;\r\n}\r\n\r\n#slideshow img,\r\n#slideshow_1 img {\r\n    display: none;\r\n    position: absolute;\r\n}\r\n\r\n#slideshow_1 img {\r\n    left: 300px;\r\n}", ""]);
 
 // exports
 
@@ -1966,6 +1970,67 @@ StudentdataService = __decorate([
 ], StudentdataService);
 
 //# sourceMappingURL=studentdata.service.js.map
+
+/***/ }),
+
+/***/ "../../../../../src/app/zigsawpuzzle/zigsawpuzzle.component.css":
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, "", ""]);
+
+// exports
+
+
+/*** EXPORTS FROM exports-loader ***/
+module.exports = module.exports.toString();
+
+/***/ }),
+
+/***/ "../../../../../src/app/zigsawpuzzle/zigsawpuzzle.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "<!-- <div class=\"puzzleContainer\">\n    <div class=\"startGame\">\n        <div class=\"popup\">\n            <div class=\"msgStart\">Please Select level of Zigsaw Puzzles</div>\n            <span class=\"btn\">easy</span>\n            <span class=\"btn\">medium</span>\n            <span class=\"btn\">hard</span>\n        </div>\n    </div>\n    <div class=\"headerMenu\">\n        <span id=\"startOverBtn\" class=\"btn\">Reload</span>\n        <span id=\"gridBtn\" class=\"btn\">Grid</span>\n        <span id=\"hintBtn\" class=\"btn\">Hint</span>\n        <span id=\"showHidetimerBtn\" class=\"btn\">Show Hide Timer</span>\n        <span id=\"timerGame\"><span class=\"spanTxt\"> 00:00 </span></span>\n\n    </div>\n\n    <div id=\"arayGigswaPuzzle\">\n        <img class=\"sourceImg\" src=\"\">\n    </div>\n</div> -->\npuzzle game start"
+
+/***/ }),
+
+/***/ "../../../../../src/app/zigsawpuzzle/zigsawpuzzle.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ZigsawpuzzleComponent; });
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+var ZigsawpuzzleComponent = (function () {
+    function ZigsawpuzzleComponent() {
+    }
+    ZigsawpuzzleComponent.prototype.ngOnInit = function () {
+    };
+    return ZigsawpuzzleComponent;
+}());
+ZigsawpuzzleComponent = __decorate([
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+        selector: 'app-zigsawpuzzle',
+        template: __webpack_require__("../../../../../src/app/zigsawpuzzle/zigsawpuzzle.component.html"),
+        styles: [__webpack_require__("../../../../../src/app/zigsawpuzzle/zigsawpuzzle.component.css")]
+    }),
+    __metadata("design:paramtypes", [])
+], ZigsawpuzzleComponent);
+
+//# sourceMappingURL=zigsawpuzzle.component.js.map
 
 /***/ }),
 

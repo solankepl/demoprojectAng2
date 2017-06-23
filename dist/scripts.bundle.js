@@ -28,6 +28,13 @@ module.exports = "/*! jQuery UI - v1.12.1 - 2016-09-14\n* http://jqueryui.com\n*
 
 /***/ }),
 
+/***/ "../../../../raw-loader/index.js!../../../../source-map-loader/index.js!../../../../../src/assets/jslib/jquery.simpleslideshow.js":
+/***/ (function(module, exports) {
+
+module.exports = "//created by pavan solanke \n(function ($) {\n    $.simpleSlideShow = function (selector, settings) {\n\n        var config = {\n            'delay': 2000,\n            'fadeSpeed': 500\n        };\n        if (settings) {\n            $.extend(config, settings);\n        }\n\n\n        var obj = $(selector);\n        var img = obj.children('img');\n        var count = img.length;\n        var i = 0;\n\n\n        img.eq(0).show();\n\n        setInterval(function () {\n            img.eq(i).fadeOut(config.fadeSpeed);\n            i = (i + 1 == count) ? 0 : i + 1;\n            img.eq(i).fadeIn(config.fadeSpeed);\n        }, config.delay);\n\n        return this;\n    };\n})(jQuery);"
+
+/***/ }),
+
 /***/ "../../../../raw-loader/index.js!../../../../source-map-loader/index.js!../../../../../src/assets/jslib/jquery.ui.touch-punch.js":
 /***/ (function(module, exports) {
 
@@ -80,6 +87,13 @@ __webpack_require__("../../../../script-loader/addScript.js")(__webpack_require_
 
 /***/ }),
 
+/***/ "../../../../script-loader/index.js!../../../../../src/assets/jslib/jquery.simpleslideshow.js":
+/***/ (function(module, exports, __webpack_require__) {
+
+__webpack_require__("../../../../script-loader/addScript.js")(__webpack_require__("../../../../raw-loader/index.js!../../../../source-map-loader/index.js!../../../../../src/assets/jslib/jquery.simpleslideshow.js"))
+
+/***/ }),
+
 /***/ "../../../../script-loader/index.js!../../../../../src/assets/jslib/jquery.ui.touch-punch.js":
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -124,7 +138,8 @@ __webpack_require__("../../../../script-loader/index.js!../../../../bootstrap/di
 __webpack_require__("../../../../script-loader/index.js!../../../../../src/assets/jslib/myPlugin.js");
 __webpack_require__("../../../../script-loader/index.js!../../../../../src/assets/jslib/jquery-ui.min.js");
 __webpack_require__("../../../../script-loader/index.js!../../../../../src/assets/jslib/jquery.ui.touch-punch.js");
-module.exports = __webpack_require__("../../../../script-loader/index.js!../../../../../src/assets/jslib/canvasjs.min.js");
+__webpack_require__("../../../../script-loader/index.js!../../../../../src/assets/jslib/canvasjs.min.js");
+module.exports = __webpack_require__("../../../../script-loader/index.js!../../../../../src/assets/jslib/jquery.simpleslideshow.js");
 
 
 /***/ })
