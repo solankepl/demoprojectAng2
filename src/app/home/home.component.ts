@@ -46,6 +46,7 @@ export class HomeComponent implements OnInit, OnDestroy, AfterViewInit  {
     
     ngAfterViewInit() {
          this.selectListVal = this.dropeDownList[0].val; 
+        $.simpleSlideShow('#slideshow');
       }
 
     navigateFormPage = function () {

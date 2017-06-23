@@ -38,6 +38,7 @@ import { YoutubePlaylistService,HttpUtilService } from 'angular2-youtube';
 import { YoutubePlayerMiniModule }  from 'ng2-youtube-player-mini'
 import { YoutubeplayerComponent } from './commancomponent/youtubeplayer/youtubeplayer.component';
 import { AddzeroPipe } from './pipes/addzero.pipe';
+import { ZigsawpuzzleComponent } from './zigsawpuzzle/zigsawpuzzle.component';
 
 
 const routes: Routes = [
@@ -79,7 +80,8 @@ const routes: Routes = [
       BarchartComponent,
       MypluginDirective,
       YoutubeplayerComponent,
-      AddzeroPipe
+      AddzeroPipe,
+      ZigsawpuzzleComponent
       
   ],
   imports: [
