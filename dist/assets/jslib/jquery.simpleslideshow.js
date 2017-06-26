@@ -3,7 +3,7 @@
     $.simpleSlideShow = function (selector, settings) {
 
         var config = {
-            'delay': 2000,
+            'delay': 4000,
             'fadeSpeed': 500
         };
         if (settings) {
@@ -19,11 +19,16 @@
 
         img.eq(0).show();
 
-        setInterval(function () {
+        var timer = setInterval(startSideShow, config.delay);
+
+        function startSideShow() {
             img.eq(i).fadeOut(config.fadeSpeed);
             i = (i + 1 == count) ? 0 : i + 1;
             img.eq(i).fadeIn(config.fadeSpeed);
-        }, config.delay);
+            clearInterval(timer); //clear interval
+            timer = setInterval(startSideShow, config.delay); //start it again   
+        }
+
 
         return this;
     };
