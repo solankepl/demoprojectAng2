@@ -1,23 +1,30 @@
-<!-- <div class="puzzleContainer">
-    <div class="startGame">
-        <div class="popup">
-            <div class="msgStart">Please Select level of Zigsaw Puzzles</div>
-            <span class="btn">easy</span>
-            <span class="btn">medium</span>
-            <span class="btn">hard</span>
+<div class="puzzleContainer">
+    <section *ngIf="startGamePopup">
+        <div class="modal-backdrop fade show"></div>
+        <div class="startGame modal fade show ">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-body text-center mt-1">
+                        <h4>Please Select Level Of Zigsaw Puzzles</h4>
+                        <div class="btn-group my-3">
+                            <button type="button" class="btn btn-primary" (click)="startGame('easy');">Easy</button>
+                            <button type="button" class="btn btn-secondary" (click)="startGame('medium');">Medium</button>
+                            <button type="button" class="btn btn-danger" (click)="startGame('hard');">Hard</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-    </div>
-    <div class="headerMenu">
-        <span id="startOverBtn" class="btn">Reload</span>
-        <span id="gridBtn" class="btn">Grid</span>
-        <span id="hintBtn" class="btn">Hint</span>
-        <span id="showHidetimerBtn" class="btn">Show Hide Timer</span>
+    </section>
+    <div class="text-center">
+        <button type="button" class="btn btn-primary">Reload</button>
+        <button type="button" class="btn btn-primary">Grid</button>
+        <button type="button" class="btn btn-primary">Hint</button>
+        <button type="button" class="btn btn-primary">Show Hide Timer</button>
         <span id="timerGame"><span class="spanTxt"> 00:00 </span></span>
-
     </div>
 
     <div id="arayGigswaPuzzle">
-        <img class="sourceImg" src="">
+        <img class="sourceImg" src="{{imgPath}}">
     </div>
-</div> -->
-puzzle game start
+</div>

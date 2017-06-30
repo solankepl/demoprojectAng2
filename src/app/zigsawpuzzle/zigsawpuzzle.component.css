@@ -1,0 +1,141 @@
+.startGame {
+    display: block;
+    top: 10%;
+}
+
+
+/*================================= */
+
+.puzzleContainer {
+    margin-top: 70px;
+}
+
+.headerMenu {
+    height: 60px;
+    width: 1024px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.headerMenu span {
+    margin: 10px 5px;
+}
+
+.headerMenu .spanTxt {
+    font-size: 34px;
+    color: #FFF;
+    position: relative;
+    bottom: -5px;
+    left: 10px;
+}
+
+.btn {}
+
+.palypausebtnBg {
+    width: 29px;
+    height: 28px;
+    background: #4917AE;
+    border: 3px solid #FFF;
+    border-radius: 28px;
+    display: inline-block;
+    padding-top: 7px;
+    position: relative;
+    top: 12px;
+    cursor: pointer;
+}
+
+.pauseImg {
+    width: 10px;
+    height: 10px;
+    background: #FFF;
+    position: relative;
+    float: left;
+    top: 5px;
+    left: 4px;
+}
+
+.playImg {
+    width: 10px;
+    height: 10px;
+    background: #FFF;
+    position: relative;
+    float: left;
+    top: 5px;
+    left: 4px;
+}
+
+.backBtn {
+    margin-top: 30px;
+}
+
+#arayGigswaPuzzle {
+    margin: auto;
+    margin-bottom: 0px;
+    position: relative;
+}
+
+#arayGigswaPuzzle .sourceImg {
+    margin: 0px auto;
+    left: 0px;
+    top: 10px;
+    right: 0px;
+    position: absolute;
+    display: block;
+    opacity: 1;
+}
+
+.jigswaPuzzle {
+    margin: 0px auto;
+    left: 0px;
+    top: 10px;
+    right: 0px;
+    bottom: 0px;
+    position: absolute;
+    background-color: #FFF;
+}
+
+.column {
+    position: absolute;
+}
+
+.draggable {
+    z-index: 1;
+    cursor: pointer;
+}
+
+.dropzone {
+    background: rgba(255, 255, 255, 0.5);
+}
+
+.showGried {
+    border: 1px solid #000;
+}
+
+#timerGame {
+    display: block;
+}
+
+.clearFix {
+    clear: both;
+}
+
+.popup {
+    width: 255px;
+    height: 118px;
+    background: #6F61F5;
+    left: 0px;
+    top: 0px;
+    bottom: 0px;
+    right: 0px;
+    position: absolute;
+    margin: auto;
+    padding: 30px 40px;
+    border: 3px solid #FFF;
+    border-radius: 0px 30px;
+}
+
+.popup .btn {
+    margin: 0px 2px;
+}
+
+.msgStart {}

@@ -55,6 +55,7 @@ const routes: Routes = [
   { path: 'about', component: AboutComponent },
   { path: 'form', component: FormComponent },
   { path: 'jqueryui', component: DragComponent },    
+  { path: 'puzzle', component: ZigsawpuzzleComponent },        
   { path: '**', component: PageNotFoundComponentComponent }    
 ];
 
