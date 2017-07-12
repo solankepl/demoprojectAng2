@@ -1982,7 +1982,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, ".startGame {\r\n    display: block;\r\n    top: 10%;\r\n}\r\n\r\n\r\n/*================================= */\r\n\r\n.puzzleContainer {\r\n    margin-top: 70px;\r\n}\r\n\r\n.headerMenu {\r\n    height: 60px;\r\n    width: 1024px;\r\n    margin: 0 auto;\r\n    text-align: center;\r\n}\r\n\r\n.headerMenu span {\r\n    margin: 10px 5px;\r\n}\r\n\r\n.headerMenu .spanTxt {\r\n    font-size: 34px;\r\n    color: #FFF;\r\n    position: relative;\r\n    bottom: -5px;\r\n    left: 10px;\r\n}\r\n\r\n.btn {}\r\n\r\n.palypausebtnBg {\r\n    width: 29px;\r\n    height: 28px;\r\n    background: #4917AE;\r\n    border: 3px solid #FFF;\r\n    border-radius: 28px;\r\n    display: inline-block;\r\n    padding-top: 7px;\r\n    position: relative;\r\n    top: 12px;\r\n    cursor: pointer;\r\n}\r\n\r\n.pauseImg {\r\n    width: 10px;\r\n    height: 10px;\r\n    background: #FFF;\r\n    position: relative;\r\n    float: left;\r\n    top: 5px;\r\n    left: 4px;\r\n}\r\n\r\n.playImg {\r\n    width: 10px;\r\n    height: 10px;\r\n    background: #FFF;\r\n    position: relative;\r\n    float: left;\r\n    top: 5px;\r\n    left: 4px;\r\n}\r\n\r\n.backBtn {\r\n    margin-top: 30px;\r\n}\r\n\r\n#arayGigswaPuzzle {\r\n    margin: auto;\r\n    margin-bottom: 0px;\r\n    position: relative;\r\n}\r\n\r\n#arayGigswaPuzzle .sourceImg {\r\n    margin: 0px auto;\r\n    left: 0px;\r\n    top: 10px;\r\n    right: 0px;\r\n    position: absolute;\r\n    display: block;\r\n    opacity: 1;\r\n}\r\n\r\n.jigswaPuzzle {\r\n    margin: 0px auto;\r\n    left: 0px;\r\n    top: 10px;\r\n    right: 0px;\r\n    bottom: 0px;\r\n    position: absolute;\r\n    background-color: #FFF;\r\n}\r\n\r\n.column {\r\n    position: absolute;\r\n}\r\n\r\n.draggable {\r\n    z-index: 1;\r\n    cursor: pointer;\r\n}\r\n\r\n.dropzone {\r\n    background: rgba(255, 255, 255, 0.5);\r\n}\r\n\r\n.showGried {\r\n    border: 1px solid #000;\r\n}\r\n\r\n#timerGame {\r\n    display: block;\r\n}\r\n\r\n.clearFix {\r\n    clear: both;\r\n}\r\n\r\n.popup {\r\n    width: 255px;\r\n    height: 118px;\r\n    background: #6F61F5;\r\n    left: 0px;\r\n    top: 0px;\r\n    bottom: 0px;\r\n    right: 0px;\r\n    position: absolute;\r\n    margin: auto;\r\n    padding: 30px 40px;\r\n    border: 3px solid #FFF;\r\n    border-radius: 0px 30px;\r\n}\r\n\r\n.popup .btn {\r\n    margin: 0px 2px;\r\n}\r\n\r\n.msgStart {}", ""]);
+exports.push([module.i, ".startGame {\r\n    display: block;\r\n    top: 10%;\r\n}\r\n\r\n\r\n/*================================= */\r\n\r\n.puzzleContainer {\r\n    margin-top: 70px;\r\n}\r\n\r\n.palypausebtnBg {\r\n    width: 29px;\r\n    height: 28px;\r\n    background: #4917AE;\r\n    border: 3px solid #FFF;\r\n    border-radius: 28px;\r\n    display: inline-block;\r\n    padding-top: 7px;\r\n    position: relative;\r\n    top: 12px;\r\n    cursor: pointer;\r\n}\r\n\r\n.pauseImg {\r\n    width: 10px;\r\n    height: 10px;\r\n    background: #FFF;\r\n    position: relative;\r\n    float: left;\r\n    top: 5px;\r\n    left: 4px;\r\n}\r\n\r\n.playImg {\r\n    width: 10px;\r\n    height: 10px;\r\n    background: #FFF;\r\n    position: relative;\r\n    float: left;\r\n    top: 5px;\r\n    left: 4px;\r\n}\r\n\r\n.backBtn {\r\n    margin-top: 30px;\r\n}\r\n\r\n#arayGigswaPuzzle {\r\n    margin: auto;\r\n    margin-bottom: 0px;\r\n    position: relative;\r\n}\r\n\r\n#arayGigswaPuzzle .sourceImg {\r\n    margin: 0px auto;\r\n    left: 0px;\r\n    top: 10px;\r\n    right: 0px;\r\n    position: absolute;\r\n    display: block;\r\n    opacity: 1;\r\n}\r\n\r\n.jigswaPuzzle {\r\n    margin: 0px auto;\r\n    left: 0px;\r\n    top: 10px;\r\n    right: 0px;\r\n    bottom: 0px;\r\n    position: absolute;\r\n    background-color: #FFF;\r\n}\r\n\r\n.column {\r\n    position: absolute;\r\n}\r\n\r\n.draggable {\r\n    z-index: 1;\r\n    cursor: pointer;\r\n}\r\n\r\n.dropzone {\r\n    background: rgba(255, 255, 255, 0.5);\r\n}\r\n\r\n.showGried {\r\n    border: 1px solid #000;\r\n}\r\n\r\n#timerGame {\r\n    display: block;\r\n}\r\n\r\n.popup {\r\n    width: 255px;\r\n    height: 118px;\r\n    background: #6F61F5;\r\n    left: 0px;\r\n    top: 0px;\r\n    bottom: 0px;\r\n    right: 0px;\r\n    position: absolute;\r\n    margin: auto;\r\n    padding: 30px 40px;\r\n    border: 3px solid #FFF;\r\n    border-radius: 0px 30px;\r\n}\r\n\r\n.popup .btn {\r\n    margin: 0px 2px;\r\n}", ""]);
 
 // exports
 
@@ -1995,7 +1995,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/zigsawpuzzle/zigsawpuzzle.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"puzzleContainer\">\n    <section *ngIf=\"startGamePopup\">\n        <div class=\"modal-backdrop fade show\"></div>\n        <div class=\"startGame modal fade show \">\n            <div class=\"modal-dialog\" role=\"document\">\n                <div class=\"modal-content\">\n                    <div class=\"modal-body text-center mt-1\">\n                        <h4>Please Select Level Of Zigsaw Puzzles</h4>\n                        <div class=\"btn-group my-3\">\n                            <button type=\"button\" class=\"btn btn-primary\" (click)=\"startGame('easy');\">Easy</button>\n                            <button type=\"button\" class=\"btn btn-secondary\" (click)=\"startGame('medium');\">Medium</button>\n                            <button type=\"button\" class=\"btn btn-danger\" (click)=\"startGame('hard');\">Hard</button>\n                        </div>\n                    </div>\n                </div>\n            </div>\n        </div>\n    </section>\n    <div class=\"text-center\">\n        <button type=\"button\" class=\"btn btn-primary\">Reload</button>\n        <button type=\"button\" class=\"btn btn-primary\">Grid</button>\n        <button type=\"button\" class=\"btn btn-primary\">Hint</button>\n        <button type=\"button\" class=\"btn btn-primary\">Show Hide Timer</button>\n        <span id=\"timerGame\"><span class=\"spanTxt\"> 00:00 </span></span>\n    </div>\n\n    <div id=\"arayGigswaPuzzle\">\n        <img class=\"sourceImg\" src=\"{{imgPath}}\">\n    </div>\n</div>"
+module.exports = "<div class=\"puzzleContainer\">\n    <section *ngIf=\"startGamePopup\">\n        <div class=\"modal-backdrop fade show\"></div>\n        <div class=\"startGame modal fade show \">\n            <div class=\"modal-dialog\" role=\"document\">\n                <div class=\"modal-content\">\n                    <div class=\"modal-body text-center mt-1\">\n                        <h4>Please Select Level Of Zigsaw Puzzles</h4>\n                        <div class=\"btn-group my-3\">\n                            <button type=\"button\" class=\"btn btn-primary\" (click)=\"startGame('easy');\">Easy</button>\n                            <button type=\"button\" class=\"btn btn-secondary\" (click)=\"startGame('medium');\">Medium</button>\n                            <button type=\"button\" class=\"btn btn-danger\" (click)=\"startGame('hard');\">Hard</button>\n                        </div>\n                    </div>\n                </div>\n            </div>\n        </div>\n    </section>\n    <div class=\"text-center\">\n        <button type=\"button\" class=\"btn btn-primary\">Reload</button>\n        <button type=\"button\" class=\"btn btn-primary\">Grid</button>\n        <button type=\"button\" class=\"btn btn-primary\">Hint</button>\n        <button type=\"button\" class=\"btn btn-primary\">Show Hide Timer</button>\n        <span id=\"timerGame\"><span class=\"spanTxt\"> 00:00 </span></span>\n    </div>\n\n    <div>\n\n\n\n    </div>\n\n\n    <div id=\"arayGigswaPuzzle\">\n        <img class=\"sourceImg\" #sourceImg [src]=\"imgPath\">\n        <div class=\"jigswaPuzzle\">\n            <ng-container *ngFor=\"let col of colArr\">\n                <ng-container *ngFor=\"let row of rowArr\">\n                    <div class=\"column dropzone\" style=\"border:1px solid #cecece;\" [style.width.px]=\"columnWidth\" [style.height.px]=\"columnHeigh\" [style.left.px]=\"row*columnWidth\" [style.top.px]=\"col*columnHeigh\">\n                        {{col}}_{{row}}\n                    </div>\n                </ng-container>\n            </ng-container>\n        </div>\n    </div>\n</div>"
 
 /***/ }),
 
@@ -2025,188 +2025,41 @@ var ZigsawpuzzleComponent = (function () {
         this.totalSeconds = 0;
         this.shuffleRandon = true;
         this.startGamePopup = true;
+        this.colArr = [];
+        this.rowArr = [];
     }
     ZigsawpuzzleComponent.prototype.ngOnInit = function () {
     };
     ZigsawpuzzleComponent.prototype.startGame = function (stage) {
         this.gamelevel = stage;
-        console.log("start= " + this.gamelevel);
+        // console.log("start= " + this.gamelevel);
         this.startGamePopup = false;
         this.plotImg();
-        //console.log(row +" == "+ col);
-        //loadGame();
     };
     ZigsawpuzzleComponent.prototype.plotImg = function () {
-        var row = Number(this.gamelevelObj[this.gamelevel].split("-")[0]);
-        var col = Number(this.gamelevelObj[this.gamelevel].split("-")[1]);
-        var imgWidth = $("#arayGigswaPuzzle .sourceImg").width();
-        var imgHeight = $("#arayGigswaPuzzle .sourceImg").height();
-        var columnWidth = imgWidth / row;
-        var columnHeigh = imgHeight / col;
-        //console.log(columnWidth +" == "+ columnHeigh);
-        var addJigswaContainer = "<div class='jigswaPuzzle'></div>";
-        $("#arayGigswaPuzzle").append(addJigswaContainer);
-        $(".jigswaPuzzle").css({ "width": imgWidth + "px", "height": imgHeight + "px" });
-        $("#arayGigswaPuzzle").css({ "width": columnWidth * (row + 2.3) + "px", "height": columnHeigh * (col + 1.3) + "px" });
-        this.setSquare(columnWidth, columnHeigh, row, col, this.imgPath);
+        var col = this.gamelevelObj[this.gamelevel].split("-")[0];
+        var row = this.gamelevelObj[this.gamelevel].split("-")[1];
+        this.columnWidth = this.elementView.nativeElement.offsetWidth / row;
+        this.columnHeigh = this.elementView.nativeElement.offsetHeight / col;
+        this.colArr = this.numberConvertIntoArray(col);
+        this.rowArr = this.numberConvertIntoArray(row);
+        console.log(this.colArr);
+        console.log(this.rowArr);
+        //console.log(columnWidth +"== columnWidth ==" +columnHeigh);
     };
-    ZigsawpuzzleComponent.prototype.setSquare = function (colW, colH, row, column, bgPath) {
-        var leftPos = 0;
-        var topPos = 0;
-        var _self = this;
-        for (var i = 0; i < column; i++) {
-            for (var j = 0; j < row; j++) {
-                var dropDiv = "<div class='column dropzone' style='width:" + colW + "px;height:" + colH + "px; left:" + leftPos + "px; top:" + topPos + "px;' data-cr='" + i + "_" + j + "'></div>";
-                var strDrag = "<div class='column draggable' style='width:" + colW + "px;height:" + colH + "px; left:" + leftPos + "px; top:" + topPos + "px; background-image:url(" + bgPath + ");background-position:" + -1 * leftPos + "px" + " " + -1 * topPos + "px" + ";'data-cr='" + i + "_" + j + "'data-orgX='" + leftPos + "'data-orgY='" + topPos + "'></div>";
-                strDrag += dropDiv;
-                $(".jigswaPuzzle").append(strDrag);
-                leftPos += colW;
-            }
-            leftPos = 0;
-            topPos += colH;
+    ZigsawpuzzleComponent.prototype.numberConvertIntoArray = function (num) {
+        var newArr = [];
+        for (var i = 0; i < num; i++) {
+            newArr.push(i);
         }
-        //removeDuplicate();
-        setTimeout(function () {
-            _self.shuffleDraggableItem();
-        }, 1000);
-    };
-    ZigsawpuzzleComponent.prototype.shuffleDraggableItem = function () {
-        var dragElements = document.querySelectorAll('.draggable');
-        var maxL = $(".jigswaPuzzle").width() + ($(".column").width() * 0.5);
-        var minL = $(".column").width() * 0.5;
-        var maxT = $(".jigswaPuzzle").height(); //+$(".column").width();
-        var minT = 0; //$(".column").width();
-        var setX = -($(".column").width() + 20);
-        var setY = 0;
-        var r = Number(this.gamelevelObj[this.gamelevel].split("-")[0]);
-        var c = Number(this.gamelevelObj[this.gamelevel].split("-")[1]);
-        var setLevelWiseWidth = 2.7;
-        var setLevelWiseHeight = 6;
-        if (this.gamelevel == "medium") {
-            setLevelWiseWidth = 3.9;
-            setLevelWiseHeight = 4;
-        }
-        if (this.gamelevel == "hard") {
-            setLevelWiseWidth = 6.5;
-            setLevelWiseHeight = 2;
-        }
-        var vWidth = dragElements.length - ((c * 2) + setLevelWiseWidth);
-        var horzantolX = $(".jigswaPuzzle").width() / vWidth;
-        for (var i = 0; i < dragElements.length; i++) {
-            var drag = dragElements[i];
-            //$(drag).css({"left":randomX+"px","top":randomY+"px"});
-            $(drag).draggable({
-                containment: '#arayGigswaPuzzle',
-                start: function (event, ui) { $(this).css("z-index", this.zindex++); }
-            });
-            if (this.shuffleRandon) {
-                console.log(setX + " === " + setY);
-                this.setAnimation($(drag), setX, setY);
-                if (i < c) {
-                    setY += $(".column").height() + setLevelWiseHeight;
-                }
-                else if (i <= (dragElements.length - r)) {
-                    setX += horzantolX;
-                }
-                else {
-                    setY -= $(".column").height() + setLevelWiseHeight;
-                }
-            }
-            else {
-                var randomN;
-                var randomX = randomN = Math.floor(Math.random() * maxL) - minL;
-                var randomY = randomN = Math.floor(Math.random() * maxT) - minT;
-                console.log(randomX + " === " + randomY);
-                //this.setAnimation($(drag),randomX,randomY);	
-            }
-            $(drag).draggable('enable');
-        }
-        var dropElements = document.querySelectorAll('.dropzone');
-        for (var i = 0; i < dropElements.length; i++) {
-            var drop = dropElements[i];
-            $(drop).droppable({
-                accept: '.jigswaPuzzle div',
-                drop: this.handleDrop,
-            });
-        }
-    };
-    ZigsawpuzzleComponent.prototype.handleDrop = function (event, ui) {
-        var _self = this;
-        var dropNumber = $(this).attr('data-cr');
-        var dragNumber = ui.draggable.attr('data-cr');
-        var dragL = $(this).css("left");
-        var dragT = $(this).css("top");
-        var dropL = ui.draggable.css("left");
-        var dropT = ui.draggable.css("top");
-        $(ui.draggable).draggable({
-            revert: function (event, ui) {
-                if (dragNumber === dropNumber) {
-                    $(this).css({
-                        "left": dragL,
-                        "top": dragT
-                    });
-                    $(this).draggable('disable');
-                    $(this).css("z-index", "1");
-                    //_self.checkAns();
-                }
-            }
-        });
-    };
-    ZigsawpuzzleComponent.prototype.setAnimation = function (obj, xPos, yPos) {
-        var _self = this;
-        obj.animate({
-            left: xPos,
-            top: yPos
-        }, 1000, 'easeInOutElastic', function () {
-            // Animation complete.
-            _self.timerStart();
-        });
-    };
-    ZigsawpuzzleComponent.prototype.checkAns = function () {
-        var dragElements = document.querySelectorAll('.draggable');
-        var showAns = false;
-        for (var i = 0; i < dragElements.length; i++) {
-            var drag = dragElements[i];
-            if ($(drag).hasClass("ui-draggable-disabled")) {
-                showAns = true;
-            }
-            else {
-                showAns = false;
-                break;
-            }
-        }
-        if (showAns) {
-            this.timerStop();
-            // this.cheackWin();
-        }
-    };
-    ZigsawpuzzleComponent.prototype.timerStop = function () {
-        clearInterval(this.globalTimer);
-        this.globalTimer = null;
-    };
-    ZigsawpuzzleComponent.prototype.timerStart = function () {
-        this.timerStop();
-        this.globalTimer = setInterval(this.addTime, 1000);
-    };
-    ZigsawpuzzleComponent.prototype.addTime = function () {
-        this.totalSeconds++;
-        var seconds = this.totalSeconds % 60; //this.addZero(this.totalSeconds % 60);
-        var minute = this.totalSeconds / 60; //this.addZero(parseInt(this.totalSeconds / 60));
-        var hours = this.totalSeconds / 3600; //this.addZero(parseInt(this.totalSeconds / 3600));
-        var curTime = minute + ":" + seconds + " ";
-        $(".spanTxt").html(curTime);
-    };
-    ZigsawpuzzleComponent.prototype.addZero = function (val) {
-        var valString = val + "";
-        if (valString.length < 2) {
-            return parseInt("0" + valString);
-        }
-        else {
-            return valString;
-        }
+        return newArr;
     };
     return ZigsawpuzzleComponent;
 }());
+__decorate([
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["ViewChild"])('sourceImg'),
+    __metadata("design:type", typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["ElementRef"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["ElementRef"]) === "function" && _a || Object)
+], ZigsawpuzzleComponent.prototype, "elementView", void 0);
 ZigsawpuzzleComponent = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
         selector: 'app-zigsawpuzzle',
@@ -2216,6 +2069,7 @@ ZigsawpuzzleComponent = __decorate([
     __metadata("design:paramtypes", [])
 ], ZigsawpuzzleComponent);
 
+var _a;
 //# sourceMappingURL=zigsawpuzzle.component.js.map
 
 /***/ }),
