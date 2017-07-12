@@ -24,7 +24,21 @@
         <span id="timerGame"><span class="spanTxt"> 00:00 </span></span>
     </div>
 
+    <div>
+
+        <div *ngFor="let col of colArr">
+            <div *ngFor="let row of rowArr">
+                <div style="border:1px solid #cecece;" [style.width.px]="columnWidth" [style.height.px]="columnHeigh">
+                    {{col}}_{{row}}
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+
     <div id="arayGigswaPuzzle">
-        <img class="sourceImg" src="{{imgPath}}">
+        <img class="sourceImg" #sourceImg [src]="imgPath">
     </div>
 </div>

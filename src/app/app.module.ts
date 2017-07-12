@@ -41,6 +41,7 @@ import { AddzeroPipe } from './pipes/addzero.pipe';
 import { ZigsawpuzzleComponent } from './zigsawpuzzle/zigsawpuzzle.component';
 
 
+
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
   { path: 'home', component: HomeComponent,
