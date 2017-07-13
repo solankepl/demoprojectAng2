@@ -190,13 +190,8 @@ providers:[MapdataService]
 
 
 
-
-
-
-
-
-
-
+///========================  ng-container======================
+use of  <ng-container> without adding div render element
 
 
 

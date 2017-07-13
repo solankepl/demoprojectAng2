@@ -26,19 +26,34 @@
 
     <div>
 
-        <div *ngFor="let col of colArr">
-            <div *ngFor="let row of rowArr">
-                <div style="border:1px solid #cecece;" [style.width.px]="columnWidth" [style.height.px]="columnHeigh">
-                    {{col}}_{{row}}
-                </div>
-            </div>
-        </div>
 
 
     </div>
 
 
-    <div id="arayGigswaPuzzle">
+    <div id="arayGigswaPuzzle" [style.width.px]="widthDragArea" [style.height.px]="heightDragArea">
         <img class="sourceImg" #sourceImg [src]="imgPath">
+        <div class="jigswaPuzzle" [style.width.px]="imageWidth">
+            <ng-container *ngFor="let col of colArr">
+                <ng-container *ngFor="let row of rowArr">
+                    <div class="column dropzone" style="border:1px solid #cecece;" [style.width.px]="columnWidth" [style.height.px]="columnHeigh" [style.left.px]="row*columnWidth" [style.top.px]="col*columnHeigh" [attr.data-cr]="col +'_'+ row">
+                        {{col}}_{{row}}
+                    </div>
+                </ng-container>
+            </ng-container>
+
+
+
+            <ng-container *ngFor="let col of colArr; let last = last;let first = first;let index = index">
+                <ng-container *ngFor="let row of rowArr">
+                    <div class="column draggable" style="border:1px solid #cecece;" [style.width.px]="columnWidth" [style.height.px]="columnHeigh" [style.left.px]="row*columnWidth" [style.top.px]="col*columnHeigh" [ngStyle]="{'background-image':'url(' + imgPath + ')', 'background-position': -1*row*columnWidth +'px' +' ' + -1*col*columnHeigh +'px' }" [attr.data-cr]="col +'_'+ row">
+                        drag {{col}}_{{row}}
+                    </div>
+                </ng-container>
+            </ng-container>
+
+
+
+        </div>
     </div>
 </div>
