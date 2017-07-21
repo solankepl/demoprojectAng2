@@ -170,6 +170,9 @@ AppComponent = __decorate([
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_29__commancomponent_youtubeplayer_youtubeplayer_component__ = __webpack_require__("../../../../../src/app/commancomponent/youtubeplayer/youtubeplayer.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_30__pipes_addzero_pipe__ = __webpack_require__("../../../../../src/app/pipes/addzero.pipe.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_31__zigsawpuzzle_zigsawpuzzle_component__ = __webpack_require__("../../../../../src/app/zigsawpuzzle/zigsawpuzzle.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_32__d3chart_d3chart_component__ = __webpack_require__("../../../../../src/app/d3chart/d3chart.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_33_ng2_nvd3__ = __webpack_require__("../../../../ng2-nvd3/build/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_33_ng2_nvd3___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_33_ng2_nvd3__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppModule; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -177,6 +180,8 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
+
 
 
 
@@ -224,6 +229,7 @@ var routes = [
     { path: 'form', component: __WEBPACK_IMPORTED_MODULE_9__form_form_component__["a" /* FormComponent */] },
     { path: 'jqueryui', component: __WEBPACK_IMPORTED_MODULE_21__drag_drag_component__["a" /* DragComponent */] },
     { path: 'puzzle', component: __WEBPACK_IMPORTED_MODULE_31__zigsawpuzzle_zigsawpuzzle_component__["a" /* ZigsawpuzzleComponent */] },
+    { path: 'd3chart', component: __WEBPACK_IMPORTED_MODULE_32__d3chart_d3chart_component__["a" /* D3chartComponent */] },
     { path: '**', component: __WEBPACK_IMPORTED_MODULE_16__page_not_found_component_page_not_found_component_component__["a" /* PageNotFoundComponentComponent */] }
 ];
 var AppModule = (function () {
@@ -255,7 +261,10 @@ AppModule = __decorate([
             __WEBPACK_IMPORTED_MODULE_22__custumdirective_myplugin_directive__["a" /* MypluginDirective */],
             __WEBPACK_IMPORTED_MODULE_29__commancomponent_youtubeplayer_youtubeplayer_component__["a" /* YoutubeplayerComponent */],
             __WEBPACK_IMPORTED_MODULE_30__pipes_addzero_pipe__["a" /* AddzeroPipe */],
-            __WEBPACK_IMPORTED_MODULE_31__zigsawpuzzle_zigsawpuzzle_component__["a" /* ZigsawpuzzleComponent */]
+            __WEBPACK_IMPORTED_MODULE_31__zigsawpuzzle_zigsawpuzzle_component__["a" /* ZigsawpuzzleComponent */],
+            __WEBPACK_IMPORTED_MODULE_32__d3chart_d3chart_component__["a" /* D3chartComponent */],
+            __WEBPACK_IMPORTED_MODULE_5__app_component__["a" /* AppComponent */],
+            __WEBPACK_IMPORTED_MODULE_33_ng2_nvd3__["NvD3Component"]
         ],
         imports: [
             __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__["BrowserModule"],
@@ -669,6 +678,133 @@ var _a, _b;
 
 /***/ }),
 
+/***/ "../../../../../src/app/d3chart/d3chart.component.css":
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, "/* On mouse hover, lighten state color */\r\n\r\npath:hover {\r\n    fill-opacity: .7;\r\n}\r\n\r\n\r\n/* Style for Custom Tooltip */\r\n\r\ndiv.tooltip {\r\n    position: absolute;\r\n    text-align: center;\r\n    width: 60px;\r\n    height: 28px;\r\n    padding: 2px;\r\n    font: 12px sans-serif;\r\n    background: white;\r\n    border: 0px;\r\n    border-radius: 8px;\r\n    pointer-events: none;\r\n}\r\n\r\n.legend {\r\n    position: absolute;\r\n    left: 800px;\r\n    top: 350px;\r\n}", ""]);
+
+// exports
+
+
+/*** EXPORTS FROM exports-loader ***/
+module.exports = module.exports.toString();
+
+/***/ }),
+
+/***/ "../../../../../src/app/d3chart/d3chart.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "<div>\n    <nvd3 [options]=\"options\" [data]=\"data\"></nvd3>\n</div>"
+
+/***/ }),
+
+/***/ "../../../../../src/app/d3chart/d3chart.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return D3chartComponent; });
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+var D3chartComponent = (function () {
+    function D3chartComponent() {
+    }
+    D3chartComponent.prototype.ngOnInit = function () {
+        this.options = {
+            chart: {
+                type: 'discreteBarChart',
+                height: 450,
+                margin: {
+                    top: 20,
+                    right: 20,
+                    bottom: 50,
+                    left: 55
+                },
+                x: function (d) { return d.label; },
+                y: function (d) { return d.value; },
+                showValues: true,
+                valueFormat: function (d) {
+                    return d3.format(',.4f')(d);
+                },
+                duration: 500,
+                xAxis: {
+                    axisLabel: 'X Axis'
+                },
+                yAxis: {
+                    axisLabel: 'Y Axis',
+                    axisLabelDistance: -10
+                }
+            }
+        };
+        this.data = [
+            {
+                key: "Cumulative Return",
+                values: [
+                    {
+                        "label": "A",
+                        "value": -29.765957771107
+                    },
+                    {
+                        "label": "B",
+                        "value": 0
+                    },
+                    {
+                        "label": "C",
+                        "value": 32.807804682612
+                    },
+                    {
+                        "label": "D",
+                        "value": 196.45946739256
+                    },
+                    {
+                        "label": "E",
+                        "value": 0.19434030906893
+                    },
+                    {
+                        "label": "F",
+                        "value": -98.079782601442
+                    },
+                    {
+                        "label": "G",
+                        "value": -13.925743130903
+                    },
+                    {
+                        "label": "H",
+                        "value": -5.1387322875705
+                    }
+                ]
+            }
+        ];
+    };
+    return D3chartComponent;
+}());
+D3chartComponent = __decorate([
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+        selector: 'app-d3chart',
+        template: __webpack_require__("../../../../../src/app/d3chart/d3chart.component.html"),
+        styles: [__webpack_require__("../../../../../src/app/d3chart/d3chart.component.css")],
+        encapsulation: __WEBPACK_IMPORTED_MODULE_0__angular_core__["ViewEncapsulation"].None
+    }),
+    __metadata("design:paramtypes", [])
+], D3chartComponent);
+
+//# sourceMappingURL=d3chart.component.js.map
+
+/***/ }),
+
 /***/ "../../../../../src/app/drag/drag.component.css":
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -995,7 +1131,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/headertop/headertop.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<nav class=\"navbar navbar-toggleable-md navbar-light bg-faded\">\r\n\r\n    <button class=\"navbar-toggler navbar-toggler-right\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarSupportedContent\" aria-controls=\"navbarSupportedContent\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">\r\n        <span class=\"navbar-toggler-icon\"></span>\r\n    </button>\r\n    <a class=\"navbar-brand\" href=\"#\">Angular2 Demo</a>\r\n\r\n\r\n\r\n    <div class=\"collapse navbar-collapse\" id=\"navbarSupportedContent\">\r\n        <ul class=\"navbar-nav mr-auto\">\r\n            <li class=\"nav-item\">\r\n                <a class=\"nav-link\" [routerLink]=\"['home']\" routerLinkActive=\"active\">Home</a>\r\n            </li>\r\n            <li class=\"nav-item\">\r\n                <a class=\"nav-link\" [routerLink]=\"['about']\" routerLinkActive=\"active\">About</a>\r\n            </li>\r\n            <li class=\"nav-item\">\r\n                <a class=\"nav-link\" [routerLink]=\"['form']\" routerLinkActive=\"active\">Form</a>\r\n            </li>\r\n            <li class=\"nav-item\">\r\n                <a class=\"nav-link\" [routerLink]=\"['jqueryui']\" routerLinkActive=\"active\">Jquery Plugin</a>\r\n            </li>\r\n            <li class=\"nav-item\">\r\n                <a class=\"nav-link\" [routerLink]=\"['puzzle']\" routerLinkActive=\"active\">Puzzle</a>\r\n            </li>\r\n        </ul>\r\n        <form class=\"form-inline my-2 my-lg-0\" *ngIf=\"currentRoute == '/about'\">\r\n            <input class=\"form-control mr-sm-2\" type=\"text\" placeholder=\"Search\">\r\n            <button class=\"btn btn-outline-success my-2 my-sm-0\" type=\"submit\">Search</button>\r\n        </form>\r\n    </div>\r\n\r\n</nav>"
+module.exports = "<nav class=\"navbar navbar-toggleable-md navbar-light bg-faded\">\r\n\r\n    <button class=\"navbar-toggler navbar-toggler-right\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarSupportedContent\" aria-controls=\"navbarSupportedContent\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">\r\n        <span class=\"navbar-toggler-icon\"></span>\r\n    </button>\r\n    <a class=\"navbar-brand\" href=\"#\">Angular2 Demo</a>\r\n\r\n\r\n\r\n    <div class=\"collapse navbar-collapse\" id=\"navbarSupportedContent\">\r\n        <ul class=\"navbar-nav mr-auto\">\r\n            <li class=\"nav-item\">\r\n                <a class=\"nav-link\" [routerLink]=\"['home']\" routerLinkActive=\"active\">Home</a>\r\n            </li>\r\n            <li class=\"nav-item\">\r\n                <a class=\"nav-link\" [routerLink]=\"['about']\" routerLinkActive=\"active\">About</a>\r\n            </li>\r\n            <li class=\"nav-item\">\r\n                <a class=\"nav-link\" [routerLink]=\"['form']\" routerLinkActive=\"active\">Form</a>\r\n            </li>\r\n            <li class=\"nav-item\">\r\n                <a class=\"nav-link\" [routerLink]=\"['jqueryui']\" routerLinkActive=\"active\">Jquery Plugin</a>\r\n            </li>\r\n            <li class=\"nav-item\">\r\n                <a class=\"nav-link\" [routerLink]=\"['puzzle']\" routerLinkActive=\"active\">Puzzle</a>\r\n            </li>\r\n            <li class=\"nav-item\">\r\n                <a class=\"nav-link\" [routerLink]=\"['d3chart']\" routerLinkActive=\"active\">D3 Chart</a>\r\n            </li>\r\n\r\n\r\n\r\n        </ul>\r\n        <form class=\"form-inline my-2 my-lg-0\" *ngIf=\"currentRoute == '/about'\">\r\n            <input class=\"form-control mr-sm-2\" type=\"text\" placeholder=\"Search\">\r\n            <button class=\"btn btn-outline-success my-2 my-sm-0\" type=\"submit\">Search</button>\r\n        </form>\r\n    </div>\r\n\r\n</nav>"
 
 /***/ }),
 
@@ -2017,6 +2153,8 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 var ZigsawpuzzleComponent = (function () {
     function ZigsawpuzzleComponent() {
+        var _self = this;
+        console.log(this);
         this.zindex = 2;
         this.imgPath = "../assets/images/pavan.JPG";
         this.gamelevel = "easy";
@@ -2083,14 +2221,15 @@ var ZigsawpuzzleComponent = (function () {
             });
         }
     };
-    ZigsawpuzzleComponent.prototype.handleDrop = function (event, ui) {
+    ZigsawpuzzleComponent.prototype.handleDrop = function (event, ui, obj) {
         var dropNumber = $(this).attr('data-cr');
         var dragNumber = ui.draggable.attr('data-cr');
         var dragL = $(this).css("left");
         var dragT = $(this).css("top");
         var dropL = ui.draggable.css("left");
         var dropT = ui.draggable.css("top");
-        //let _self = this;
+        var _self = this;
+        console.log(this);
         $(ui.draggable).draggable({
             revert: function (event, ui) {
                 if (dragNumber === dropNumber) {
@@ -2100,10 +2239,7 @@ var ZigsawpuzzleComponent = (function () {
                     });
                     $(this).draggable('disable');
                     $(this).css("z-index", "1");
-                    /*if(dragL == (dropL-5)){
-                        console.log(ui.draggable);
-                     }*/
-                    // checkAns();
+                    _self.checkAns();
                 }
             }
         });
