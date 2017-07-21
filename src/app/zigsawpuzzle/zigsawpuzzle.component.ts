@@ -26,12 +26,14 @@ export class ZigsawpuzzleComponent implements OnInit {
     private imageHeight;
     private widthDragArea;
     private heightDragArea;
-    public _self;
+    //public _self;
     
     
     @ViewChild('sourceImg') elementView:ElementRef;
     
     constructor() { 
+        let _self = this;
+        console.log(this);
         this.zindex = 2;
         this.imgPath = "../assets/images/pavan.JPG";
         this.gamelevel = "easy";
@@ -116,14 +118,15 @@ export class ZigsawpuzzleComponent implements OnInit {
     }
     
     
-    handleDrop(event, ui) {
+    handleDrop(event, ui, obj) {
         let dropNumber = $(this).attr('data-cr');
         let dragNumber = ui.draggable.attr('data-cr');
         let dragL = $(this).css("left");
         let dragT = $(this).css("top");
         let dropL = ui.draggable.css("left");
         let dropT = ui.draggable.css("top");
-        //let _self = this;
+        let _self = this;
+           console.log(this)
         $(ui.draggable).draggable({
             revert: function (event, ui) {
                 if (dragNumber === dropNumber) {
@@ -133,17 +136,14 @@ export class ZigsawpuzzleComponent implements OnInit {
                     });
                     $(this).draggable('disable');
                     $(this).css("z-index", "1");
-                    /*if(dragL == (dropL-5)){
-                        console.log(ui.draggable);  
-                     }*/
-                   // checkAns();
+                     _self.checkAns();
                 }
             }
 
         })
     }
     
-    public checkAns() {
+    checkAns() {
         let dragElements = document.querySelectorAll('.draggable');
         let showAns = false;
         for (var i = 0; i < dragElements.length; i++) {

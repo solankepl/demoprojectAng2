@@ -39,7 +39,9 @@ import { YoutubePlayerMiniModule }  from 'ng2-youtube-player-mini'
 import { YoutubeplayerComponent } from './commancomponent/youtubeplayer/youtubeplayer.component';
 import { AddzeroPipe } from './pipes/addzero.pipe';
 import { ZigsawpuzzleComponent } from './zigsawpuzzle/zigsawpuzzle.component';
+import { D3chartComponent } from './d3chart/d3chart.component';
 
+import { NvD3Component } from 'ng2-nvd3';
 
 
 const routes: Routes = [
@@ -56,7 +58,8 @@ const routes: Routes = [
   { path: 'about', component: AboutComponent },
   { path: 'form', component: FormComponent },
   { path: 'jqueryui', component: DragComponent },    
-  { path: 'puzzle', component: ZigsawpuzzleComponent },        
+  { path: 'puzzle', component: ZigsawpuzzleComponent },   
+   { path: 'd3chart', component: D3chartComponent },                
   { path: '**', component: PageNotFoundComponentComponent }    
 ];
 
@@ -83,15 +86,18 @@ const routes: Routes = [
       MypluginDirective,
       YoutubeplayerComponent,
       AddzeroPipe,
-      ZigsawpuzzleComponent
+      ZigsawpuzzleComponent,
+      D3chartComponent,
+      AppComponent, 
+      NvD3Component
       
   ],
   imports: [
     BrowserModule,   
     FormsModule,
     YoutubePlayerMiniModule,  
-    HttpModule,
-    RouterModule.forRoot(routes), // <-- installs Router routes, components and services-->
+    HttpModule,   
+    RouterModule.forRoot(routes), // <-- installs Router routes, components and services-->    
     AgmCoreModule.forRoot({
           apiKey: 'AIzaSyCE8lSGYLtw4qX2wrUazXhmxc907Jd8vFc'
         })
