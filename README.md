@@ -3,6 +3,8 @@
 ##Project Link
 https://exporter-edward-62476.netlify.com/index.html#/home/subtab1
 
+http://jasonwatmore.com/post/2016/09/29/angular-2-user-registration-and-login-example-tutorial
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.0.5.
 
 ## Development server
