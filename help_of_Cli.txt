@@ -1,3 +1,5 @@
+npm config edit // edit npm file https to http
+
 https://www.angularjs4u.com/angularjs2/top-20-angular-2-charts-graphs/
 https://github.com/angular/angular-cli
 https://www.sitepoint.com/ultimate-angular-cli-reference/
