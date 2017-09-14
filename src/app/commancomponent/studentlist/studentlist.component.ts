@@ -21,9 +21,13 @@ export class StudentlistComponent implements OnInit {
         this.students = this.studentdataService.getStudents();       
     }
     
-    deleteReord(index){
-       
+    deleteRecord(index){
         this.studentdataService.deleteStudentData(index);   
+    }
+    
+    editRecord(index){
+        //this.studentdataService.editStudentData(index); 
+        this.router.navigateByUrl('/form?id='+ index, { queryParams: { id: index } });
     }
     
     sort(property){

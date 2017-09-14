@@ -15,6 +15,12 @@ export class StudentdataService {
         this.studentList.push(obj);
     }
     
+    updateStudentData(obj, item):void{
+        this.deleteStudentData(item);
+        this.addStudentData(obj);
+      //title?: string
+    }
+    
     deleteStudentData(item:number):void {
         let index = item;        
         //console.log("index == " + index);
@@ -22,6 +28,10 @@ export class StudentdataService {
             return;
         }
         this.studentList.splice(index,1);
+    }
+    
+    editStudentData(item:number):void {
+        console.log(this.studentList[item]);
     }
     
     getStudents():Student[]{
