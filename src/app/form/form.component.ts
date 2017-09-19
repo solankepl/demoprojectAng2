@@ -32,7 +32,8 @@ export class FormComponent implements OnInit {
           });
     }
     
-    postForm(studentform:Student){        
+    postForm(studentform:Student){    
+        //console.log(isEmpty(this.student));
         if(this.studentId == 'blank'){
             this.studentdataService.addStudentData(this.student);
         }else{

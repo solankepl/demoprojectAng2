@@ -226,6 +226,8 @@ git branch "branch_name"
 
 git branch
 
+git branch -a
+
 git branch checkout "baranche-name"
 
 $ git push origin --delete "baranche-name"
