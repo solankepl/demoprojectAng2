@@ -1,3 +1,12 @@
+30402
+
+Lovenish Parwani
+
+Hi. The location is E2 POD 7
+
+
+
+https://angular.io/tutorial/toh-pt5
 npm config edit // edit npm file https to http
 
 https://www.angularjs4u.com/angularjs2/top-20-angular-2-charts-graphs/

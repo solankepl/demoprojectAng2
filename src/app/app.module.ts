@@ -5,7 +5,11 @@ import { HttpModule } from '@angular/http';
 import { RouterModule, Routes} from '@angular/router';
 import {BootsrapeModule} from 'bootstrap';
 
+
 import { AppComponent } from './app.component';
+
+
+
 import { HeadertopComponent } from './headertop/headertop.component';
 import { FooterBottomComponent } from './footer-bottom/footer-bottom.component';
 import { AboutComponent } from './about/about.component';
@@ -19,11 +23,14 @@ import { Subtab4Component } from './home/subtab/subtab4/subtab4.component';
 import {LocationStrategy, HashLocationStrategy} from '@angular/common';
 import { PageNotFoundComponentComponent } from './page-not-found-component/page-not-found-component.component';
 
+
+
+
 import { StudentdataService } from './services/studentdata.service';
 import { MapdataService } from './services/mapdata.service';
 
-import { StudentlistComponent } from './commancomponent/studentlist/studentlist.component';
 import { SortinglistPipe } from './pipes/sortinglist.pipe';
+import { StudentlistComponent } from './commancomponent/studentlist/studentlist.component';
 import { DragComponent } from './drag/drag.component';
 import { MypluginDirective } from './custumdirective/myplugin.directive';
 
@@ -44,7 +51,8 @@ import { D3chartComponent } from './d3chart/d3chart.component';
 import { NvD3Component } from 'ng2-nvd3';
 
 
-const routes: Routes = [
+
+ const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
   { path: 'home', component: HomeComponent,
     children: [
@@ -94,7 +102,7 @@ const routes: Routes = [
   ],
   imports: [
     BrowserModule,   
-    FormsModule,
+    FormsModule,    
     YoutubePlayerMiniModule,  
     HttpModule,   
     RouterModule.forRoot(routes), // <-- installs Router routes, components and services-->    
