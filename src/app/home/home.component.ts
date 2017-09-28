@@ -50,7 +50,8 @@ export class HomeComponent implements OnInit, OnDestroy, AfterViewInit  {
       }
 
     navigateFormPage = function () {
-        this.router.navigateByUrl('/form');
+        this.router.navigateByUrl('/form?id=', { queryParams: { id:'' } });  
+        this.router.navigateByUrl('/form?id=blank', { queryParams: { id: 'blank' } });
     };    
 
     ngOnDestroy() {
