@@ -1,4 +1,4 @@
-<div class="panel panel-default panel-table">
+<div class="panel panel-default panel-table table-wrapper">
     <div class="panel-heading">
         <div class="row">
             <div class="col col-xs-6">
@@ -48,7 +48,7 @@
         <tbody>
             <tr *ngFor="let student of students | sortinglist: {property: column, direction: direction}; let i = index;">
                 <!-- | sortinglist: {property: column, direction: direction} -->
-                <td class="text-center">{{i}}</td>
+                <th class="text-center">{{i}}</th>
                 <th>{{student.name}}</th>
                 <td class="text-center">{{student.english}}</td>
                 <td class="text-center">{{student.math}}</td>

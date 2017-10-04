@@ -1,3 +1,23 @@
 .pointer {
     cursor: pointer;
 }
+
+.table-wrapper { 
+    overflow-x:scroll;
+    overflow-y:visible;
+    width:100%;  
+    min-width: 250px;
+    /*margin-left: 120px;*/
+}
+
+
+td, th {
+    padding: 5px 20px;
+   
+}
+
+/*th:first-child {
+    position: fixed;
+    left: 5px
+}*/
+
