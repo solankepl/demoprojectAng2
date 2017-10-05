@@ -1,11 +1,4 @@
-30402
-
-Lovenish Parwani
-
-Hi. The location is E2 POD 7
-
-
-
+v.0.0
 https://angular.io/tutorial/toh-pt5
 npm config edit // edit npm file https to http
 
